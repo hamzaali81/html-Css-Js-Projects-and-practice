@@ -1,0 +1,8 @@
+<article> tag is independent piece of content.
+<article> element is content that makes sense on its own.
+The key point is here is that the content has to make sense independent of its context.
+Potential Sources for article element.
+1.forum post.
+2.Blog post.
+3.New Story.
+4.Comment.
