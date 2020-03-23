@@ -1,0 +1,15 @@
+/* p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Arial;
+    color: chartreuse;
+} */
+
+li>a {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+}
