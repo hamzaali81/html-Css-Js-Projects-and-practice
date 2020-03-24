@@ -1,0 +1,17 @@
+td {
+    border: 2px solid green;
+}
+
+table.one {
+    border-collapse: separate;
+    empty-cells: show;
+}
+
+table.two {
+    empty-cells: hide;
+}
+
+table.three {
+    empty-cells: inherit;
+    border-collapse: collapse;
+}
