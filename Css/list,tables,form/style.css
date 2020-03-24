@@ -1,0 +1,21 @@
+ol {
+    list-style-type: lower-roman;
+    list-style-position: inside;
+    margin: 10px;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+
+/* 
+ul {
+    list-style-image: url('a.png');
+}
+
+li {
+    margin: 10px 10px 0px 0px;
+} */
