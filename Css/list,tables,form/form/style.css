@@ -1,0 +1,16 @@
+input {
+    font-size: 120%;
+    background-color: gray;
+    border: 5px solid;
+    padding: 5px 5px 5px 10px;
+    margin: 10px;
+    border-radius: 100px;
+    /* background-position: 10px 9px; */
+    margin-bottom: 10px;
+    background-image: url('a.png');
+    background-position: 10px;
+}
+
+a {
+    cursor: crosshair;
+}
