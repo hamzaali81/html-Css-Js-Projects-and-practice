@@ -1,0 +1,11 @@
+p {
+    min-width: 350px;
+    max-width: 350px;
+    margin: 0px;
+    padding: 25px;
+}
+
+h1 {
+    min-height: 0px;
+    max-height: 0px;
+}
