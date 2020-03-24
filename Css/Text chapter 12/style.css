@@ -1,0 +1,23 @@
+/* p {
+    font-family: Impact;
+    font-weight: 70%;
+} */
+
+@font-face {
+    font-family: 'AlexBrush';
+    src: url('alex-brush/AlexBrush-Regular.ttf');
+}
+
+p::first-letter {
+    font-family: AlexBrush;
+    font-weight: bold;
+    font-size: 5em;
+    font-style: oblique;
+    text-transform: uppercase;
+    text-decoration: blink;
+    line-height: 10em;
+    /* word-spacing: 5em;
+    letter-spacing: 3em; */
+    text-align: right;
+    text-indent: 20px;
+}
