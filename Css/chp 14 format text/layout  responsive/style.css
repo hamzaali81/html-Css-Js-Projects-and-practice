@@ -1,36 +1,45 @@
 body {
-    width: 960px;
+    width: 90%;
     margin: 0 auto;
+    text-align: center;
 }
 
 #content {
     overflow: auto;
-    height: 100%;
 }
 
 #nav,
 #feature,
 #footer {
-    background-color: #efefef;
-    padding: 10px;
-    margin: 10px;
+    margin: 1%;
 }
 
 .column1,
 .column2,
 .column3 {
-    background-color: cornflowerblue;
-    width: 300px;
+    display: inline;
+    width: 31.3%;
+    margin: 1%;
     float: left;
-    margin: 10px;
+    background-color: #efefef;
+    height: 10em;
+    margin-bottom: 1em;
 }
 
 li {
     display: inline;
-    margin: 5px;
-    background-color: cornflowerblue;
+    padding: 0.5%;
 }
 
-li:hover {
-    cursor: pointer;
+#nav,
+#footer {
+    background-color: #efefef;
+    padding: 0.5em 0;
+}
+
+#feature {
+    height: 10em;
+    margin-bottom: 1em;
+    background-color: #efefef;
+    text-align: center;
 }
