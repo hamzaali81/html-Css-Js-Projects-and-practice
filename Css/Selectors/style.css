@@ -1,0 +1,18 @@
+li>a {
+    font-family: impact;
+    background-color: greenyellow;
+}
+
+
+/* h1>p {
+    color: aqua;
+    background-color: chartreuse;   not part of selector technically wrong
+} */
+
+h1+p {
+    background-color: cornflowerblue;
+}
+
+h2~p {
+    background-color: darkgoldenrod;
+}
