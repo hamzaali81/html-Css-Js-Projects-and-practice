@@ -16,3 +16,13 @@ h1+p {
 h2~p {
     background-color: darkgoldenrod;
 }
+
+h3 {
+    background-color: darkgoldenrod;
+    padding: 10px;
+}
+
+h4 {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: inherit;
+}
