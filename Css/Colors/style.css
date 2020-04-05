@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-image: linear-gradient(rgba(82, 72, 72, 0.7), rgba(0, 0, 0, 0.07)), url('3.jpg');
+    /* background-image: url('3.jpg'); */
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.btn {
+    color: #fff;
+    padding: 10px 30px;
+    background-color: orange;
+    font-weight: 300;
+    text-decoration: none;
+    border: 1px solid orange;
+    border-radius: 100px;
+    text-align: center;
+    margin-bottom: 500px;
+    transition: background-color 0.2s;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #e67e21;
+    transform: translateY(-3px);
+}
+
+.btn:link,
+.btn:visited {
+    background-color: #e67e21;
+}
