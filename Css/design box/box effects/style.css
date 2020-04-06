@@ -24,6 +24,25 @@ li {
     display: block;
 }
 
+
+/* 
 p.one {
-    box-shadow: 10px 0px 7px 5px #777777;
+    box-shadow: inset 0px 7px 5px #777777;
+} */
+
+p.one {
+    /* border: 2px solid #777777;
+    max-width: 600px;
+    min-width: 500px;
+    max-height: 700px;
+    min-height: 200px; */
+    padding: 0;
+    border: 2px solid #777;
+    border-radius: 100px;
+    max-width: 100px;
+    min-width: 50px;
+}
+
+img {
+    border-radius: 100px;
 }
