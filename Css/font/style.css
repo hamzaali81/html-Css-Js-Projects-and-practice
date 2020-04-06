@@ -1,6 +1,52 @@
-p {
+/* p {
     font-size: 200%;
     font-weight: bold;
     line-height: 5em;
     text-align: right;
+    word-spacing: 0.1em;
+    letter-spacing: 0.2em;
+} */
+
+
+/* .align {
+    vertical-align: middle;
+} */
+
+h1 {
+    background-image: url('3.jpg');
+    text-indent: 700px;
+}
+
+p::first-letter {
+    text-shadow: 1px 1px #565674;
+    background-color: coral;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.int::first-line {
+    font-size: 300%;
+}
+
+
+/* a::hover {
+    color: yellow;
+    text-decoration: dotted;
+} */
+
+
+/* 
+a:visited {
+    color: yellow;
+    text-decoration: dotted;
+} */
+
+
+/* 
+a:link {
+    color: yellow;
+} */
+
+a:active {
+    color: darkcyan;
 }
