@@ -14,11 +14,16 @@ img {
     float: right;
 }
 
-p {
+
+/* p {
     max-width: 300px;
     min-width: 200px;
-}
+} */
 
 li {
     display: block;
+}
+
+p.one {
+    box-shadow: 10px 0px 7px 5px #777777;
 }
