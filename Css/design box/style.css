@@ -1,0 +1,54 @@
+body {
+    background-color: #fff;
+}
+
+.header {
+    /* margin: 0;
+    height: 0; */
+    background-color: lightsteelblue;
+    height: 10px;
+    width: 1200px;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0;
+    float: right;
+}
+
+div {
+    background-color: skyblue;
+    width: 300px;
+    height: 800px;
+    padding: 20px;
+    margin: 10px;
+}
+
+ul {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.link {
+    background-color: black;
+    max-width: 400px;
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+}
+
+.list {
+    display: block;
+    padding: 10px;
+}
+
+.search {
+    text-align: center;
+}
+
+
+/* a {
+    text-decoration: none;
+} */
