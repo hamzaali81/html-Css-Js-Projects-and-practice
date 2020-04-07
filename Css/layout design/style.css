@@ -1,0 +1,65 @@
+/* h1 {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+padding: 10px;
+
+/* bottom: 0px; */
+
+
+/* text-align: right; */
+
+
+/* float: right;
+position: fixed;
+
+} */
+
+p {
+    /* top: 70%; */
+    left: 0;
+    /* padding: 10px; */
+    /* margin: 10px; */
+    float: left;
+    max-width: 300px;
+    min-width: 100px;
+    background-color: antiquewhite;
+}
+
+.eg {
+    float: right;
+}
+
+
+/* .example {
+    clear: left;
+} */
+
+
+/* 
+/* .example {
+    position: relative;
+    /* position: absolute;
+padding: 10px;
+left: 30px;
+z-index: -1;
+
+}
+ */
+
+.fir {
+    float: left;
+    /* margin: 10px; */
+    width: 300px;
+}
+
+.sec {
+    float: left;
+    width: 300px;
+}
+
+.thi {
+    float: left;
+    width: 300px;
+}
