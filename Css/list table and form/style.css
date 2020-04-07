@@ -26,3 +26,31 @@ td {
     empty-cells: hide;
     border-spacing: 5px 15px 15px 0px;
 }
+
+
+/* 
+input {
+    background-image: url(1.png);
+    background-repeat: no-repeat;
+    border: 2px solid #000;
+    background-position: 1px 1px 1px 1px;
+    padding: 5px 10px 10px 20px;
+    display: block;
+} */
+
+.submit {
+    width: 100px;
+    height: 30px;
+    /* background-color: black; */
+    background: linear-gradient(to left, 0, 0, 0, 0);
+    color: #fff;
+    border-color: #000;
+    border-radius: 100px;
+    transition: all .2s;
+}
+
+.submit:hover::before {
+    color: #fff;
+    /* transform: scaleY(-1px); */
+    cursor: pointer;
+}
