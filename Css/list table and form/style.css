@@ -1,0 +1,28 @@
+ul {
+    /* list-style-image: url(1.png); */
+    max-width: 30px;
+    min-width: 20px;
+}
+
+li {
+    margin: 10px;
+    /* list-style-position: inside; */
+    list-style: inside circle;
+    max-width: 30px;
+    min-width: 20px;
+}
+
+td {
+    border: 1px solid #000;
+    padding: 15px;
+    border-spacing: 5px 5px;
+}
+
+.one {
+    border-collapse: collapse;
+}
+
+.two {
+    empty-cells: hide;
+    border-spacing: 5px 15px 15px 0px;
+}
