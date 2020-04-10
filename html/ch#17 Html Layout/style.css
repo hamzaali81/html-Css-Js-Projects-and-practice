@@ -1,0 +1,15 @@
+header {
+    background-color: gray;
+    width: 400px;
+    height: 800px;
+}
+
+li {
+    display: inline;
+    color: blue;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    width: 60px;
+    background-color: cornflowerblue;
+}
