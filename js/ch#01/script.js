@@ -16,28 +16,47 @@
 
 
 /**Function Constructor*/
-var john = {
-    name: 'hamza',
-    age: 21,
-    DOB: 1999
-}
+// var john = {
+//     name: 'hamza',
+//     age: 21,
+//     DOB: 1999
+// }
 
-var Person = function(name, age, DOD) {
-    this.name = name;
-    this.age = age;
-    this.DOB = DOD;
-    // this.cal = function() {
-    //     console.log(2020 - this.DOB);
-    // }
-}
+// var Person = function(name, age, DOD) {
+//     this.name = name;
+//     this.age = age;
+//     this.DOB = DOD;
+//     // this.cal = function() {
+//     //     console.log(2020 - this.DOB);
+//     // }
+// }
 
-Person.prototype.cal = function() {
-    console.log(2020 - this.DOB);
-}
-Person.prototype.LastName = 'Ahmed';
+// Person.prototype.cal = function() {
+//     console.log(2020 - this.DOB);
+// }
+// Person.prototype.LastName = 'Ahmed';
 
-var mark = new Person('ali', 22, 1999);
-var ali = new Person('hassan', 55, 1958);
-mark.cal();
-ali.cal();
-console.log(ali.LastName);
+// var mark = new Person('ali', 22, 1999);
+// var ali = new Person('hassan', 55, 1958);
+// mark.cal();
+// ali.cal();
+// console.log(ali.LastName);
+
+
+//Object.create
+var personProto = {
+    calculateAge: function() {
+        console.log(2020 - this.yearOfBirth);
+    }
+};
+
+var john = Object.create(personProto);
+john.name = 'hamza';
+john.age = 21;
+john.yearOfBirth = 1999;
+
+var jane = Object.create(personProto, {
+    name: { value: 'hamza' },
+    age: { value: 21 },
+    yearOfBirth: { value: 2000 }
+})
