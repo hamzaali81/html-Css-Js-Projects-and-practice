@@ -80,17 +80,52 @@ console.log(obj.age);
 console.log(obj1.age)
 
 //Function
-var age = 27;
-var obj2 = {
-    name: 'hamza',
-    city: 'karachi'
+// var age = 27;
+// var obj2 = {
+//     name: 'hamza',
+//     city: 'karachi'
+// }
+
+// function change(a, b) {
+//     a = 30;
+//     b.city = 'punjab';
+// }
+
+// change(age, obj2);
+// console.log(age);
+// console.log(obj2.city);
+
+//Passing Function as arguments
+var years = [1999, 2000, 1998, 1997];
+
+function calculateAge(arr, fn) {
+    var arrRes = [];
+    for (i = 0; i < arr.length; i++) {
+        arrRes.push(fn(arr[i]))
+    }
+    return arrRes;
 }
 
-function change(a, b) {
-    a = 30;
-    b.city = 'punjab';
+function final(el) {
+    return 2020 - el;
 }
 
-change(age, obj2);
-console.log(age);
-console.log(obj2.city);
+function isFullAges(el) {
+    return el >= 18;
+}
+
+function maxHeartRate(el) {
+    if (el >= 18 && el <= 81) {
+        return Math.ceil(206.9 - (0.067 * el));
+
+    } else {
+        return -1;
+    }
+}
+
+var ages = calculateAge(years, final);
+var fullAges = calculateAge(ages, isFullAges);
+var HeartRate = calculateAge(ages, maxHeartRate)
+console.log(ages);
+console.log(fullAges);
+console.log(HeartRate);
