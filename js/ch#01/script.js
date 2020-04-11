@@ -64,20 +64,20 @@
 //Primitives vs Objects
 
 
-var a = 46;
-var b = 30;
-a = 50;
-console.log(a);
-console.log(b);
-var obj = {
-    name: 'hamza',
-    age: 30
-}
+// var a = 46;
+// var b = 30;
+// a = 50;
+// console.log(a);
+// console.log(b);
+// var obj = {
+//     name: 'hamza',
+//     age: 30
+// }
 
-var obj1 = obj;
-obj1.age = 50;
-console.log(obj.age);
-console.log(obj1.age)
+// var obj1 = obj;
+// obj1.age = 50;
+// console.log(obj.age);
+// console.log(obj1.age)
 
 //Function
 // var age = 27;
@@ -132,30 +132,39 @@ console.log(obj1.age)
 
 
 //Function Returning function
-function interviewQuestion(job) {
-    if (job === 'teacher') {
-        return function(name) {
-            console.log(name + ' Apply in teacher job');
-        }
-    }
+// function interviewQuestion(job) {
+//     if (job === 'teacher') {
+//         return function(name) {
+//             console.log(name + ' Apply in teacher job');
+//         }
+//     }
 
-    if (job === 'designer') {
-        return function(name) {
-            console.log(name + 'Apply in UX designer job');
-        }
-    }
-
-
-    if (job === 'driver') {
-        return function(name) {
-            console.log(name + ' Apply in driver job');
-        }
-    } else {
-        console.log(name + 'Available to call us')
-    }
-}
+//     if (job === 'designer') {
+//         return function(name) {
+//             console.log(name + 'Apply in UX designer job');
+//         }
+//     }
 
 
-var QuestionInterview = interviewQuestion('teacher');
-QuestionInterview('hamza');
-interviewQuestion('driver')('ali');
+//     if (job === 'driver') {
+//         return function(name) {
+//             console.log(name + 'Apply in driver job');
+//         }
+//     } else {
+//         console.log(name + 'Available to call us')
+//     }
+// }
+
+
+// var QuestionInterview = interviewQuestion('teacher');
+// QuestionInterview('hamza');
+// interviewQuestion('driver')('ali');
+
+
+//IIFE
+
+(function(goodluck) {
+    var score = Math.random() * 5;
+    console.log(score > -5);
+})(5);
+console.log(score)
