@@ -95,37 +95,67 @@ console.log(obj1.age)
 // console.log(age);
 // console.log(obj2.city);
 
-//Passing Function as arguments
-var years = [1999, 2000, 1998, 1997];
+//Passing Function as arguments(First class function)
+// var years = [1999, 2000, 1998, 1997];
 
-function calculateAge(arr, fn) {
-    var arrRes = [];
-    for (i = 0; i < arr.length; i++) {
-        arrRes.push(fn(arr[i]))
+// function calculateAge(arr, fn) {
+//     var arrRes = [];
+//     for (i = 0; i < arr.length; i++) {
+//         arrRes.push(fn(arr[i]))
+//     }
+//     return arrRes;
+// }
+
+// function final(el) {
+//     return 2020 - el;
+// }
+
+// function isFullAges(el) {
+//     return el >= 18;
+// }
+
+// function maxHeartRate(el) {
+//     if (el >= 18 && el <= 81) {
+//         return Math.ceil(206.9 - (0.067 * el));
+
+//     } else {
+//         return -1;
+//     }
+// }
+
+// var ages = calculateAge(years, final);
+// var fullAges = calculateAge(ages, isFullAges);
+// var HeartRate = calculateAge(ages, maxHeartRate)
+// console.log(ages);
+// console.log(fullAges);
+// console.log(HeartRate);
+
+
+//Function Returning function
+function interviewQuestion(job) {
+    if (job === 'teacher') {
+        return function(name) {
+            console.log(name + ' Apply in teacher job');
+        }
     }
-    return arrRes;
-}
 
-function final(el) {
-    return 2020 - el;
-}
+    if (job === 'designer') {
+        return function(name) {
+            console.log(name + 'Apply in UX designer job');
+        }
+    }
 
-function isFullAges(el) {
-    return el >= 18;
-}
 
-function maxHeartRate(el) {
-    if (el >= 18 && el <= 81) {
-        return Math.ceil(206.9 - (0.067 * el));
-
+    if (job === 'driver') {
+        return function(name) {
+            console.log(name + ' Apply in driver job');
+        }
     } else {
-        return -1;
+        console.log(name + 'Available to call us')
     }
 }
 
-var ages = calculateAge(years, final);
-var fullAges = calculateAge(ages, isFullAges);
-var HeartRate = calculateAge(ages, maxHeartRate)
-console.log(ages);
-console.log(fullAges);
-console.log(HeartRate);
+
+var QuestionInterview = interviewQuestion('teacher');
+QuestionInterview('hamza');
+interviewQuestion('driver')('ali');
