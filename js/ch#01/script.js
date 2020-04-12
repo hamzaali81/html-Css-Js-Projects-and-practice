@@ -169,26 +169,77 @@
 // console.log(score)
 
 //Lecture:Clousers
-function retirement(retirementAge) {
-    var a = ' years left until retirement';
-    return function(yearOfBirth) {
-        var age = 2020 - yearOfBirth;
-        console.log((retirementAge - age) + a);
-    }
-}
-// var retirementUs = retirement(66);
-// retirementUs(1999);
-retirement(66)(1999);
+// function retirement(retirementAge) {
+//     var a = ' years left until retirement';
+//     return function(yearOfBirth) {
+//         var age = 2020 - yearOfBirth;
+//         console.log((retirementAge - age) + a);
+//     }
+// }
+// // var retirementUs = retirement(66);
+// // retirementUs(1999);
+// retirement(66)(1999);
 
-function interviewQuestion(job) {
-    return function(name) {
-        if (job === 'designer') {
-            console.log('UX designer is ' + name)
-        } else {
-            console.log('Call next job');
+// function interviewQuestion(job) {
+//     return function(name) {
+//         if (job === 'designer') {
+//             console.log('UX designer is ' + name)
+//         } else {
+//             console.log('Call next job');
+//         }
+//     }
+
+// }
+
+// interviewQuestion('designer')('Mark');
+
+//Bind,Call and apply
+var john = {
+    name: 'john',
+    age: 26,
+    job: 'teacher',
+    presentation: function(style, timeOfDay) {
+        if (style === 'formal') {
+            console.log('The ' + this.name + ' applying teaching job this age is ' + this.age + ' apply ' + this.job + ' ' + timeOfDay + '.');
+        } else if (style === 'friendly') {
+            console.log('The ' + this.name + ' applying teaching job this age is ' + this.age + ' apply ' + this.job + ' ' + timeOfDay + '.');
         }
     }
-
 }
 
-interviewQuestion('designer')('Mark');
+var emily = {
+    name: 'Emily',
+    age: 55,
+    job: 'designer'
+}
+john.presentation.call(emily, 'friendly', 'afternoon')
+
+
+john.presentation('formal', 'morning');
+var johnFriendly = john.presentation.bind(john, 'friendly');
+johnFriendly('morning')
+
+var EmilyFriendly = john.presentation.bind(emily, 'formal');
+EmilyFriendly('night');
+
+var year = [1999, 2000, 1998, 1992, 2001];
+
+function arrcal(arr, fn) {
+    arrRes = [];
+    for (i = 0; i <= arr.length; i++) {
+        arrRes.push(fn(arr[i]))
+    }
+    return arrRes;
+}
+
+function final(el) {
+    return 2020 - el;
+}
+
+function isFullAge(limit, el) {
+    return el >= limit;
+}
+var calculateAge = arrcal(year, final);
+var FullAgeJapan = arrcal(calculateAge, isFullAge.bind(this, 20))
+console.log(calculateAge);
+console.log(FullAgeJapan)
