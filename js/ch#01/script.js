@@ -163,8 +163,32 @@
 
 //IIFE
 
-(function(goodluck) {
-    var score = Math.random() * 5;
-    console.log(score > -5);
-})(5);
-console.log(score)
+// (function(goodluck) {
+//         var score = Math.random()]\ * 5; console.log(score > -5);
+// })(5);
+// console.log(score)
+
+//Lecture:Clousers
+function retirement(retirementAge) {
+    var a = ' years left until retirement';
+    return function(yearOfBirth) {
+        var age = 2020 - yearOfBirth;
+        console.log((retirementAge - age) + a);
+    }
+}
+// var retirementUs = retirement(66);
+// retirementUs(1999);
+retirement(66)(1999);
+
+function interviewQuestion(job) {
+    return function(name) {
+        if (job === 'designer') {
+            console.log('UX designer is ' + name)
+        } else {
+            console.log('Call next job');
+        }
+    }
+
+}
+
+interviewQuestion('designer')('Mark');
