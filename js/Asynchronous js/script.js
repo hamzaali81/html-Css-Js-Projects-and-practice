@@ -45,7 +45,60 @@
 // }
 // getReceipe();
 
-//Promise
+//Promise produce
+// const getIDs = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         // reject([101, 102, 103, 104])
+//         resolve([101, 102, 103, 104])
+//     }, 1500)
+// })
+
+// const getReceipe = recID => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(ID => {
+//             const receipe = {
+//                 title: 'chips',
+//                 author: 'hamza'
+
+//             }
+//             resolve(`${ID}: ${receipe.title}`);
+
+//         }, 1500, recID);
+//     });
+// };
+
+// const getRelated = publisher => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(pub => {
+//             const receipe = {
+//                 title: 'burger',
+//                 publisher: 'ahmed'
+//             }
+//             resolve(`${pub} : ${receipe.title}`)
+//         }, 1500, publisher)
+//     })
+// }
+// getIDs
+//     .then(IDs => {
+//         console.log(IDs);
+//         return getReceipe(IDs[2]);
+//         // return getRelated(IDs[3]);
+//     })
+//     .then(receipe => {
+//         console.log(receipe);
+//         // return getRelated(receipe.publisher);
+//         return getRelated('hamza');
+//     })
+//     .then(receipe => {
+//         console.log(receipe);
+//     })
+//     .catch(error => {
+//         // console.log(error);
+//         console.log('error!!');
+//     });
+
+
+//Promise consume
 const getIDs = new Promise((resolve, reject) => {
     setTimeout(() => {
         // reject([101, 102, 103, 104])
@@ -68,31 +121,47 @@ const getReceipe = recID => {
 };
 
 const getRelated = publisher => {
-    return new Promise((resolve, reject) => {
-        setTimeout(pub => {
-            const receipe = {
-                title: 'burger',
-                publisher: 'ahmed'
-            }
-            resolve(`${pub} : ${receipe.title}`)
-        }, 1500, publisher)
-    })
+        return new Promise((resolve, reject) => {
+            setTimeout(pub => {
+                const receipe = {
+                    title: 'burger',
+                    publisher: 'ahmed'
+                }
+                resolve(`${pub} : ${receipe.title}`)
+            }, 1500, publisher)
+        })
+    }
+    // getIDs                           //this part as async shows
+    //     .then(IDs => {
+    //         console.log(IDs);
+    //         return getReceipe(IDs[2]);
+    //         // return getRelated(IDs[3]);
+    //     })
+    //     .then(receipe => {
+    //         console.log(receipe);
+    //         // return getRelated(receipe.publisher);
+    //         return getRelated('hamza');
+    //     })
+    //     .then(receipe => {
+    //         console.log(receipe);
+    //     })
+    //     .catch(error => {
+    //         // console.log(error);
+    //         console.log('error!!');
+    //     });
+
+async function getReceipesAw() {
+    const IDs = await getIDs;
+    console.log(IDs);
+    const receipe = await getReceipe(IDs[3]);
+    console.log(receipe);
+    const related = await getRelated('hamza');
+    console.log(related);
+    return receipe;
 }
-getIDs
-    .then(IDs => {
-        console.log(IDs);
-        return getReceipe(IDs[2]);
-        // return getRelated(IDs[3]);
-    })
-    .then(receipe => {
-        console.log(receipe);
-        // return getRelated(receipe.publisher);
-        return getRelated('hamza');
-    })
-    .then(receipe => {
-        console.log(receipe);
-    })
-    .catch(error => {
-        // console.log(error);
-        console.log('error!!');
-    });
+// const rec = getReceipesAw();
+// console.log(rec);
+
+getReceipesAw().then(result => {
+    console.log(`${receipe}: result is the best ever!`);
+});
