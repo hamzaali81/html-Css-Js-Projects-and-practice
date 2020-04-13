@@ -172,15 +172,42 @@
 function getWeather(woeid) {
     fetch(`https://crossorigin.me/https://www.metaweather.com/api/location/${woeid}/`)
         .then(result => {
-            console.log(result);
+            // console.log(result);
             return result.json();
         })
         .then(data => {
+            const today = data.consolidated_weather[0];
             // console.log(data);
-            console.log('Temperature in ${data.title} stay between ${today.min_temp} and ${today.max_temp}')
+            console.log('Temperature in ${data.title} stay between ${today.min_temp} and ${today.max_temp}');
         })
         .catch(error =>
             console.log(error));
 
 }
 getWeather(2487956);
+getWeather(112444444);
+
+
+async function getWeatherAw(woeid) {
+    try {
+        const result = await fetch(`https://crossorigin.me/https://www.metaweather.com/api/location/${woeid}/`);
+        const data = await result.json();
+        const today = data.consolidated_weather[0];
+        // console.log(data);
+        console.log('Temperature in ${data.title} stay between ${today.min_temp} and ${today.max_temp}');
+        console.log(data);
+        return data;
+    } catch (error) {
+        // console.log(error);
+        alert(error);
+    }
+}
+getWeatherAw(2487956);
+// getWeatherAw(112444444);
+let dataLondon;
+getWeatherAw(44418).then(data => {
+    dataLondon = data
+    console.log(dataLondon)
+});
+
+// console.log(dataLondon);
