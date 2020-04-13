@@ -14,33 +14,85 @@
 // }
 // first();
 
-//Asynchromous in old way
-//Callback hell in js
-function getReceipe() {
+// Asynchromous in old way
+// Callback hell in js
+// function getReceipe() {
+//     setTimeout(() => {
+//         const receipeID = [101, 102, 103, 104]
+//         console.log(receipeID);
+
+//         setTimeout((id) => {
+//             const receipe = {
+//                 title: 'fresh vegetables',
+//                 publisher: 'hamza'
+//             };
+//             console.log(`${id}: ${receipe.title}`);
+
+
+//             setTimeout(publisher => {
+//                 const receipe = {
+//                     title: 'Italian pizza',
+//                     publisher: 'hamza'
+//                 }
+//                 console.log(receipe);
+
+//             }, 1000, receipe.publisher)
+
+//         }, 1000, receipeID[2])
+
+
+//     }, 1500)
+// }
+// getReceipe();
+
+//Promise
+const getIDs = new Promise((resolve, reject) => {
     setTimeout(() => {
-        const receipeID = [101, 102, 103, 104]
-        console.log(receipeID);
-
-        setTimeout((id) => {
-            const receipe = {
-                title: 'fresh vegetables',
-                publisher: 'hamza'
-            };
-            console.log(`${id}: ${receipe.title}`);
-
-
-            setTimeout(publisher => {
-                const receipe = {
-                    title: 'Italian pizza',
-                    publisher: 'hamza'
-                }
-                console.log(receipe);
-
-            }, 1000, receipe.publisher)
-
-        }, 1000, receipeID[2])
-
-
+        // reject([101, 102, 103, 104])
+        resolve([101, 102, 103, 104])
     }, 1500)
+})
+
+const getReceipe = recID => {
+    return new Promise((resolve, reject) => {
+        setTimeout(ID => {
+            const receipe = {
+                title: 'chips',
+                author: 'hamza'
+
+            }
+            resolve(`${ID}: ${receipe.title}`);
+
+        }, 1500, recID);
+    });
+};
+
+const getRelated = publisher => {
+    return new Promise((resolve, reject) => {
+        setTimeout(pub => {
+            const receipe = {
+                title: 'burger',
+                publisher: 'ahmed'
+            }
+            resolve(`${pub} : ${receipe.title}`)
+        }, 1500, publisher)
+    })
 }
-getReceipe();
+getIDs
+    .then(IDs => {
+        console.log(IDs);
+        return getReceipe(IDs[2]);
+        // return getRelated(IDs[3]);
+    })
+    .then(receipe => {
+        console.log(receipe);
+        // return getRelated(receipe.publisher);
+        return getRelated('hamza');
+    })
+    .then(receipe => {
+        console.log(receipe);
+    })
+    .catch(error => {
+        // console.log(error);
+        console.log('error!!');
+    });
