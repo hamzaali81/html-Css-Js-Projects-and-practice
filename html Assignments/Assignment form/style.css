@@ -1,0 +1,23 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #944dff;
+    color: #fff;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    color: blue;
+    text-decoration: underline;
+}
+
+input {
+    margin: 20px;
+}
+
+p {
+    margin: 10px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+}
