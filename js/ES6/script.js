@@ -353,19 +353,50 @@ for (const cur of boxesArr6) {
 
 
 //ES5
-var ages = [12, 17, 22, 8, 12, 11];
-// var tages = ages.map(function(cur) {
-//     return cur >= 18;
-// })
-// console.log(tages);
+// var ages = [12, 17, 22, 8, 12, 11];
+// // var tages = ages.map(function(cur) {
+// //     return cur >= 18;
+// // })
+// // console.log(tages);
 
-// console.log(tages.indexOf(true));
-// console.log(ages[tages.indexOf(true)]);
+// // console.log(tages.indexOf(true));
+// // console.log(ages[tages.indexOf(true)]);
 
-//ES6
-// ages.findIndex(index and intire array)
-var tages2 = ages.findIndex(cur => cur >= 18);
-console.log(tages2)
-console.log(ages.find(cur => cur >= 18));
+// //ES6
+// // ages.findIndex(index and intire array)
+// var tages2 = ages.findIndex(cur => cur >= 18);
+// console.log(tages2)
+// console.log(ages.find(cur => cur >= 18));
 
 //Destructuring array
+
+const teamPakistan = [
+    "Haris shoail(a/r)",
+    "babar Azam(bat)",
+    "fakhar zaman(bat)",
+    "imam(bat)",
+    "sarfraz(wk)",
+    "naseem(bowl)"
+];
+// let firstopener, secondopener, allrounder, onedown;
+// [, , firstopener, secondopener] = teamPakistan;
+// // console.log(teamPakistan[0], teamPakistan[2])
+// console.log(allrounder, onedown, firstopener, secondopener);
+
+let [, , striker, nonstriker, ...team] = teamPakistan;
+
+
+console.log(striker, nonstriker, team);
+
+// let tmp = striker;
+// striker = nonstriker;
+// nonstriker = tmp;
+// [striker, nonstriker] = [nonstriker, striker]
+
+// console.log(striker, nonstriker);
+
+// let a = 'hamza';
+// let b = 'ali';
+
+// [a, b] = [b, a]
+// console.log(a, b)
