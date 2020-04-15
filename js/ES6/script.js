@@ -312,91 +312,117 @@
 
 
 /////////////////////////////////////
-//Arrays 
-
-
-const boxes = document.querySelectorAll('.box');
-//ES5 
-var boxesArr5 = Array.prototype.slice.call(boxes);
-boxesArr5.forEach(function(cur) {
-    cur.style.backgroundColor =
-        'dodgerblue';
-});
-
-//ES6
-const boxesArr6 = Array.from(boxes);
-boxesArr6.forEach(cur => cur.style.backgroundColor = 'dodgerblue')
-
-
+//Arrays
+// console.dir(Array);
+// [1,2,3].splice
+//Array.from()
+let str = "hello";
+console.log([...str]);
+const a = Array.from(str);
+console.log(a);
 
 //ES5
-// for (var i = 0; i < boxesArr5.length; i++) {
-//     if (boxesArr5[i].className === 'box blue') {
-//         //continue;
-//         break;
+// let programming = ['java', 'ruby', 'python'];
+// for (let i = 0; i < programming.length; i++) {
+//     console.log(`Use languages for data science ${programming[i]}`)
+// }
+
+//es6
+// let programming = ['java', 'ruby', 'python'];
+// for (let language of programming) {
+//     console.log(`Use languages for data science ${language}`)
+// }
+
+//Testing Array in es6
+// function sum() {
+//     console.log(arguments);
+// }
+// sum(1, 2, 1)
+
+// console.log(Array.from("Hello world"))
+
+// const boxes = document.querySelectorAll('.box');
+// //ES5 
+// var boxesArr5 = Array.prototype.slice.call(boxes);
+// boxesArr5.forEach(function(cur) {
+//     cur.style.backgroundColor =
+//         'dodgerblue';
+// });
+
+// //ES6
+// const boxesArr6 = Array.from(boxes);
+// boxesArr6.forEach(cur => cur.style.backgroundColor = 'dodgerblue')
+
+
+
+// //ES5
+// // for (var i = 0; i < boxesArr5.length; i++) {
+// //     if (boxesArr5[i].className === 'box blue') {
+// //         //continue;
+// //         break;
+// //     }
+// //     boxesArr5[i].textContent = 'I changed to blue'
+// // }
+
+
+// //ES^
+// for (const cur of boxesArr6) {
+//     // if (boxesArr6.className === 'box blue') {
+//     // if (cur.className === 'box blue') {
+//     if (cur.className.includes('blue')) {
+
+
+//         continue;
 //     }
-//     boxesArr5[i].textContent = 'I changed to blue'
+//     cur.textContent = 'I change blue'
 // }
 
 
-//ES^
-for (const cur of boxesArr6) {
-    // if (boxesArr6.className === 'box blue') {
-    // if (cur.className === 'box blue') {
-    if (cur.className.includes('blue')) {
+// //ES5
+// // var ages = [12, 17, 22, 8, 12, 11];
+// // // var tages = ages.map(function(cur) {
+// // //     return cur >= 18;
+// // // })
+// // // console.log(tages);
+
+// // // console.log(tages.indexOf(true));
+// // // console.log(ages[tages.indexOf(true)]);
+
+// // //ES6
+// // // ages.findIndex(index and intire array)
+// // var tages2 = ages.findIndex(cur => cur >= 18);
+// // console.log(tages2)
+// // console.log(ages.find(cur => cur >= 18));
+
+// //Destructuring array
+
+// // const teamPakistan = [
+// //     "Haris shoail(a/r)",
+// //     "babar Azam(bat)",
+// //     "fakhar zaman(bat)",
+// //     "imam(bat)",
+// //     "sarfraz(wk)",
+// //     "naseem(bowl)"
+// // ];
+// // // let firstopener, secondopener, allrounder, onedown;
+// // // [, , firstopener, secondopener] = teamPakistan;
+// // // // console.log(teamPakistan[0], teamPakistan[2])
+// // // console.log(allrounder, onedown, firstopener, secondopener);
+
+// // let [, , striker, nonstriker, ...team] = teamPakistan;
 
 
-        continue;
-    }
-    cur.textContent = 'I change blue'
-}
+// // console.log(striker, nonstriker, team);
 
+// // let tmp = striker;
+// // striker = nonstriker;
+// // nonstriker = tmp;
+// // [striker, nonstriker] = [nonstriker, striker]
 
-//ES5
-// var ages = [12, 17, 22, 8, 12, 11];
-// // var tages = ages.map(function(cur) {
-// //     return cur >= 18;
-// // })
-// // console.log(tages);
+// // console.log(striker, nonstriker);
 
-// // console.log(tages.indexOf(true));
-// // console.log(ages[tages.indexOf(true)]);
+// // let a = 'hamza';
+// // let b = 'ali';
 
-// //ES6
-// // ages.findIndex(index and intire array)
-// var tages2 = ages.findIndex(cur => cur >= 18);
-// console.log(tages2)
-// console.log(ages.find(cur => cur >= 18));
-
-//Destructuring array
-
-const teamPakistan = [
-    "Haris shoail(a/r)",
-    "babar Azam(bat)",
-    "fakhar zaman(bat)",
-    "imam(bat)",
-    "sarfraz(wk)",
-    "naseem(bowl)"
-];
-// let firstopener, secondopener, allrounder, onedown;
-// [, , firstopener, secondopener] = teamPakistan;
-// // console.log(teamPakistan[0], teamPakistan[2])
-// console.log(allrounder, onedown, firstopener, secondopener);
-
-let [, , striker, nonstriker, ...team] = teamPakistan;
-
-
-console.log(striker, nonstriker, team);
-
-// let tmp = striker;
-// striker = nonstriker;
-// nonstriker = tmp;
-// [striker, nonstriker] = [nonstriker, striker]
-
-// console.log(striker, nonstriker);
-
-// let a = 'hamza';
-// let b = 'ali';
-
-// [a, b] = [b, a]
-// console.log(a, b)
+// // [a, b] = [b, a]
+// // console.log(a, b)
