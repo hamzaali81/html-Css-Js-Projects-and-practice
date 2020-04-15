@@ -276,36 +276,96 @@
 
 //New Concept inheritance
 
-class People {
-    constructor(name, job, country) {
-        this.name = name;
-        this.job = job;
-        this.country = country;
-    }
-    sayHi() {
-        console.log(`Hi ,I'm ${name}, I'm ${job} work in ${country}`)
-    }
-}
-class Player extends People {
-    constructor(name, age, job, country) {
-        super(name, job, country); //super initialize people cinstructor
-        // this.name = name;
-        this.age = age;
-    }
-    greet() {
-        console.log("hello this is " + this.name + "and age is" + this.age)
+// class People {
+//     constructor(name, job, country) {
+//         this.name = name;
+//         this.job = job;
+//         this.country = country;
+//     }
+//     sayHi() {
+//         console.log(`Hi ,I'm ${name}, I'm ${job} work in ${country}`)
+//     }
+// }
+// class Player extends People {
+//     constructor(name, age, job, country) {
+//         super(name, job, country); //super initialize people cinstructor
+//         // this.name = name;
+//         this.age = age;
+//     }
+//     greet() {
+//         console.log("hello this is " + this.name + "and age is" + this.age)
 
+//     }
+//     get nick() {
+//         return this.nick.toUpperCase();
+//     }
+//     set nick(value) {
+//         this.nickname = value;
+//     }
+//     static description() { //not work instance work direct class
+//         console.log("This is description")
+//     }
+// }
+
+// const team1 = new Player('hamza', 21, 'cricketer', 'pakistan');
+// const team2 = new People('hamza', 'student', 'pakistan')
+
+
+/////////////////////////////////////
+//Arrays 
+
+
+const boxes = document.querySelectorAll('.box');
+//ES5 
+var boxesArr5 = Array.prototype.slice.call(boxes);
+boxesArr5.forEach(function(cur) {
+    cur.style.backgroundColor =
+        'dodgerblue';
+});
+
+//ES6
+const boxesArr6 = Array.from(boxes);
+boxesArr6.forEach(cur => cur.style.backgroundColor = 'dodgerblue')
+
+
+
+//ES5
+// for (var i = 0; i < boxesArr5.length; i++) {
+//     if (boxesArr5[i].className === 'box blue') {
+//         //continue;
+//         break;
+//     }
+//     boxesArr5[i].textContent = 'I changed to blue'
+// }
+
+
+//ES^
+for (const cur of boxesArr6) {
+    // if (boxesArr6.className === 'box blue') {
+    // if (cur.className === 'box blue') {
+    if (cur.className.includes('blue')) {
+
+
+        continue;
     }
-    get nick() {
-        return this.nick.toUpperCase();
-    }
-    set nick(value) {
-        this.nickname = value;
-    }
-    static description() { //not work instance work direct class
-        console.log("This is description")
-    }
+    cur.textContent = 'I change blue'
 }
 
-const team1 = new Player('hamza', 21, 'cricketer', 'pakistan');
-const team2 = new People('hamza', 'student', 'pakistan')
+
+//ES5
+var ages = [12, 17, 22, 8, 12, 11];
+// var tages = ages.map(function(cur) {
+//     return cur >= 18;
+// })
+// console.log(tages);
+
+// console.log(tages.indexOf(true));
+// console.log(ages[tages.indexOf(true)]);
+
+//ES6
+// ages.findIndex(index and intire array)
+var tages2 = ages.findIndex(cur => cur >= 18);
+console.log(tages2)
+console.log(ages.find(cur => cur >= 18));
+
+//Destructuring array
