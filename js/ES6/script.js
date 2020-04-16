@@ -437,24 +437,67 @@ var sum = addFour(18, 11, 3, 8);
 console.log(sum);
 
 //ES5
-var ages = [18, 11, 12, 31];
-var sum2 = addFour.apply(null, ages);
-console.log(sum2)
+// var ages = [18, 11, 12, 31];
+// var sum2 = addFour.apply(null, ages);
+// console.log(sum2)
+
+// //ES6
+// const sum3 = addFour(...ages);
+
+// console.log(sum3);
+
+// const familySmith = ['john', 'jane'];
+// const familyMiller = ['Mary', 'viller'];
+
+// const bigFamily = [...familySmith, ...familyMiller];
+// console.log(bigFamily);
+
+// const h = document.querySelector('h1');
+// const boxes = document.querySelectorAll('.box');
+// const all = [h, ...boxes];
+// Array.from(all).forEach(cur => {
+//     cur.style.color = 'purple'
+// });
+
+
+//Rest parameter 
+//allow us arbitary number of arguments in a function
+
+
+//ES5
+// function fullAge() {
+//     // console.log(arguments);
+//     var argsArr = Array.prototype.slice.call(arguments);
+//     argsArr.forEach(cur => {
+//         console.log((2020 - cur) >= 18);
+//     })
+// }
+// fullAge(2005, 1992, 1998);
+
+// //ES6
+// function fullAge2(...year) {
+//     year.forEach(cur => console.log((2020 - cur) >= 18))
+// }
+// fullAge2(1999, 2003, 1992);
+
+//ES5
+function fullAge(limit) {
+    // console.log(arguments);
+    // var argsArr = Array.prototype.slice.call(arguments);
+    var argsArr = Array.prototype.slice.call(arguments, 1);
+    // console.log(argsArr)
+    // argsArr.forEach(cur => {
+    //     console.log((2020 - cur) >= 18);
+    // })
+    // console.log(argsArr)
+    argsArr.forEach(cur => {
+        console.log((2020 - cur) >= limit);
+    })
+}
+fullAge(2005, 1992, 1998);
 
 //ES6
-const sum3 = addFour(...ages);
-
-console.log(sum3);
-
-const familySmith = ['john', 'jane'];
-const familyMiller = ['Mary', 'viller'];
-
-const bigFamily = [...familySmith, ...familyMiller];
-console.log(bigFamily);
-
-const h = document.querySelector('h1');
-const boxes = document.querySelectorAll('.box');
-const all = [h, ...boxes];
-Array.from(all).forEach(cur => {
-    cur.style.color = 'purple'
-});
+function fullAge2(...year) {
+    year.forEach(cur => console.log((2020 - cur) >= 18))
+}
+fullAge2(1999, 2003, 1992)
