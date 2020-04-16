@@ -11,56 +11,56 @@
 </head>
 
 <body>
-    <img src="logo.png" alt="Sylani logo">
+    <img src="logo.png" alt="Sylani logo" class="center">
     <h1>
         student Registeration form
     </h1>
     <table>
         <form action="#">
             <tr>
-                <td>first name</td>
-                <td><input type="text" placeholder="Enter the name"></td>
+                <!-- <td>first name</td> -->
+                <td><label for="">first name</label><input type="text" placeholder="Enter the name" name="first name" maxlength="30" size="20" required>(max 30 characters a-z and A-Z)</td>
 
             </tr>
 
-            <tr>
-                <td>lastname</td>
-                <td><input type="text" placeholder="Enter the last name"></td>
+            <tr class="inline">
+                <!-- <td>lastname</td> -->
+                <td><label for="">last name</label><input type="text" placeholder="Enter the last name" name="lastname" maxlength="30" size="20" required>(max 30 characters a-z and A-Z)</td>
             </tr>
-            <tr>
+            <tr class="inline">
                 <td>date of birth</td>
                 <td><input type="date"></td>
             </tr>
-            <tr>
-                <td>email id</td>
-                <td><input type="email" placeholder="Enter email address"></td>
+            <tr class="inline">
+                <!-- <td>email id</td> -->
+                <td><label for="">email id</label><input type="email" placeholder="Enter email address"></td>
+            </tr>
+            <tr class="inline">
+                <!-- <td>mobile number</td> -->
+                <td><label for="">mobile number</label><input type="number" placeholder="Enter the mobile number"></td>
             </tr>
 
-            <tr>
-                <td>mobile number</td>
-                <td><input type="number" placeholder="Enter the mobile number"></td>
-            </tr>
-
 
             <tr>
-                <td><input type="radio">Male</td>
-                <td><input type="radio">Female</td>
+
+                <td><input type="radio"><label for="">Male</label></td>
+                <td><input type="radio"><label for="">Female</label></td>
             </tr>
-            <tr>
+            <tr class="inline">
                 <td>Address</td>
-                <td> <textarea name="" id="" cols="30" rows="10"></textarea></td>
+                <td> <textarea name="" id="" cols="40" rows="5"></textarea></td>
             </tr>
-            <tr>
-                <td>city</td>
-                <td><input type="text" placeholder="Enter city name"></td>
+            <tr class="inline">
+                <!-- <td>city</td> -->
+                <td><label for="">city</label><input type="text" placeholder="Enter city name"></td>
             </tr>
-            <tr>
-                <td>pin code</td>
-                <td><input type="text" placeholder="Enter pincode"></td>
+            <tr class="inline">
+                <!-- <td>pin code</td> -->
+                <td><label for="">pin code</label><input type="text" placeholder="Enter pincode"></td>
             </tr>
-            <tr>
-                <td>country</td>
-                <td><input type="text" placeholder="Enter country"></td>
+            <tr class="inline">
+                <!-- <td>country</td> -->
+                <td><label for="">country</label><input type="text" placeholder="Enter country"></td>
             </tr>
             <tr>
                 <td>hobbies</td>
@@ -75,64 +75,67 @@
             <tr>
 
             </tr>
+
+            <tr>
+                <td>qualification</td>
+                <td>Sl.No.Examination</td>
+                <td>Board</td>
+                <td>Percentage</td>
+                <td>Year of Passing</td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td>Class X </td>
+                <td><input type="text"></td>
+                <td> <input type="text"></td>
+                <td> <input type="text"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Class X!!</td>
+                <td><input type="text"></td>
+                <td> <input type="text"></td>
+                <td> <input type="text"></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td>Graduation</td>
+                <td><input type="text"></td>
+                <td> <input type="text"></td>
+                <td> <input type="text"></td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td>Masters</td>
+                <td> <input type="text"></td>
+                <td> <input type="text"></td>
+                <td> <input type="text"></td>
+
+            </tr>
+            <tr>
+                <td>courses</td>
+            </tr>
+            <tr>
+                <td>Applied for</td>
+                <td> <label for="">BCA<input type="radio"></label></td>
+                <td> <label for="">B.com<input type="radio"></label></td>
+                <td><label for="">B.Sc<input type="radio"></label></td>
+                <td><label for="">B.A<input type="radio"></label></td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="Submission.html"><input type="submit"></a>
+                </td>
+                <td>
+                    <a href="index.html"><input type="reset"></a>
+                </td>
+            </tr>
         </form>
     </table>
-    <table>
-        <tr>
-            <td>qualification</td>
-            <td>Sl.No.Examination</td>
-            <td>Board</td>
-            <td>Percentage</td>
-            <td>Year of Passing</td>
-        </tr>
-        <tr>
-            <th></th>
-            <td>Class X <input type="text"></td>
-            <td> <input type="text"></td>
-            <td> <input type="text"></td>
-        </tr>
-        <tr>
-            <td>Class X!! <input type="text"></td>
-            <td> <input type="text"></td>
-            <td> <input type="text"></td>
 
-        </tr>
-        <tr>
-            <td>Graduation <input type="text"></td>
-            <td> <input type="text"></td>
-            <td> <input type="text"></td>
-
-        </tr>
-        <tr>
-            <td>Masters <input type="text"></td>
-            <td> <input type="text"></td>
-            <td> <input type="text"></td>
-
-        </tr>
-        <tr>
-            <td>courses</td>
-            <td>Applied for</td>
-            <td> <label for=""><input type="radio"></label></td>
-            <td> <label for=""><input type="radio"></label></td>
-            <td><label for=""><input type="radio"></label></td>
-            <td><label for=""><input type="radio"></label></td>
-        </tr>
-        <tr>
-            <td> <input type="submit"></td>
-            <td><input type="reset"></td>
-        </tr>
-    </table>
-
-
-
-
-
-
-
-
-
-    </p>
-    </form>
 </body>
 
 </html>

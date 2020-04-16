@@ -1,0 +1,7 @@
+Shortcut
+Alt+shift+f=========> Alignment
+ol========li*2
+e.g
+<ol>
+li*2
+<ol>
