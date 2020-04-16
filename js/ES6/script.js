@@ -498,6 +498,8 @@ fullAge(2005, 1992, 1998);
 
 //ES6
 function fullAge2(...year) {
-    year.forEach(cur => console.log((2020 - cur) >= 18))
+    year.forEach(cur => console.log((2020 - limit) >= 18))
 }
 fullAge2(1999, 2003, 1992)
+
+//Default parameter
