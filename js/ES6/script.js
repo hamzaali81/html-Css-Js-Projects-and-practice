@@ -316,10 +316,10 @@
 // console.dir(Array);
 // [1,2,3].splice
 //Array.from()
-let str = "hello";
-console.log([...str]);
-const a = Array.from(str);
-console.log(a);
+// let str = "hello";
+// console.log([...str]);
+// const a = Array.from(str);
+// console.log(a);
 
 //ES5
 // let programming = ['java', 'ruby', 'python'];
@@ -365,9 +365,9 @@ console.log(a);
 // // }
 
 
-// //ES^
+// //ES6
 // for (const cur of boxesArr6) {
-//     // if (boxesArr6.className === 'box blue') {
+//     //Major mistake  if (boxesArr6.className === 'box blue') {
 //     // if (cur.className === 'box blue') {
 //     if (cur.className.includes('blue')) {
 
@@ -426,3 +426,35 @@ console.log(a);
 
 // // [a, b] = [b, a]
 // // console.log(a, b)
+
+
+//Spread operator
+
+function addFour(a, b, c, d) {
+    return a + b + c + d;
+}
+var sum = addFour(18, 11, 3, 8);
+console.log(sum);
+
+//ES5
+var ages = [18, 11, 12, 31];
+var sum2 = addFour.apply(null, ages);
+console.log(sum2)
+
+//ES6
+const sum3 = addFour(...ages);
+
+console.log(sum3);
+
+const familySmith = ['john', 'jane'];
+const familyMiller = ['Mary', 'viller'];
+
+const bigFamily = [...familySmith, ...familyMiller];
+console.log(bigFamily);
+
+const h = document.querySelector('h1');
+const boxes = document.querySelectorAll('.box');
+const all = [h, ...boxes];
+Array.from(all).forEach(cur => {
+    cur.style.color = 'purple'
+});
