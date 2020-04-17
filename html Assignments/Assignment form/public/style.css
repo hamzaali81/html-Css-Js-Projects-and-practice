@@ -10,10 +10,47 @@
         min-width: 80px; */
     }
     
+    .arrange {
+        margin-right: 70px;
+    }
+    
+    .arrange2 {
+        margin-right: 25px;
+    }
+    
+    .arrange3 {
+        margin-right: 85px;
+    }
+    
+    .arrange4 {
+        margin-right: 100px;
+    }
+    
+    .arrange5 {
+        margin-right: 115px;
+    }
+    
+    .arrange6 {
+        margin-right: 75px;
+    }
+    
     .inline {
         margin-left: 5px;
         display: block;
+        margin: 0;
     }
+    
+    .arrangement {
+        text-align: justify;
+        position: relative;
+        padding: 50px;
+    }
+    
+    .box1 {
+        margin: 20px 40px;
+    }
+    
+    .btn {}
     
     body {
         text-transform: uppercase;
@@ -43,4 +80,11 @@
     
     input {
         margin: 20px;
+    }
+    
+    .arrange7 {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-radius: 10px;
     }
