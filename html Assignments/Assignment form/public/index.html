@@ -16,7 +16,7 @@
         student Registeration form
     </h1>
     <table>
-        <form action="#">
+        <form action="Submission.html">
             <tr>
                 <!-- <td>first name</td> -->
                 <td class="arrange"><label for="" class="arrange">first name</label><input type="text" placeholder="Enter the name" name="first name" maxlength="30" size="20" required>(max 30 characters a-z and A-Z)</td>
@@ -31,7 +31,7 @@
                 <td>date of birth</td>
                 <!-- <td><label for="" class="arrange"></label><input type="date" size="20"></td> -->
                 <td class="arrangement">
-                    <select name="month" id="">
+                    <select name="month" id="month">
                     <option value="month">Month</option>
                     <option value="january">January</option>
                     <option value="month">February</option>
@@ -46,7 +46,7 @@
                     <option value="month">November</option>
                     <option value="month">December</option>
                 </select>
-                    <select name="days" id="">
+                    <select name="days" id="days">
     <option value="days">Days</option>
     <option value="">1</option>
     <option value="">2</option>
@@ -54,7 +54,7 @@
     <option value="">4</option>
     <option value="">5</option>
 </select>
-                    <select name="year" id="">
+                    <select name="year" id="year">
 
     <option value="year">Year</option>
     <option value="2020">2020</option>
@@ -63,17 +63,14 @@
 </select>
                 </td>
 
-
-
-
             </tr>
             <tr>
                 <!-- <td>email id</td> -->
-                <td><label for="" class="arrange3">email id</label><input type="email" placeholder="Enter email address" size="20"></td>
+                <td><label for="" class="arrange3">email id</label><input type="email" placeholder="Enter email address" size="20" required></td>
             </tr>
             <tr>
                 <!-- <td>mobile number</td> -->
-                <td><label for="" class="arrange2">mobile number</label><input size="20" type="text" placeholder="Enter the mobile number" maxlength="10" size="20">(10 digit number)</td>
+                <td><label for="" class="arrange2">mobile number</label><input size="20" type="text" placeholder="Enter the mobile number" maxlength="10" size="20" required>(10 digit number)</td>
             </tr>
 
 
@@ -92,15 +89,15 @@
             </tr>
             <tr>
                 <!-- <td>city</td> -->
-                <td><label for="" class="arrange5">city</label><input type="text" placeholder="Enter city name" maxlength="30" size="20">(MAX 30 CHARACTERS A-Z AND A-Z)</td>
+                <td><label for="city" class="arrange5">city</label><input type="text" placeholder="Enter city name" maxlength="30" size="20">(MAX 30 CHARACTERS A-Z AND A-Z)</td>
             </tr>
             <tr>
                 <!-- <td>pin code</td> -->
-                <td><label for="" class="arrange6">pin code</label><input type="text" placeholder="Enter pincode"></td>
+                <td><label for="pin code" class="arrange6">pin code</label><input type="text" placeholder="Enter pincode"></td>
             </tr>
             <tr class="inline">
                 <!-- <td>country</td> -->
-                <td><label for="" class="arrange6">country</label><input type="text" placeholder="Enter country"></td>
+                <td><label for="country" class="arrange6">country</label><input type="text" placeholder="Enter country"></td>
             </tr>
             <tr>
                 <td>hobbies</td>
@@ -112,10 +109,6 @@
                 <td><input type="text"></td>
             </tr>
             <tr>
-
-            </tr>
-
-            <tr>
                 <th>qualification</th>
                 <th>Sl.No.Examination</th>
                 <th>Board</th>
@@ -126,32 +119,32 @@
             <tr style="text-align: center;">
                 <td></td>
                 <td>Class X </td>
-                <td><input type="text"></td>
-                <td> <input type="text"></td>
-                <td> <input type="text"></td>
+                <td><input type="text" name="board"></td>
+                <td> <input type="text" name="Percentage"></td>
+                <td> <input type="text" name="year of Passing"></td>
             </tr>
             <tr style="text-align: center;">
                 <td></td>
                 <td>Class X!!</td>
-                <td><input type="text"></td>
-                <td> <input type="text"></td>
-                <td> <input type="text"></td>
+                <td><input type="text" name="board"></td>
+                <td> <input type="text" name="percentage"></td>
+                <td> <input type="text" name="year of passing"></td>
 
             </tr>
             <tr style="text-align: center;">
                 <td></td>
                 <td>Graduation</td>
-                <td><input type="text"></td>
-                <td> <input type="text"></td>
-                <td> <input type="text"></td>
+                <td><input type="text" name="board"></td>
+                <td> <input type="text" name="percentage"></td>
+                <td> <input type="text" name="year of passing"></td>
 
             </tr>
             <tr style="text-align: center;">
                 <td></td>
                 <td>Masters</td>
-                <td> <input type="text"></td>
-                <td> <input type="text"></td>
-                <td> <input type="text"></td>
+                <td> <input type="text" name="board"></td>
+                <td> <input type="text" name="percentage"></td>
+                <td> <input type="text" name="year of passing"></td>
 
             </tr>
             <tr>
@@ -159,10 +152,10 @@
             </tr>
             <tr>
                 <td>Applied for</td>
-                <td> <label for="">BCA<input type="radio"></label></td>
-                <td> <label for="">B.com<input type="radio"></label></td>
-                <td><label for="">B.Sc<input type="radio"></label></td>
-                <td><label for="">B.A<input type="radio"></label></td>
+                <td> <label for="BCA">BCA<input type="radio"></label></td>
+                <td> <label for="b.com">B.com<input type="radio"></label></td>
+                <td><label for="bsc">B.Sc<input type="radio"></label></td>
+                <td><label for="B.A">B.A<input type="radio"></label></td>
             </tr>
 
             <!-- <td class="arrange7">
@@ -175,8 +168,10 @@
                 <button class="btn"><a href="index.html"></a>Reset</button>
             </P> -->
             <tr class="arrange7">
-                <td><button class="btn"> <a href="Submission.html">Submit</a></button></td>
-                <td><button class="btn"><a href="index.html">Reset</a></td>
+
+                <td> <button type="submit" href="Submission.html">Submit</button></td>
+                <td> <button type="reset" href="index.html">Reset</button></td>
+
             </tr>
 
 
