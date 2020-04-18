@@ -1,0 +1,56 @@
+/*Navbar Styling*/
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #4c6ca0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+}
+
+.navbar li a:hover {
+    background-color: #446190;
+}
+
+
+/*Side Menu*/
+
+.side-menu {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    border: 1px #ddd solid;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.side-menu li {
+    font-size: 18px;
+    line-height: 2.4em;
+    border-bottom: dotted 1px #ddd;
+}
+
+.side-menu li:last-child {
+    border: none;
+}
+
+.side-menu li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.side-menu li a:hover {
+    color: coral;
+}
