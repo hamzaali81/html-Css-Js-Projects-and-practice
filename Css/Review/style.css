@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     line-height: 1.4em;
 }
@@ -5,6 +9,10 @@ body {
 .container {
     max-width: 960px;
     margin: 30px auto;
+}
+
+.clr {
+    clear: both;
 }
 
 .box {
@@ -18,7 +26,14 @@ body {
     text-align: center;
 }
 
-#box3 {
+#box2 {
+    width: 60%;
     float: right;
-    width: 400px;
 }
+
+#box3 {
+    float: left;
+    width: 30%;
+}
+
+#box4 {}
