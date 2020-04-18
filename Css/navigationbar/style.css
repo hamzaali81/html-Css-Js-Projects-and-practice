@@ -20,6 +20,10 @@
     padding: 15px 20px;
 }
 
+p {
+    color: #000;
+}
+
 .navbar li a:hover {
     background-color: #446190;
 }

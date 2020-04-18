@@ -6,14 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form</title>
     <style>
-
+        body {
+            background-color: #605A87;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        div {
+            background-color: #fff;
+            width: 400px;
+            height: 650px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        
+        .menu {
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            line-height: 1.5em;
+            padding: 3px;
+            /* text-align: center; */
+            float: left;
+            color: #D4D5D5;
+        }
+        
+        .side {
+            float: left;
+        }
+        
+        footer {
+            text-align: center;
+            color: #fff;
+        }
+        
+        input {
+            border: 2px solid #E8EBEB;
+            width: 350px;
+            height: 30px;
+        }
+        
+        span {
+            text-align: center;
+        }
+        
+        button {
+            display: inline;
+            border: none;
+            width: 89%;
+            height: 5%;
+            background-color: #4ECF84;
+            border-radius: 5px;
+            color: #fff;
+        }
+        
+        a {
+            color: #4ECF84;
+            text-decoration: none;
+        }
     </style>
 </head>
 
 <body>
     <div>
-        <form action="#"></form>
+        <form action="#">
+            <h1>Sign Up</h1>
+            <p>it's free and only takes a minute</p>
+
+            <div class="menu">
+                <p>First Name</p>
+                <p>
+                    <input type="text" name="first name" id="name"></p>
+                <p>Last Name</p>
+                <p> <input type="text" name="lastname" id="name"></p>
+                <p>Email</p>
+                <p> <input type="email" name="mail"></p>
+                <p>Password</p>
+                <p><input type="password" name="password"></p>
+
+                <button>Sign Up</button>
+
+                <span><p>By clicking the Sign up button you agree to our</p></span>
+                <span><p> <a href="#" style="color: blue;">Terms & Condition</a> and <a href="#" style="color: blue;">Privacy Policy</a></p></span>
+            </div>
+        </form>
     </div>
+    <footer>Already have an account? <a href="#">Login Here</a> </footer>
 </body>
 
 </html>
