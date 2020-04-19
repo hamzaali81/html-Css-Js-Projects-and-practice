@@ -76,3 +76,20 @@ p {
     background: #444;
     color: #f7c08a;
 }
+
+
+/*Show Case*/
+
+#showcase {
+    background-image: url(../img/showcase.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    background-position: center;
+}
+
+#showcase .showcase-content {
+    color: #fff;
+    text-align: center;
+    padding-top: 170px;
+}
