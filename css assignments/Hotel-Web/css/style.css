@@ -77,8 +77,12 @@ p {
 }
 
 .bg-primary {
-    background: #333;
-    color: #fff;
+    background: #f7c08a;
+    color: #333;
+}
+
+.clr {
+    clear: both;
 }
 
 
@@ -172,4 +176,28 @@ p {
 
 #home-info .info-content p {
     padding-bottom: 30px;
+}
+
+
+/*Features*/
+
+.box {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+    text-align: center;
+}
+
+.box i {
+    margin-bottom: 10px;
+}
+
+
+/*Footer*/
+
+#main-footer {
+    text-align: center;
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
 }
