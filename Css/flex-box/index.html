@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-box</title>
+
+    <style>
+        #container {
+            display: flex;
+            flex-direction: row;
+            /* flex-direction: row-reverse; */
+            flex-wrap: wrap;
+            /* flex-flow: row wrap; */
+        }
+        
+        .item {
+            background-color: #f4f4f4;
+            border: #ccc solid 1px;
+            padding: 1rem;
+            text-align: center;
+            margin: 0.75rem;
+            flex: 1;
+        }
+        
+        .item:first-child {
+            /* flex: 2; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <div class="item">
+            <h3>Item1</h3>
+        </div>
+        <div class="item">
+            <h3>Item2</h3>
+        </div>
+        <div class="item">
+            <h3>Item3</h3>
+        </div>
+        <div class="item">
+            <h3>Item4</h3>
+        </div>
+        <div class="item">
+            <h3>Item5</h3>
+        </div>
+        <div class="item">
+            <h3>Item6</h3>
+        </div>
+        <div class="item">
+            <h3>Item7</h3>
+        </div>
+        <div class="item">
+            <h3>Item8</h3>
+        </div>
+        <div class="item">
+            <h3>Item9</h3>
+        </div>
+        <div class="item">
+            <h3>Item10</h3>
+        </div>
+    </div>
+</body>
+
+</html>
