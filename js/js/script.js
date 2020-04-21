@@ -109,21 +109,107 @@ var sum = 0;
 
 //Find Array helper
 //ES5
-var users = [
-    { name: 'hamza', id: 3 },
-    { name: 'ali' },
-    { name: 'hamza' }
-]
-var user;
-// for (var i = 0; i < users.length; i++) {
-//     if (users[i].name === 'hamza') {
-//         user = users[i];
-//         break;
-//     }
+// var users = [
+//     { name: 'hamza', id: 3 },
+//     { name: 'ali' },
+//     { name: 'hamza' }
+// ]
+// var user;
+// // for (var i = 0; i < users.length; i++) {
+// //     if (users[i].name === 'hamza') {
+// //         user = users[i];
+// //         break;
+// //     }
+// // }
+// // console.log(user);
+// //ES6
+// var a = users.find(function(user) {
+//     return user.name === 'hamza';
+// });
+// console.log(a)
+
+
+// function Car(model) {
+//     this.model = model;
 // }
-// console.log(user);
-//ES6
-var a = users.find(function(user) {
-    return user.name === 'hamza';
-});
+
+// var cars = [
+//     new Car('Buick'),
+//     new Car('Camamro'),
+//     new Car('focus')
+// ]
+// var a = cars.find(function(car) {
+//     return car.model === 'Buick'
+// })
+// console.log(a);
+
+
+// var posts = [
+//     { id: 1, title: 'New Post' },
+//     { id: 2, title: 'Old Post' }
+// ]
+// var comment = { postId: 1, content: 'Great Post' };
+
+// function postForComment(posts, comment) {
+//     return posts.find(function(post) {
+//         return post.id === comment.postId;
+//     })
+// }
+// var a = postForComment(posts, comment);
+// console.log(a);
+
+var computers = [
+    { name: 'Apple', ram: 24 },
+    { name: 'Compaq', ram: 4 },
+    { name: 'Acer', ram: 32 }
+];
+var computerCanrunProgram = true;
+var onlySomeComputercanRunProgram = false;
+
+
+// for (var i = 0; i < computers.length; i++) {
+//     var computer = computers[i];
+//     if (computer.ram < 16) {
+//         computerCanrunProgram;
+//     } else {
+//         onlySomeComputercanRunProgram;
+//     }
+
+// }
+// console.log(computer)
+// var a = computers.every(function(computer) {
+//     return computer.ram > 2;
+// });
+// console.log(a);
+
+
+// var b = computers.some(function(computer) {
+//     return computer.ram > 16;
+// });
+// console.log(b)
+
+// var names = [
+//     "hamza",
+//     "ali",
+//     "ahmed"
+// ];
+// var r1 = names.every(function(name) {
+//     return name.length > 4;
+// });
+// console.log(r1);
+// var r2 = names.some(function(name) {
+//     return name.length > 4;
+// });
+// console.log(r2);
+
+function Field(value) {
+    this.value = value
+}
+Field.prototype.validate = function() {
+    return this.value.length > 0;
+}
+
+var username = new Field("hamza@");
+var password = new Field("123456");
+var a = username.validate();
 console.log(a)
