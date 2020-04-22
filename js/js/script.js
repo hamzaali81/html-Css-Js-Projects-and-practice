@@ -202,14 +202,30 @@ var onlySomeComputercanRunProgram = false;
 // });
 // console.log(r2);
 
-function Field(value) {
-    this.value = value
-}
-Field.prototype.validate = function() {
-    return this.value.length > 0;
-}
+// function Field(value) {
+//     this.value = value
+// }
+// Field.prototype.validate = function() {
+//     return this.value.length > 0;
+// }
 
-var username = new Field("hamza@");
-var password = new Field("123456");
-var a = username.validate();
-console.log(a)
+// var username = new Field("hamza@");
+// var password = new Field("123456");
+// var birthday = new Field("10/10/2020")
+//     // var a = username.validate();
+//     // var b = password.validate();
+
+// var fields = [username, password, birthday]
+//     // console.log(a);
+//     // console.log(b);
+// var formIsValid = fields.every(function(field) {
+//     return field.validate();
+// })
+
+// if (formIsValid) {
+//     //allow user to submit 
+// } else {
+//     //form rejected
+// }
+
+//Reduce helper
