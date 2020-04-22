@@ -229,3 +229,55 @@ var onlySomeComputercanRunProgram = false;
 // }
 
 //Reduce helper
+
+// var numbers = [10, 20, 30];
+// // var sum = 0;
+
+// // for (var i = 0; i < numbers.length; i++) {
+// //     sum += numbers[i];
+// //     // console.log(sum)
+// // }
+// // console.log(sum)
+
+// var a = numbers.reduce(function(sum, number) {
+//     return number + sum;
+
+// }, 0)
+// console.log(a)
+
+// var primaryColors = [
+//     { color: 'red' }, { color: 'yellow' }, { color: 'green' }
+// ];
+
+// //['red','yellow','grren']
+
+// var a = primaryColors.reduce(function(previous, primaryColor) {
+//     previous.push(primaryColor.color)
+//     return previous;
+// }, [])
+// console.log(a)
+
+// "()()()()"
+// "(((())))"
+// "))))"
+// "()))))"
+// ")()("
+
+
+// function balancedParens(string) {
+//     return string.split("").reduce(function(previous, char) {
+//         if (previous < 0) {
+//             return previous;
+//         }
+//         if (char === "(") {
+//             return ++previous;
+//         }
+//         if (char === ")") { return --previous }
+//         return previous;
+//     }, 0);
+// }
+// // var a = balancedParens("((((");
+// balancedParens("(())((");
+// console.log(a)
+
+//const and let
