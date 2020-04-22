@@ -282,16 +282,86 @@ var onlySomeComputercanRunProgram = false;
 
 //const and let
 
-function vowelCount(targetString) {
-    var vowels = ['a', 'e', 'i', 'o', 'u'];
-    var numbers = 0;
+// function vowelCount(targetString) {
+//     var vowels = ['a', 'e', 'i', 'o', 'u'];
+//     var numbers = 0;
 
-    for (var i = 0; i < targetString.length; i++) {
-        if (vowels.includes(targetString[i])) {
-            numbers++;
-        }
-    }
-    return numbers;
-}
-var a = vowelCount('aertiouyresaruioiouaedgh');
-console.log(a);
+//     for (var i = 0; i < targetString.length; i++) {
+//         if (vowels.includes(targetString[i])) {
+//             numbers++;
+//         }
+//     }
+//     return numbers;
+// }
+// var a = vowelCount('aertiouyresaruioiouaedgh');
+// console.log(a);
+//Rest and spread operator
+//1.Rest
+//ES5
+// function addNumberS(numbers) {
+//     const numbers = [a, b, c, d, e, ]
+//     return numbers.reduce((sum, number) => {
+//         return sum + number;
+//     }, 0)
+// }
+
+
+// var a = addNumberS(1, 2, 3, 4, 5);
+// console.log(a);
+//ES6
+// function addNumberS(...numbers) {
+//     //function addNumberS(a,b,c,d,e) {
+//     // function addNumberS(numbers) {
+//     // const numbers = [a, b, c, d, e, ]
+//     return numbers.reduce((sum, number) => {
+//         return sum + number;
+//     }, 0)
+// }
+
+
+// var a = addNumberS(1, 2, 3, 4, 5);
+// console.log(a);
+
+//2.Spread
+
+// const defaultColors = ['red', 'green'];
+// const userFavoriteColors = ['orange', 'yellow']
+// const coolColors = ['skyblue', 'blue']
+// var colorslist = [...defaultColors, ...userFavoriteColors, ...coolColors, 'purple'];
+// console.log(colorslist)
+
+// function validateShoppingList(...items) {
+//     if (items.indexOf('milk') < 0) {
+//         return ['milk', ...items]
+//     }
+// }
+
+// console.log(validateShoppingList('orange', 'apple'))
+
+// const MathLibrary = {
+//     calculateProduct(a, b) {
+//         return a * b;
+//     },
+//     multiply(a, b) {
+//         return a * b;
+//     }
+// }
+
+// const MathLibrary = {
+//     calculateProduct(...rest) {
+//         console.log('Please use multiply method instead')
+//         return this.multiply(...rest);
+//     },
+//     multiply(a, b) {
+//         return a * b;
+//     }
+// }
+
+// var a = MathLibrary.calculateProduct(2, 3);
+// console.log(a)
+
+//Asynchronous JS
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => response.json())
+    .then(json => console.log(json))

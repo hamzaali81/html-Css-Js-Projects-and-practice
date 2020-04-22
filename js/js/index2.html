@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous JS</title>
+</head>
+
+<body>
+    <h1>Asynchronous JS</h1>
+    <script>
+        const second = () => {
+            // console.log('Hey there 2!')
+            setTimeout(() => {
+                console.log("Pakistan Zindabad")
+            }, 3000)
+
+        }
+        const first = () => {
+            console.log('Hey there!')
+            second();
+            console.log('The End!')
+
+        }
+        first();
+    </script>
+</body>
+
+</html>
