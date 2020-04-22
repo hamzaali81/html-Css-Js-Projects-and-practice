@@ -281,3 +281,17 @@ var onlySomeComputercanRunProgram = false;
 // console.log(a)
 
 //const and let
+
+function vowelCount(targetString) {
+    var vowels = ['a', 'e', 'i', 'o', 'u'];
+    var numbers = 0;
+
+    for (var i = 0; i < targetString.length; i++) {
+        if (vowels.includes(targetString[i])) {
+            numbers++;
+        }
+    }
+    return numbers;
+}
+var a = vowelCount('aertiouyresaruioiouaedgh');
+console.log(a);
