@@ -10,20 +10,45 @@
 <body>
     <h1>Asynchronous JS</h1>
     <script>
-        const second = () => {
-            // console.log('Hey there 2!')
-            setTimeout(() => {
-                console.log("Pakistan Zindabad")
-            }, 3000)
+        // const second = () => {
+        //     // console.log('Hey there 2!')
+        //     setTimeout(() => {
+        //         console.log("Pakistan Zindabad")
+        //     }, 3000)
 
-        }
-        const first = () => {
-            console.log('Hey there!')
-            second();
-            console.log('The End!')
+        // }
+        // const first = () => {
+        //     console.log('Hey there!')
+        //     second();
+        //     console.log('The End!')
 
-        }
-        first();
+        // }
+        // first();
+
+        // function getRecipe() {
+        //     setTimeout(() => {
+        //         const recipeID = [523, 883, 432, 974];
+        //         console.log(recipeID);
+
+        //         setTimeout((id) => {
+        //             const recipe = {
+        //                 title: 'pasta',
+        //                 publisher: 'hamza'
+        //             }
+        //             console.log(`${id}: ${recipe.title}`);
+
+
+        //             setTimeout(publisher => {
+        //                 const recipe = {
+        //                     title: 'Italian pizza',
+        //                     publisher: 'ali'
+        //                 }
+        //                 console.log(recipe)
+        //             }, 1500, recipe.publisher)
+        //         }, 1500, recipeID[2]);
+        //     }, 1500)
+        // }
+        // getRecipe();
     </script>
 </body>
 
