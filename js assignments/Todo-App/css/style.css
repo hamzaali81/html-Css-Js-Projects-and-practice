@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: gainsboro;
+    overflow: hidden;
 }
 
 .container {
@@ -46,6 +47,7 @@ body {
     padding: 15px;
     margin: 10px;
     display: inline;
+    /* border-bottom: 2px solid black; */
 }
 
 p {
@@ -88,8 +90,7 @@ ul {
 } */
 
 .add-item {
-    margin: 10px;
-    top: 300px;
+    margin-top: 200px;
 }
 
 input {
