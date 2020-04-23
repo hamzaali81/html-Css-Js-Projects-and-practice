@@ -2,7 +2,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: gainsboro;
-    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .container {
@@ -10,6 +12,7 @@ body {
     padding: 30px;
     width: 10px;
     margin: 0 auto;
+    border-radius: 10px;
 }
 
 .header {
@@ -57,6 +60,7 @@ p {
     align-items: stretch; */
     margin: 0px;
     padding: 5px;
+    border-bottom: 2px solid;
 }
 
 .del {
@@ -91,6 +95,8 @@ ul {
 
 .add-item {
     margin-top: 200px;
+    border-top: 2px solid #F1E8E8;
+    border-bottom: 2px solid #F1E8E8;
 }
 
 input {
