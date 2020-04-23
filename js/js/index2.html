@@ -140,7 +140,15 @@
             })
 
         .catch(error =>
-            console.log(error))
+            console.log(error));
+
+        async function getWeatherAW() {
+            const result = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+            const data = await result.json;
+            console.log(data);
+        }
+
+        getWeatherAW();
     </script>
 </body>
 

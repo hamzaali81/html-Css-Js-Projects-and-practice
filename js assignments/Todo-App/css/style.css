@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: gainsboro;
+}
+
+.container {
+    background-position: center;
+    padding: 30px;
+    width: 10px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url('../img/bg.png');
+    width: 50vh;
+    height: 50vh;
+    background-size: cover;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.ref {
+    float: right;
+    padding: 20px;
+}
+
+#date {
+    vertical-align: bottom;
+    padding: 10px;
+    font-size: 200%;
+    position: absolute;
+    bottom: 320px;
+}
+
+.content {
+    margin: 0px;
+    padding: 10px;
+    background-color: #fff;
+    width: 330px;
+    height: 350px;
+    overflow: auto;
+}
+
+#list {
+    padding: 15px;
+    margin: 10px;
+    display: inline;
+}
+
+p {
+    /* position: relative; */
+    display: inline;
+    /* justify-content: space-between;
+    align-items: stretch; */
+    margin: 0px;
+    padding: 5px;
+}
+
+.del {
+    float: right;
+}
+
+.cir {
+    float: left;
+}
+
+ul {
+    padding: 10px;
+    list-style: none;
+    /* position: absolute; */
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.po {
+    font-size: 25px;
+    color: dodgerblue;
+}
+
+
+/* .po {
+    position: absolute;
+    bottom: 155px;
+    padding: 10px;
+    font-size: 20px;
+} */
+
+.add-item {
+    margin: 10px;
+    top: 300px;
+}
+
+input {
+    color: dodgerblue;
+    border: 2px solid gray;
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+    font-size: 20px;
+    /* margin: 10px; */
+    /* outline: none;
+    padding: 10px;
+    margin-bottom: 20px; */
+}
