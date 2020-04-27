@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Js</title>
+</head>
+
+<body>
+    <h1>Advance Javascript and ES6 Concepts</h1>
+    <script>
+        // var hamza = {
+        //     name: 'hamza',
+        //     yearOfbirth: 1999,
+        //     job: 'teacher'
+        // };
+        // var Person = function(name, yearOfbirth, job) {
+        //     this.name = name;
+        //     this.yearOfbirth = yearOfbirth;
+        //     this.job = job;
+        //     // this.calAge = function() {
+        //     //     console.log(2020 - this.yearOfbirth);
+        //     // }
+        // };
+        // // Person.prototype.calAge = function() {
+        // //     console.log(2020 - this.yearOfbirth)
+        // // }
+        // Person.prototype.lastname = 'ali'
+
+        // var hamza = new Person('hamza', 1999, 'teacher');
+        // // hamza.calAge();
+        // var ali = new Person('ahmed', 1997, 'designer');
+        // // ali.calAge();
+        // console.log(ali.lastname);
+
+        //Another way
+        var Person5 = function(name, yearOfbirth, job) {
+            this.name = name;
+            this.yearOfbirth = yearOfbirth;
+            this.job = job;
+        }
+
+        Person5.prototype.calAge = function() {
+            var age = new Date().getFullyear - this.yearOfbirth;
+            console.log(age);
+        };
+
+
+        var hamza = new Person5('hamza', 1999, 'designer');
+        hamza.calAge();
+    </script>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 /*Stacks*/
 
 var letters = [];
-// var word = "racecar";
+// var word = "racecar";  //racecar
 var word = "code";
 var rword = "";
 
@@ -22,6 +22,8 @@ if (rword === word) {
     console.log(word + 'is not a palindrome');
 }
 
+
+//new stack
 //Creates a stack
 var stack = function() {
     this.count = 0;
@@ -55,7 +57,7 @@ var stack = function() {
         }
 
     //Returns the value at the end of the stack
-    this.peek = function(value) {
+    this.peek = function() {
         return this.storage[this.count - 1];
     }
 }
