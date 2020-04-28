@@ -1,4 +1,9 @@
 
+/*         
+#204ac8
+#1a3ba0
+#3a61d4
+*/
 
 body{
     margin: 0;
@@ -18,7 +23,7 @@ align-items: center;
 header{
     margin: 0;
     padding:0  ;
-background-color: royalblue;
+background-color:#3a61d4 ;
 color: #fff;
 padding: 10px;
 }
@@ -56,4 +61,12 @@ header.sec ul li{
     display: flex;
     justify-content: space-around;
 
+}
+
+
+/*Part footer*/
+
+.footer{
+    background-color: #3a61d4;
+    color: #fff;
 }
