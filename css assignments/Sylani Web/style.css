@@ -1,10 +1,57 @@
+
+
 body{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+
+/*Main Header*/
+.main{
+display: inline-block;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
 header{
     margin: 0;
     padding:0  ;
 background-color: royalblue;
+color: #fff;
+padding: 10px;
+}
+
+div.icon{
+    letter-spacing: 10px;
+    font-size: 15px;
+}
+
+div.btn{
+    font-size: 13.5px;
+    color: #666666;
+    
+}
+div.paragraph{
+    font-size: 14px;
+    
+}
+
+/*Part 2 Header*/
+
+
+.sec{
+    background-color: #DCDADA;
+}
+
+header.sec ul li{
+    display: inline-block;
+    
+}
+
+.one{
+    display: flex;
+    justify-content: space-around;
+
 }
