@@ -176,6 +176,7 @@ blockquote{
     
 }
 .main-box1{
+    background-color:  rgba(245, 244, 244, 0.836);
     display: flex;
     justify-content: space-around;
     align-content: space-between;
@@ -185,6 +186,7 @@ blockquote{
     
 }
 .main-box2{
+    background-color:  rgba(245, 244, 244, 0.836);
     display: flex;
     justify-content: space-around;
     align-content: space-between;
@@ -196,6 +198,10 @@ blockquote{
     width: 30.33%;
     height: 37.33%;
     text-align: center;
+    box-shadow:  5px 5px 5px 5px rgb(240, 240, 240);
+padding: 10px 10px;
+margin: 20px;
+}
     
 
 }
