@@ -53,8 +53,8 @@ div.paragraph{
     background-color: rgba(245, 244, 244, 0.836);
     color: #666666;
     
+    
 }
-
 
 header.sec ul li{
     display: inline-block;
@@ -65,6 +65,7 @@ header.sec ul li{
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 
 }
 
@@ -80,6 +81,71 @@ div.list ul li{
     text-align: center;
     color: #fff;
 }
+
+
+/*INTRODUCTION*/
+
+ section.tri .heading-img{
+
+ }
+
+.colr1{
+    color: #3a61d4;
+    font-family:Merriweather, serif;
+    font-weight: bold;
+}
+.colr2{
+    color:rgb(66, 121, 0);
+    font-family:Merriweather, serif;
+
+   font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Part footer*/
 
