@@ -85,23 +85,46 @@ div.list ul li{
 
 /*INTRODUCTION*/
 
- section.tri .heading-img{
+.tri{
+   
+    text-align: center;
+    background-color:rgba(245, 244, 244, 0.836) ;
+}
+
+  .heading-img{
+      line-height: 17px;
+      top: 80px;
+      padding: 40px 40px;
+      margin: 100px;
 
  }
 
 .colr1{
     color: #3a61d4;
     font-family:Merriweather, serif;
+ font-size: 30px;
     font-weight: bold;
 }
 .colr2{
     color:rgb(66, 121, 0);
     font-family:Merriweather, serif;
-
+font-size: 30px;
    font-weight: bold;
 
 }
+.img1{
+    line-height: 10px;
+    margin-bottom: 10px;
+}
 
+blockquote{
+    text-align: justify;
+}
+
+blockquote p{
+    line-height: 30px;
+  
+}
 
 
 
