@@ -114,17 +114,70 @@ font-size: 30px;
 }
 .img1{
     line-height: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 }
 
 blockquote{
     text-align: justify;
+    
 }
 
-blockquote p{
+ blockquote p{
     line-height: 30px;
   
+} 
+
+
+/*ARRANGEMENTS*/
+.quad{
+    
+    background-color: #3a61d4;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 40px 30px;
+    
+    font-family: serif;
+    line-height: 10px;
+    font-weight: bolder; 
+    
 }
+.third{
+ line-height: 20px;
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-evenly;
+}
+.bl{
+    display: block;
+
+    
+}
+
+.colr3{
+    color: rgb(0, 236, 79);
+}
+
+.item1{
+    text-align: center;
+}
+
+
+/*Boxes*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
