@@ -32,6 +32,9 @@ div.icon{
     letter-spacing: 10px;
     font-size: 15px;
 }
+.watsapp{
+    color: #25D366;
+}
 
 div.btn{
     font-size: 13.5px;
@@ -47,7 +50,8 @@ div.paragraph{
 
 
 .sec{
-    background-color: #DCDADA;
+    background-color: rgba(245, 244, 244, 0.836);
+    color: #666666;
     
 }
 
@@ -60,9 +64,22 @@ header.sec ul li{
 .one{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 
 }
 
+div.list ul li{
+    margin:10px;
+}
+
+.current{
+    background-color: #3a61d4;
+    font-size: 13px;    
+         padding: 8px 18px;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+}
 
 /*Part footer*/
 
