@@ -171,7 +171,7 @@ blockquote{
 .boxes{
     background-color: rgba(245, 244, 244, 0.836);
     text-align: center;
-    padding: 20px 20px;
+    padding: 50px 50px;
     
     
 }
@@ -180,9 +180,9 @@ blockquote{
     display: flex;
     justify-content: space-around;
     align-content: space-between;
-    background-color: #fff;
     color: #3a61d4;
     font-weight: bolder;
+    
     
 }
 .main-box2{
@@ -190,21 +190,23 @@ blockquote{
     display: flex;
     justify-content: space-around;
     align-content: space-between;
-    background-color: #fff;
     color: #3a61d4;
     font-weight: bolder;
+    text-align: center;
+    
 }
 .box1{
-    width: 30.33%;
-    height: 37.33%;
-    text-align: center;
-    box-shadow:  5px 5px 5px 5px rgb(240, 240, 240);
-padding: 10px 10px;
+    background-color: #fff;
+    width: 400px;
+    height: 200px;
+text-align: center;
+     /* box-shadow:  0.1px 5px 2px 7px rgb(233, 233, 233);  */
+padding: 50px 20px;
 margin: 20px;
 }
     
 
-}
+
 
 .clear{
     clear: both;
