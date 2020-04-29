@@ -168,6 +168,43 @@ blockquote{
 
 
 
+.boxes{
+    background-color: rgba(245, 244, 244, 0.836);
+    text-align: center;
+    padding: 20px 20px;
+    
+    
+}
+.main-box1{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+    background-color: #fff;
+    color: #3a61d4;
+    font-weight: bolder;
+    
+}
+.main-box2{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+    background-color: #fff;
+    color: #3a61d4;
+    font-weight: bolder;
+}
+.box1{
+    width: 30.33%;
+    height: 37.33%;
+    text-align: center;
+    
+
+}
+
+.clear{
+    clear: both;
+}
+
+
 
 
 
