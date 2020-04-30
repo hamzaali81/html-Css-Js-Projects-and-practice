@@ -266,18 +266,26 @@ margin: 20px;
 
 
 /*IMAGES*/
-
+.gallery{
+    text-align: center;
+    line-height: 10px;
+}
 .ctn-img{
     width: 30px;
+    height: 30px;
 
 }
 
-.img-main{}
+.img-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
 
-
+/*IMAGES*/
 
 
 
