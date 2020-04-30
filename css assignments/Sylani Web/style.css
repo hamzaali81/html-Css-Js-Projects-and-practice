@@ -214,10 +214,65 @@ margin: 20px;
 
 
 
+/*MISSIONS*/
+
+.structure1{
+    display: flex;
+    justify-content: space-between;
+ flex-wrap: wrap;
+    padding: 50px;
+}
+
+.clr4{
+    color: #3a61d4;
+    font-size: 30px;
+    font-family: serif;
+    font-weight: bold;
+}
+
+.aside{
+    max-width: 300px;
+    /* max-height:50px ; */
+}
+
+.structure2{
+    display: flex;
+   
+}
+.box3{
+    background-color: rgba(245, 244, 244, 0.836);;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    color: #3a61d4;
+    font-weight: bolder;
+    font-family: serif;
+    /* display: inline; */
+    
+}
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*IMAGES*/
+
+.ctn-img{
+    width: 30px;
+
+}
+
+.img-main{}
 
 
 
