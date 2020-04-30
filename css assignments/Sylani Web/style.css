@@ -12,6 +12,8 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+
+
 /*Main Header*/
 .main{
 display: inline-block;
@@ -69,9 +71,19 @@ header.sec ul li{
 
 }
 
+
+
 div.list ul li{
-    margin:10px;
+    margin:5px;
 }
+/* li a{
+    color: #fff;
+    text-decoration: none;
+}
+li a:hover{
+    color: white;
+    text-decoration: none;
+} */
 
 .current{
     background-color: #3a61d4;
@@ -81,7 +93,30 @@ div.list ul li{
     text-align: center;
     color: #fff;
 }
+.cur2{
+    color: #666666;
+    transition: 2s;
+}
+.cur2:hover{
+   
+    text-decoration: none;
+    background-color: #3a61d4;
+    font-size: 13px;    
+         padding: 8px 18px;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+    transition: ease-in;
+}
 
+/*News*/
+.news{
+    margin: 30px;
+    padding: 0;
+    background-color: #3a61d4;
+    color: #fff;
+    text-align: center;
+}
 
 /*INTRODUCTION*/
 
@@ -232,7 +267,7 @@ margin: 20px;
 
 .aside{
     max-width: 300px;
-    /* max-height:50px ; */
+    max-height: fit-content;
 }
 
 .structure2{
@@ -269,6 +304,7 @@ margin: 20px;
 .gallery{
     text-align: center;
     line-height: 10px;
+   
 }
 .ctn-img{
     width: 30px;
@@ -280,55 +316,47 @@ margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 
 
 
-/*IMAGES*/
+/*ADDRESS*/
 
+.address{
+    background-color: rgb(36, 34, 34);
+    color: #928e8e;
+    padding: 40px;
+}
+.main-4{
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.add1{
+    list-style: none;
+}
+.add2{
+    color: #fff;
+   text-shadow: 2px;
+    font-size: 20px;
+    text-shadow: aliceblue;
+}
 
+.bg{
+    background-color: #3a61d4;
+    color: #fff;
+    padding: 5px;
+    border-radius: 100%;
+}
+.bg2{
+    color: rgb(3, 83, 0);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.con{
+    float: left;
+}
 
 
 /*Part footer*/
@@ -336,4 +364,11 @@ margin: 20px;
 .footer{
     background-color: #3a61d4;
     color: #fff;
+    padding: 3px;
+    
+}
+
+.font{
+    font-size: 12px;
+    padding: 10px;
 }
