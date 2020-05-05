@@ -1,0 +1,22 @@
+#green{
+    background-color: green;
+    max-width: 30%;
+text-align: center;
+padding:2px;
+margin: 10px;
+}
+#blue{
+    background-color: dodgerblue;
+    max-width: 30%;
+    padding:2px;
+margin: 10px;
+text-align: center;
+
+}
+#orange{
+    background-color:orangered;
+    max-width: 30%;
+    padding:2px;
+margin: 10px;
+text-align: center;
+}
