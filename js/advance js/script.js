@@ -40,69 +40,84 @@
 // john2.calAge();
 
 //Sub classes
-var Person5=function(name,yearofbirth,job){
-this.name= name;
-this.yearofbirth= yearofbirth;
-this.job=job;
-}
+// var Person5=function(name,yearofbirth,job){
+// this.name= name;
+// this.yearofbirth= yearofbirth;
+// this.job=job;
+// }
 
-Person5.prototype.calculateAge=function(){
-    var age=new Date().getFullYear()-this.yearofbirth;
-    console.log(age)
-}
-var Athelet5=function(name,yearofbirth,job,olympicGames,medals){
-Person5.call(this,name,yearofbirth,job);
-this.olympicGames=olympicGames;
-this.medals=medals;
-}
+// Person5.prototype.calculateAge=function(){
+//     var age=new Date().getFullYear()-this.yearofbirth;
+//     console.log(age)
+// }
+// var Athelet5=function(name,yearofbirth,job,olympicGames,medals){
+// Person5.call(this,name,yearofbirth,job);
+// this.olympicGames=olympicGames;
+// this.medals=medals;
+// }
 
-Athelet5.prototype=Object.create(Person5.prototype);
+// Athelet5.prototype=Object.create(Person5.prototype);
 
-Athelet5.prototype.wonMedal=function(){
-    this.medals++;
-    console.log(this.medals)
-}
+// Athelet5.prototype.wonMedal=function(){
+//     this.medals++;
+//     console.log(this.medals)
+// }
 
-var johnAthelete=new Athelet5('john',1999,'swimmwer',3,10);
-johnAthelete.calculateAge();
-johnAthelete.wonMedal()
+// var johnAthelete=new Athelet5('john',1999,'swimmwer',3,10);
+// johnAthelete.calculateAge();
+// johnAthelete.wonMedal()
 
 
-//ES6
-//ES6 Constructor
-class Person6{
-    constructor(name,yearofbirth,job){
-        this.name=name;
-             this.yearofbirth=yearofbirth;
-             this.job=job;
-    }
-    calAge(){
-        var age= new Date().getFullYear() - this.yearofbirth;
-        console.log(age)
-    }
+// //ES6
+// //ES6 Constructor
+// class Person6{
+//     constructor(name,yearofbirth,job){
+//         this.name=name;
+//              this.yearofbirth=yearofbirth;
+//              this.job=job;
+//     }
+//     calAge(){
+//         var age= new Date().getFullYear() - this.yearofbirth;
+//         console.log(age)
+//     }
     
+// }
+
+// class Athelet6 extends Person6{
+//     constructor(name,yearofbirth,job,olympicGames,medals){
+//  super(name,yearofbirth,job);
+//  this.olympicGames=olympicGames;
+//  this.medals=medals;
+// }
+// wonMedal(){
+//     this.medals++;
+//     console.log(this.medals)
+// }
+// }
+
+// var johnAthelete2=new Athelet6('john',1999,'swimmwer',3,10);
+// console.log(johnAthelete2)
+
+
+//OBJECT.CREATE
+
+var personProto={
+    calculateAge: function(){
+        console.log(2020-this.yearofbirth);
+    }
 }
+var john=Object.create(personProto);
+john.name='hamza';
+john.yearofbirth=1999;
 
-class Athelet6 extends Person6{
-    constructor(name,yearofbirth,job,olympicGames,medals){
- super(name,yearofbirth,job);
- this.olympicGames=olympicGames;
- this.medals=medals;
-}
-wonMedal(){
-    this.medals++;
-    console.log(this.medals)
-}
-}
-
-var johnAthelete2=new Athelet6('john',1999,'swimmwer',3,10);
-console.log(johnAthelete2)
+console.log(john)
+var jane=Object.create(personProto,{
+    name:{value:'john'},
+    age:{value:22}
+})
 
 
-
-
-
-
+console.log(jane)
 
 
 
