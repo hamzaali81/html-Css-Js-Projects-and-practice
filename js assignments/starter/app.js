@@ -11,7 +11,7 @@ GAME RULES:
 
 // var score1=0;
 // var score2=0;
-var scores,activePlayer,roundScore;
+var scores,activePlayer,roundScore,gamePlaying;
 init();
 // var dice= 6;
 // var dice=Math.floor(Math.random() * 6) + 1;
@@ -45,7 +45,8 @@ init();
 // document.querySelector('.btn-roll').addEventListener(typeofEvent,happenEvent)
 document.querySelector('.btn-roll').addEventListener('click',function(){
 
-//1. Random Number
+if(gamePlaying){
+       //1. Random Number
 var dice=Math.floor(Math.random() * 6)+1;
 
 //2.Display the result
@@ -64,26 +65,32 @@ else{
     //Next player
 nextPlayer();
 }
+}
+
+ 
 })
 
 
 document.querySelector('.btn-hold').addEventListener('click', function(){
+    if(gamePlaying){
+        scores[activePlayer]+=roundScore;
+        scores[activePlayer]=scores[activePlayer]+roundScore;
+            //Update the UI
+        document.querySelector('#score-' + activePlayer).textContent=scores[activePlayer];
+            //Check if player won the game
+        
+            if(scores[activePlayer]>20){
+            document.querySelector('#name-'+activePlayer).textContent='winner';
+             document.querySelector('.dice').style.display='none';
+            document.querySelector('.player-'+activePlayer+'-panel').classList.add='winner'
+            document.querySelector('.player-'+activePlayer+'-panel').classList.add='active'
+             gamePlaying=false;
+        }
+        else{
+            nextPlayer();
+        }
+    }
     // Add CURRENT score to GLOBAL scores
-scores[activePlayer]+=roundScore;
-scores[activePlayer]=scores[activePlayer]+roundScore;
-    //Update the UI
-document.querySelector('#score-' + activePlayer).textContent=scores[activePlayer];
-    //Check if player won the game
-if(scores[activePlayer]>20){
-    document.querySelector('#name-'+activePlayer).textContent='winner';
-     document.querySelector('.dice').style.display='none';
-    document.querySelector('.player-'+activePlayer+'-panel').classList.add='winner'
-    document.querySelector('.player-'+activePlayer+'-panel').classList.add='active'
-
-}
-else{
-    nextPlayer();
-}
      //Next player
 
 nextPlayer();
@@ -119,7 +126,7 @@ function init(){
     scores=[0,0];
     activePlayer=0;
     roundScore=0;
-
+     gamePlaying=true;
     document.querySelector('.dice').style.display='none';
 
     document.getElementById('score-0').textContent='0';
