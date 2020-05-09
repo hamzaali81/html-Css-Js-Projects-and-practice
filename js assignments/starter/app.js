@@ -13,7 +13,7 @@ GAME RULES:
 // var score2=0;
 var scores=[0,0];
 var roundScore=0;
-var activePlayer=1;
+var activePlayer=0;
 // var dice= 6;
 // var dice=Math.floor(Math.random() * 6) + 1;
 // console.log(dice)
@@ -55,6 +55,36 @@ var diceDOM= document.querySelector('.dice');
 diceDOM.style.display='block';
 diceDOM.src='dice-' + dice + '.png';
 //3.Update the round state IF the rolled number, was not a 1
+if(dice !== 1){
+    //Add Score
+    //roundScore=roundScore+1;
+    roundScore +=dice;
+    document.querySelector('#current-'+ activePlayer).textContent=roundScore;
+}
+else{
+    //Next player
+
+    activePlayer === 0 ? activePlayer =1: activePlayer =0
+    roundScore=0;   
+    // if(activePlayer===0){activePlayer=1}
+        //else{activeplayer=0}
+    
+    document.getElementById('current-0').textContent='0';
+    document.getElementById('current-1').textContent='0';
+    document.querySelector('.player-0-panel').classList.toggle('active');
+    document.querySelector('.player-1-panel').classList.toggle('active');
+
+    // document.querySelector('.player-0-panel').classList.remove('active');
+    // document.querySelector('.player-1-panel').classList.add('active');
+// document.querySelector('.dice').style.display='none';
+
+document.querySelector('.dice').style.display='none';
+
+
+
+}
+
+
 
 })
 
