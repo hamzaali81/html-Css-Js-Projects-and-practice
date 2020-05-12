@@ -1,10 +1,3 @@
-
-// var a=['hamza','ali','ahmed','pak','india'];
-// console.log(a)
-// v;
-// console.log(b)
-
-
 var todo=document.getElementById('todo');
 var con=document.getElementById('con');
 var btn=document.getElementById('addbtn')
