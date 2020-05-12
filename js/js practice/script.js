@@ -32,13 +32,21 @@
 
 //4.childNode
 
-var a=document.getElementById('con').childNodes[1];
-console.log(a)
+// var a=document.getElementById('con').childNodes[1];
+// console.log(a)
 
-var x=5;
-var y=x++ + ++x + x + --x + x-- - x;
-    //   5   +   7    7   6      6     5
-console.log(y);
+// var x=5;
+// var y=x++ + ++x + x + --x + x-- - x;
+//     //   5   +   7    7   6      6     5
+// console.log(y);
+
+var a="1";
+if(a===1){
+    console.log(true)
+}
+else{
+    console.log(false)
+}
 
 
 
