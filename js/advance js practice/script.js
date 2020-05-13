@@ -74,30 +74,58 @@
 // console.log(rate)
 
 
-//Function returning function
- function interviewQuestion(job){
-     if(job==='designer'){
-         return function(name){
-             console.log('hello'+ name +', wht do you do')
-         }}
+// //Function returning function
+//  function interviewQuestion(job){
+//      if(job==='designer'){
+//          return function(name){
+//              console.log('hello'+ name +', wht do you do')
+//          }}
         
-         else if(job==='teacher'){
-            return function(name){
-                console.log('hello '+name+', wht do you do')
-            }
-     }
- }
+//          else if(job==='teacher'){
+//             return function(name){
+//                 console.log('hello '+name+', wht do you do')
+//             }
+//      }
+//  }
 
 
- var teacherQuestion=interviewQuestion('designer');
- var designerQuestion=teacherQuestion(' hamza');
-// teacherQuestion(' ali');
-interviewQuestion('teacher')('ahmed');
+//  var teacherQuestion=interviewQuestion('designer');
+//  var designerQuestion=teacherQuestion(' hamza');
+// // teacherQuestion(' ali');
+// interviewQuestion('teacher')('ahmed');
 
 
+//IIFE
+// function game(){
+  
+//     var score=Math.round()*18;
+//     console.log(score>=5);
+// }
+// game();
+// (function(){
+// var score=Math.round()*10;
+// console.log(score>=5);
+// })();
 
+//Clousers
+// function ageCal(retirementAge){
+//     var a=' Your retirement age years.'
+//     return function(yearOfBirth){
+//        var age=2020-yearOfBirth;
+//        console.log((retirementAge-age)+a);
+//     }
+// }
+// ageCal(66)(1990)
 
+function interviewQuestion(job){
+    return function(name){
+        if(job==='designer'){
+            console.log(job+' job available for Mrs '+name);
+        }
+    }
+}
 
+interviewQuestion('designer')('ali')
 
 
 
