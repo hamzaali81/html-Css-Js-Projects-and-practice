@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        .another{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <button>Click Me</button>
+    <h1>heading</h1>
+
+<!-- <img src="dice-3.png" alt=""> -->
+
+    <script>
+    
+        // var body=document.querySelector("body");
+        // var h1=document.querySelector('h1').style.color='pink';
+        // isblue=false;
+        // setInterval(function(){
+        //     if(isblue){
+        //         body.style.background="white";}
+        //         else{
+        //             body.style.background='#3498db'
+        //         }
+        //      isblue= !isblue
+        // },500);
+
+        //var h1=document.querySelector('h1');
+        //h1.classList.add('another');
+        //  var h1=document.querySelector('h1');
+        //     h1.textContent="Hello world";
+
+        // var img=document.querySelector('img');
+        // img.setAttribute('src','dice-1.png')
+         
+
+        //  h1.textContent="Hello world";
+//   var button=document.querySelector('button');
+//   var h1=document.querySelector('h1');
+
+//   button.addEventListener('click',function(){   
+      
+//     h1.textContent='Assalam o alakium';
+//   })
+
+var button=document.querySelector('button');
+var body=document.querySelector('body')
+// isPurple=false;
+// button.addEventListener('click',function(){
+// if(isPurple){
+//     body.style.backgroundColor='white';
+// }
+// else{
+//     body.style.backgroundColor='purple';
+// }
+// isPurple=!isPurple;
+
+
+
+//     // body.style.backgroundColor='purple';
+// })
+button.addEventListener("click",function(){
+    document.body.classList.toggle("another")
+})
+    </script>
+</body>
+</html>
