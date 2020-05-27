@@ -38,3 +38,33 @@ font-family:Arial, Helvetica, sans-serif ;
     line-height: 1.2;
     margin: 1rem;
 }
+
+.page p{
+    font-size: 1.3rem;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #f4f4f4;
+    color: #333;
+    text-decoration: none;
+    border: none;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in;
+}
+
+.btn:hover,
+.btn-dark
+{
+    background: #333;
+    color: #fff;
+}
+
+
+.btn-dark:hover
+{
+    background: #f4f4f4;
+    color: #333;
+}
