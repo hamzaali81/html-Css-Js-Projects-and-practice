@@ -4,7 +4,7 @@
     --page-3-color: teal;
     --page-4-color: slateblue;
     
-    --animate-speed: 1s;
+    --animate-speed: 2s;
 }
 
 
@@ -67,4 +67,34 @@ font-family:Arial, Helvetica, sans-serif ;
 {
     background: #f4f4f4;
     color: #333;
+}
+
+
+/* Page Animation */
+
+#page-1 h1{
+    transform: translateY(-1200px);
+    animation: heading var(--animate-speed) forwards ease-in;
+}
+
+#page-1 p{
+    transform: translateX(-1800px);
+    animation: text var(--animate-speed) forwards ease-in;
+}
+/* Keyframes */
+
+@Keyframes heading{
+
+    to{
+
+        transform: translateY(0);
+    }
+}
+
+@Keyframes text{
+
+    to{
+
+        transform: translateY(0);
+    }
 }
