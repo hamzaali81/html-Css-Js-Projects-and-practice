@@ -1,0 +1,30 @@
+:root{
+    --primary-color: #c72727;
+    --secondary-color:#f99500;
+    --light-color: #f3f3f3;
+    --dark-color: #333;
+    --max-width: 1100px;
+}
+
+.category{
+    --sports-color: #f99500;
+    --ent-color: #a66bbe;
+    --tech-color: #009cff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    background: var(--light-color);
+}
+
+a{
+    color:#333;
+    text-decoration: none;
+}
