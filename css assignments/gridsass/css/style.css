@@ -91,3 +91,12 @@ h1,h2,h3,h4,h5,h6{
     background: var(--light-color);
     color: var(--dark-color);
 }
+
+#main-nav .social{
+    justify-self: center;
+}
+
+#main-nav .social i{
+    color: #777;
+    margin-right: .5rem;
+}
