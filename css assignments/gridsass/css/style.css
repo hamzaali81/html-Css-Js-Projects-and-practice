@@ -28,3 +28,66 @@ a{
     color:#333;
     text-decoration: none;
 }
+
+ul{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Staatliches', cursive;
+    margin-bottom: .55rem;
+    line-height:1.3
+}
+
+
+/* Utility */
+.container{
+    max-width:  var(--max-width);
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+/* Navigation */
+#main-nav{
+    background:#fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+#main-nav .container{
+    display: grid;
+    grid-template-columns: 6fr 3fr 2fr;
+    padding: 1rem;
+    align-items: center;
+}
+
+#main-nav .logo{
+    width: 180px;
+}
+
+#main-nav ul{
+    justify-self: end;
+    display: flex;
+}
+
+
+#main-nav ul li a{
+    padding: 0.75rem;
+    font-weight: bold;
+}
+
+#main-nav ul li a.current{
+    background: var(--primary-color);
+    color: #fff;
+}
+
+#main-nav ul li a:hover{
+    background: var(--light-color);
+    color: var(--dark-color);
+}
