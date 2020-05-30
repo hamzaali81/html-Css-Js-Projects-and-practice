@@ -133,6 +133,10 @@ h1,h2,h3,h4,h5,h6{
 .p-2{padding:2rem;}
 .p-3{padding:3rem;}
 
+.l-heading{
+    font-size: 3rem;
+}
+
 .list li{
     padding: .5rem 0;
     border-bottom: #555 dotted 1px;
@@ -260,6 +264,18 @@ margin-bottom: 1rem;
 #home-articles .articles-container > *:last-child{
     grid-column:  2 / span 2;
 
+}
+
+#article .meta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#eee;
+    padding: 0.5rem;
+}
+
+#article .meta .category{
+    margin-top: 0.4rem;
 }
 
 /* Footer */
