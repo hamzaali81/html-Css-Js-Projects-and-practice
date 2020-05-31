@@ -102,10 +102,35 @@ html,body{
             background: chocolate;
             }
 
+            /* Icons */
+.fa{
+    color: #fff;
+    font-size: 20px;
+    padding: 0.6rem;
+}
+
+.fab{color: #fff;
+font-size: 30px;
+padding: 10px;
+margin: 0;
+}
+#you{
+    color: rgb(236, 35, 35);
+}
+#fb{
+    color: rgb(82, 61, 223);
+}
+#ins{
+    color:#3F729B;
+}
+#wtup{
+    color: #25D366;
+}
 
 
 
             /* Image Section */
+            
 #part2 .image-bar{
 
     background-image:linear-gradient(#333 0%,#3333 0%), url("img/w40.jpg");
@@ -131,10 +156,10 @@ html,body{
     font-size: 1.3rem;
     text-align: center;
     padding: 0.5rem 1.3rem;
-    display: inline-block;    
+    /* display: inline-block;     */
     position: relative;
     top: 50%;
-    left: 5%;
+    left: 0;
 }
 .btn-dark{
     background: #C2A740;
@@ -144,27 +169,15 @@ html,body{
     opacity: 0.7;
 }
 
-/* Icons */
-.fa{
-    color: #fff;
-    font-size: 20px;
-    padding: 0.6rem;
+.logo{
+    padding: 10px;
+    margin: 20px;
 }
 
-.fab{color: #fff;
-font-size: 30px;
-padding: 10px;
-margin: 0;
-}
-#you{
-    color: rgb(236, 35, 35);
-}
-#fb{
-    color: rgb(82, 61, 223);
-}
-#ins{
-    color:#3F729B;
-}
-#wtup{
-    color: #25D366;
+.l-heading{
+    display:inline-block; 
+    color:#fff;
+     font-size: 40px;
+     margin:20px;
+     padding:20px;
 }
