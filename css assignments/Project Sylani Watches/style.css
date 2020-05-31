@@ -23,6 +23,7 @@ html,body{
     margin: 0;
     
 }  
+
     #navbar ul{
         list-style: none;
         
@@ -46,6 +47,9 @@ html,body{
 {
     color: #333;
     text-decoration: none;
+    /* background-color: #fff;
+    padding:.5rem; */
+
 }
 /* Hide nested ul by default */
 
