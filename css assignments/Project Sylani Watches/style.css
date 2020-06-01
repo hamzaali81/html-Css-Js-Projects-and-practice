@@ -213,3 +213,30 @@ box-shadow: 4px 8px 5px 3px #000000; */
 }
 
   
+/* Wedding */
+
+
+/* Article */
+
+.article-container{
+    opacity: 0.8;
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-gap: 1rem;
+    margin: 2rem;
+/* 
+    align-items: center;
+    justify-content: center; */
+}
+
+.article-container .img-art{
+    width:400px;
+    height: 300px;
+}
+
+.sub-art{
+     display: grid;
+    grid-template-columns: repeat(2,1fr); 
+
+
+}
