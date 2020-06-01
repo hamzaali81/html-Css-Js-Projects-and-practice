@@ -185,3 +185,34 @@ margin: 0;
      margin:20px;
      padding:20px;
 }
+
+
+
+
+/* Box */
+
+.img{
+    width: 300px;
+    height: 300px;
+}
+
+.main-container{
+    opacity: 0.8;
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    grid-gap: 1rem;
+}
+.main-container .ex{
+    position: absolute;
+    width:50px; 
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin:10px;
+    text-align: center;
+    align-items: center;
+    
+
+}
