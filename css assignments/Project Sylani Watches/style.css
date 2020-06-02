@@ -12,7 +12,8 @@
 
 html,body{
     background: #fff;
-    font-family: 'Oswald',Arial, Helvetica, sans-serif;
+    /* font-family: 'Oswald',Arial, Helvetica, sans-serif; */
+    font-family: NokiaPureHeadline,Arial,Helvetica,sans-serif;
     }
 
 
@@ -238,5 +239,50 @@ box-shadow: 4px 8px 5px 3px #000000; */
      display: grid;
     grid-template-columns: repeat(2,1fr); 
 
+
+}
+/* footer */
+
+footer{
+    background: #052253;
+    color: #fff;
+}
+
+.con-1{
+    /* display: grid;
+    grid-template-columns: repeat(4,2fr) */
+    display:flex;
+    justify-content:space-around;
+    color: #fff;
+    margin: 10px;
+}
+.con-2{
+    /* display: grid; */
+display: flex;
+justify-content: space-around;
+/* list-style: none; */
+color: #fff;
+}
+
+.con-2 ul li,
+.con-2 ul li a
+{
+    list-style: none;
+}
+ /* Subscribe Button */
+.sub{
+ top: 0;
+ background: #052253;
+ color: #fff;
+    border: 1px solid #fff;
+padding: 1rem;
+/* margin: 0.3rem; */
+width: 230px;
+}
+
+.sub:hover{
+    border: none;
+    color: #99c2f8;
+    background: #fff;
 
 }
