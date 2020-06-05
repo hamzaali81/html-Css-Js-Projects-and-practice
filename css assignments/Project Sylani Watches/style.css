@@ -8,13 +8,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* background:#e7e7e7; */
 }
 
-html,body{
+body,html{
     background: #fff;
-    /* font-family: 'Oswald',Arial, Helvetica, sans-serif; */
+    font-family: 'Oswald',Arial, Helvetica, sans-serif;
     font-family: NokiaPureHeadline,Arial,Helvetica,sans-serif;
-    }
+     /* perspective: 1000px;   */}
 
 
   #navbar{
@@ -24,6 +25,74 @@ html,body{
     margin: 0;
     
 }  
+
+/* marquee */
+
+marquee{
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.3rem;
+
+}
+
+.play{
+    margin:40px;
+    padding:25px;
+    /* max-width: 1000px; */
+}
+
+/* part3 */
+#part3{
+text-align: center;
+font-family: 'lato';
+}
+
+#part3 .parts-ex h1{
+ margin: 20px;
+ padding:20px;
+ border-bottom: 1px solid #333;
+ shadow:2px 2px 0 #fff;
+ font-size: 3rem;
+}
+#part3 .parts-ex h1 .bor{
+    border: 1px solid #333;
+    /* background-color: #052253; */
+    padding: 10px;
+    margin: 10px;
+}
+
+
+/* part4 */
+#part4{
+    text-align: center;
+    font-family: 'lato';
+}
+#part4 .parts-ex h1{
+    margin: 20px;
+    padding:20px;
+    border-bottom: 1px solid #333;
+    shadow:2px 2px 0 #fff;
+    font-size: 3rem;
+   }
+#part4 .parts-ex h1 .bor{
+    border: 1px solid #333;
+    /* background-color: #052253; */
+    color: #333;
+    padding: 10px;
+    margin: 10px
+}
+
+#part5{
+    text-align: center;
+    font-family: 'lato';
+    color: #0c0c0c;
+
+}
+#part5 .parts-ar h1{
+    font-size: 2.5rem;
+    color:#052253;
+}
+
 
     #navbar ul{
         list-style: none;
@@ -64,6 +133,7 @@ html,body{
     z-index: 2;
     height:100%;
 }
+
 
 #navbar ul li:hover a{
     color: #fff;
@@ -144,7 +214,31 @@ html,body{
     height: 100vh;
 }
 
+ /* .caption{
+    position: relative;
+    top: -50px;
+    left: 0px; 
+    
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    transition: all 0.5s;
+    background-color: black;
+    overflow: hidden;
+    transform: translateY(100%);
+} */
 
+/* .main-container:hover .caption{
+    transform: translateY(0);
+
+}
+.main-container:hover .img {
+    transform: translateY(-30%);
+} */
 /* Button */
 .btn{
     background:#C2A731;
@@ -191,7 +285,12 @@ html,body{
 .img{
     width: 300px;
     height: 300px;
+    /* transition: transform 1s; */
 }
+
+/* img:hover{ 
+    transform: translateZ(300px);
+} */
 
 .main-container{
     opacity: 0.8;
@@ -199,11 +298,21 @@ html,body{
     grid-template-columns: repeat(4,2fr);
     grid-gap: 1rem;
     margin: 2rem;
+    text-align: center;
+    font-size:1.2rem;
+    font-weight: bold;
+    /* text-shadow: 0px 0px #333; */
     /* -webkit-box-shadow: 4px 8px 5px 3px #000000; 
 box-shadow: 4px 8px 5px 3px #000000; */
     /* text-align: center; */
-}
 
+}
+.main-container div{
+    transition: transform 1s;
+}
+.main-container div:hover{ 
+    transform: translateZ(-300px);
+}
 .main-container .ex{
   background: var(--primary-color);
   position: absolute;
@@ -211,7 +320,25 @@ box-shadow: 4px 8px 5px 3px #000000; */
   width: 60px;
   height: 60px;
   padding: 15px
+
 }
+
+#special-font{
+    font-family: 'Kalam', cursive;
+    color: var(--primary-color);
+
+}
+#special-font2{
+    font-family: 'Kalam', cursive;
+    color: var(--primary-color);
+
+}
+
+/* .main-container #shadow-box:hover{
+  background: #fff;
+  opacity: 0.5;
+
+} */
 
   
 /* Wedding */
@@ -243,11 +370,13 @@ box-shadow: 4px 8px 5px 3px #000000; */
 }
 /* footer */
 
-footer{
+/* footer{
     background: #052253;
     color: #fff;
-}
+    margin:10px;
+} */
 
+footer{background: #052253;}
 .con-1{
     /* display: grid;
     grid-template-columns: repeat(4,2fr) */
@@ -255,19 +384,31 @@ footer{
     justify-content:space-around;
     color: #fff;
     margin: 10px;
+    padding: 10px;
+    line-height: 10px;
 }
 .con-2{
     /* display: grid; */
+    margin: 0px;
+    padding:80px;
 display: flex;
 justify-content: space-around;
 /* list-style: none; */
 color: #fff;
+line-height: 50px;
 }
+
+.line{
+    border-bottom: #fff solid 1px;
+    padding:30px;
+}
+
 
 .con-2 ul li,
 .con-2 ul li a
 {
     list-style: none;
+    border-bottom:1px solid #333;
 }
  /* Subscribe Button */
 .sub{
@@ -280,9 +421,70 @@ padding: 1rem;
 width: 230px;
 }
 
+.cp{
+    color: #fff;
+    text-align: center;
+    background-color: #333;
+    padding: 10px;
+}
 .sub:hover{
     border: none;
     color: #99c2f8;
     background: #fff;
 
 }
+
+
+/* About */
+
+.about{
+    /* background: #f3f3f3; */
+    margin: 20px;
+    
+}
+
+.about-con{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    /* grid-row: 2; */
+    grid-gap: 2rem;
+    /* display: flex;
+    justify-content: space-between;*/
+    /* grid-row: 1;  */
+    margin:20px;
+    
+    line-height:30px; 
+}
+
+.about-con > *:first:child{
+    grid-row: 1;
+}
+.sub-about{
+    background: #f3f3f3;
+     padding:20px;
+}
+.company{
+    background: #333;
+    color: #fff;
+    padding:20px;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    grid-row: 2;
+
+ } 
+
+
+.page-container{
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+.page-container > *:first-child{
+    grid-row: 1;
+}
+
+
+/* Heading Control */
+ /* .h1{
+  margin-top: 40px;
+  padding:20px;
+} */
