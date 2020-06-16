@@ -1,3 +1,5 @@
+//typeOf,indexOf,concat
+
 //Array helper ES6
 // var arr=["hamza","ali"];
 // arr.forEach(el=>console.log(el));
@@ -128,23 +130,523 @@
     
 // })
 
-var posts=[
-    {id:1,comment:'nice pic'},
-    {id:2,comment:'Amazing'}
-]
+// var posts=[
+//     {id:1,comment:'nice pic'},
+//     {id:2,comment:'Amazing'}
+// ]
 
-var comments={postId:1,title:'old post'}
+// var comments={postId:1,title:'old post'}
 
-function postComment(posts,comment){
-    return posts.find(function(post){
-        return post.id === comments.postId;
+// function postComment(posts,comment){
+//     return posts.find(function(post){
+//         return post.id === comments.postId;
        
         
-    })
+//     })
 
-}
-var a=postComment(posts,comments)
+// }
+// var a=postComment(posts,comments)
+// console.log(a);
+
+//Reduce Helper
+// var numbers=[10,20,30,10];
+// var sum=0;
+
+// // for(i=0;i<numbers.length;i++){
+// //     sum+=numbers[i];
+// //     console.log(sum);
+// // }
+
+// var a=numbers.reduce((sum,el)=>{
+// //   console.log(el+sum)
+// return el+sum;
+  
+// },0);
+// console.log(a);
+
+
+
+//EVERY AND SOME HELPER
+
+
+// var computers=[
+//     {name:'Apple',ram:24},
+//     {name:'Dell',ram:32},
+//     {name:'hp',ram:4}
+// ];
+
+// var allComputersCanRunProgram=true;
+// var onlySomeComputersCanRunProgram=false;
+
+
+//  for (var i=0; i<computers.length;i++){
+//      var comp=computers[i];
+//      if(comp.ram<16){
+//        allComputersCanRunProgram: false;  
+//  console.log(allComputersCanRunProgram);
+ 
+//     }
+//      else{
+//          onlySomeComputersCanRunProgram: true;
+//          console.log(onlySomeComputersCanRunProgram);
+         
+//      }
+//  }
+
+
+ //Every Helper &&
+
+//  computers.every(computer=>{
+//         var a=computer.ram<16;
+//         console.log(a);
+        
+//  })
+
+
+// Some Helper ||
+//  computers.some(comp=>{
+//      var b=comp.ram<16;
+//      console.log(b);
+     
+//  })
+
+
+//Every and Some Helper Example
+
+// var names=[
+//     'Hamza','Ahmed','Ali'
+// ]
+
+
+// names.every(el=>{
+//     var a=el.length< 4;
+//     console.log(a);
+    
+// })
+
+// names.some(el=>{
+//     var a=el.length< 4;
+//     console.log(a);
+    
+// })
+
+//  function Field(value){
+//      this.value=value;
+//  }
+
+//  Field.prototype.validate=function(){
+//      return this.value.length > 0;
+//  }
+// var username=new Field('2cool');
+// var password=new Field('my_pass')
+
+// username.validate()
+// console.log(username.validate());
+// var fields=[username,password];
+
+// var formsIsValid=fields.every(function(field){
+//      return field.validate();
+// });
+
+// if(formsIsValid){
+//     //allow user to submit!
+
+// }
+
+// else{
+//     //show an error message
+// }
+
+
+// function balancedParens(string){
+//       return !string.split("").reduce(function(prev,char){
+//         if(char==="("){return ++prev}
+//         if(char===")"){return --prev}       
+//       } ,0)
+// }
+
+
+// var a= balancedParens("()");
+// console.log(a);
+
+
+//rest and spread parameter
+// function addnumbers(numbers){
+
+//Rest Parameter
+//     function addnumbers(...numbers){
+
+// return numbers.reduce((sum,number)=>{
+//        return sum + number;
+
+//     },0)
+// }
+
+// // var a=addnumbers([10,2,3,4,5,3])
+// var a=addnumbers(10,2,3,4,5,3)
+
+// console.log(a)
+
+//Spread Operator
+
+// var colors=['red','orange'];
+// var defaultColors=['green','yellow']
+
+// var a=defaultColors.concat(colors)
+// console.log(a);
+
+
+// var colors=['red','orange'];
+// var defaultColors=['green','yellow']
+// var a=[...colors,...defaultColors];
+// console.log(a);
+
+
+// Destructuring
+
+// ES5
+// var car={
+//     model:2010,
+//     type:'bussiness'
+// }
+
+// // var a=car.model;
+// // var a=car.type;
+
+
+// // console.log(a);
+
+// //ES6
+// const {model,type}=car;
+// console.log(model,type);
+
+
+// example2
+// var savedFiled={
+//     extension:'mp4',
+//     name:'repost',
+//     size: 14040
+// }
+
+// //ES5
+// // function fileSummary(file){
+// //     return `${file.name} This is taken extension ${file.extension}`
+// function fileSummary({name,extension,size},{color}){
+//     return `${name} This ${color} is taken extension ${extension}`
+
+// }
+
+// var a=fileSummary(savedFiled,{color: 'red'});
+// console.log(a);
+
+
+// //Array Destructuring
+// var bike=['seventy','unique','honda'];
+
+
+// // const [name,name2,name3,name4]=bike;
+// // console.log(name4);
+// // const {length}=bike;
+// // console.log(length);
+
+// const [name1,name2,...name]=bike;
+// console.log(name)
+
+//Destructuring
+const companies=[
+    {name:'Google',location:'Mountain view'},
+    {name:'facebook',location:'Menlo Park'},
+    {name:'uber',location:'San Francisco'}
+]
+
+// var a=companies[0].location;
+
+
 console.log(a);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 
