@@ -353,16 +353,105 @@
 // console.log(name)
 
 //Destructuring
-const companies=[
-    {name:'Google',location:'Mountain view'},
-    {name:'facebook',location:'Menlo Park'},
-    {name:'uber',location:'San Francisco'}
+// const companies=[
+//     {name:'Google',location:'Mountain view'},
+//     {name:'facebook',location:'Menlo Park'},
+//     {name:'uber',location:'San Francisco'}
+// ]
+
+// // var a=companies[0].location;
+
+// const [ { location } ]=companies;
+// console.log(location);
+
+
+// const Google={
+//     location: ['mountainview','hill park']
+// }
+
+// const{location:[locations]}=Google;
+
+// console.log(locations);
+
+//Example
+
+
+//see
+function signup({username,password,email,dateOfBirth,city}){
+    //create new user
+}
+
+// other code
+// other code
+// other code
+// other code
+// other code
+
+// const user={
+//     username: 'myname',
+//     password: 'mypassword',
+//     email: 'hamza54834@gmail.com',
+//     dateOfBirth: '27/2/1999',
+//     city: 'karachi'
+// }
+
+// // var a=signup('myname','my_password','hamza54834@gmail.com',27/2/1999,'karachi')
+// var a=signup(user)
+
+// console.log(a);
+
+
+//Game
+const points=[
+    [4,5],
+    [10,1],
+    [0,40]
 ]
 
-// var a=companies[0].location;
 
+// [
+//     {x:4,y:5},
+//     {x:10,y:1},
+//     {x:0,y:40},
+// ]
+
+// points.map(pair=>{
+//     // const x=pair.x[0];
+//     // const y=pair.y[1];
+//     const [x,y]=pair;
+    
+// })
+var a=points.map(([x,y])=>{
+    // const x=pair.x[0];
+    // const y=pair.y[1];
+    return {x:x,y:y};
+    
+})
 
 console.log(a);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
