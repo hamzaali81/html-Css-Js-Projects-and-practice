@@ -174,31 +174,78 @@
 // table at the end of this document
 
 
-function printAlphabets(option){
+// function printAlphabets(option){
 	
-	//set the default value of i & j to print A to Z
-	var i = 65;
-	var j = 91;
+// 	//set the default value of i & j to print A to Z
+// 	var i = 65;
+// 	var j = 91;
  
-	//if the option is small set the value of i,j to print a to z
-	if(option == 'small'){
-		i = 97;
-		j = 123; 
-	}
+// 	//if the option is small set the value of i,j to print a to z
+// 	if(option == 'small'){
+// 		i = 97;
+// 		j = 123; 
+// 	}
  
-	//loop through the values from i to j
-	for(k = i; k < j; k++){
-		//convert the char code to string (Alphabets)
-		var str =String.fromCharCode(k);
-		//print the result in console
-                console.log(str);
-	}
+// 	//loop through the values from i to j
+// 	for(k = i; k < j; k++){
+// 		//convert the char code to string (Alphabets)
+// 		var str =String.fromCharCode(k);
+// 		//print the result in console
+//                 console.log(str);
+// 	}
  
-}
-var a=printAlphabets('small');
-console.log(a);
+// }
+// var a=printAlphabets('small');
+// console.log(a);
 
-console.log(String.fromCharCode(65));
+// console.log(String.fromCharCode(65));
+
+
+
+// 16. Write a program to convert the following string to an
+// array using string split method.
+// var university = “University of Karachi”;
+// Display the elements of array in your browser.
+
+
+
+// var university="University of Karachi";
+// var a=university.split("");
+// for(i=0;i<a.length;i++)
+// console.log(a[i]);
+
+
+
+
+
+// var m = "Hello World";  
+// var k = m.split(' ');  // I have used space, you can use any thing.
+// for(i=0;i<k.length;i++)  
+//    console.log(k[i]);
+
+// 17. Write a program to display the last character of a user
+// input.
+
+// var a="Pakistan"
+// var b=a.slice(-1);
+// console.log(b);
+
+
+// 18. You have a string “The quick brown fox jumps over the
+// lazy dog”. Write a program to count number of
+// occurrences of word “the” in given string.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
