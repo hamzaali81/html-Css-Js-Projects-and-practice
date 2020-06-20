@@ -112,6 +112,25 @@
 // ASCII code of . is 46
 // ASCII code of @ is 64
 
+// var specialChara=['@' , '!' , ',' ,'.'];
+// var a=specialChara.specialChara(0)
+// console.log(a);
+
+
+
+
+// for (var i=0;i<specialChara.length;i++){
+//     var a=specialChara[i].charCodeAt();
+//     console.log(a);
+    
+// }
+
+
+
+
+
+
+
 
 // 14. You have an array
 // A = [cake”, “apple pie”, “cookie”, “chips”, “patties”]
@@ -144,18 +163,42 @@
 // console.log(a);
 
 
+// 15. Write a program to take password as an input from
+// user. The password must qualify these requirements:
+// a. It should contain alphabets and numbers
+// b. It should not start with a number
+// c. It must at least 6 characters long
+// If the password does not meet above requirements,
+// prompt the user to enter a valid password.
+// For character codes of a-z, A-Z & 0-9, refer to ASCII
+// table at the end of this document
 
 
+function printAlphabets(option){
+	
+	//set the default value of i & j to print A to Z
+	var i = 65;
+	var j = 91;
+ 
+	//if the option is small set the value of i,j to print a to z
+	if(option == 'small'){
+		i = 97;
+		j = 123; 
+	}
+ 
+	//loop through the values from i to j
+	for(k = i; k < j; k++){
+		//convert the char code to string (Alphabets)
+		var str =String.fromCharCode(k);
+		//print the result in console
+                console.log(str);
+	}
+ 
+}
+var a=printAlphabets('small');
+console.log(a);
 
-
-
-
-
-
-
-;
-
-
+console.log(String.fromCharCode(65));
 
 
 
