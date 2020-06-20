@@ -63,8 +63,148 @@
 // football together.”;
 
 
-var message="Ali and Sami are best friends";
-var a=message.replaceAll("")
+// const message='Ali and Sami are best friends. They play cricket and football together';
+
+// const regex= /and/gi
+// var a=message.replace(regex,'&');
+// document.write(a);
+
+// 9. Write a program that converts a string “472” to a number
+// 472. Display the values & types in your browser.
+// var number=472;
+// var str=number.toString();
+// document.write(str)
+
+// 10. Write a program that takes user input. Convert and
+// show the input in capital letters.
+
+// var upperCase=prompt("Enter Any Word and Sentence");
+// var ch=upperCase.toUpperCase();
+// document.write(ch)
+
+// 11. Write a program that takes user input. Convert and
+// show the input in title case.
+
+// var title=prompt("Enter Any Word and Sentence");
+// var ch=title.charAt(0).toUpperCase() + title.slice(1);
+// document.write(ch)
+
+
+// 12. Write a program that converts the variable num to
+// string.
+// var num = 35.36 ;
+// Remove the dot to display “3536” display in your browser.
+
+
+// var num=35.36;
+// var b=num.toString()
+// var a=b.replace('.','');
+// console.log(a);
+
+
+// 13. Write a program to take user input and store username
+// in a variable. If the username contains any special symbol
+// among [@ . , !], prompt the user to enter a valid username.
+// For character codes of [@ .
+// Note:
+// ASCII code of ! is 33
+// ASCII code of , is 44
+// ASCII code of . is 46
+// ASCII code of @ is 64
+
+
+// 14. You have an array
+// A = [cake”, “apple pie”, “cookie”, “chips”, “patties”]
+// Write a program to enable “search by user input” in an
+// array. After searching, prompt the user whether the given
+// item is found in the list or not.
+// Note: Perform case insensitive search. Whether the user
+// enters cookie, Cookie, COOKIE or coOkIE, program
+// should inform about its availability. Example:
+
+
+
+// var list=["cake","apple pie","cookie","chips","patties"];
+// var search=prompt("Enter list item")
+// for(var i=0;i<list.length;i++){
+    
+//     if(list[i]===search){
+//        console.log("list available "+list[i]);
+       
+//     }
+//     else{
+//         console.log("List item not available");
+        
+//     }
+// }
+
+//  var search=prompt("Enter list item")
+//  var list=["hamza","ali","ahmed"];
+// var a=list.includes(search)
+// console.log(a);
+
+
+
+
+
+
+
+
+
+
+
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
