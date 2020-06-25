@@ -170,6 +170,184 @@
 //  }
 // biggestNumberInArray(array[i][j[k]])
 
+// var city=["karachi","lahore","islamabad"]
+// var search=prompt("Search city");
+// for(var i=0;i<city.length;i++){
+
+//    if(city[i]===search.toLowerCase()){
+//    console.log("Yes city presnt in this list");
+   
+//    }
+// }
+
+
+// var city=["karachi","lahore","islamabad"]
+
+// var a=city.slice(0,2);
+// console.log(a);
+
+//  var city=["karachi","lahore","islamabad"]
+
+// city.splice(2,1)
+// console.log(city);
+
+// var a="My name is hamza";
+// var b=a.slice(0,9);
+// console.log(b);
+
+
+
+//  var monthAbb=["jan","feb","mar","apr","may","june","july","aug","sep","oct","nov","dec"];
+
+
+
+// var a=["hamza","ali"];
+// var b=a.slice(1)
+// console.log(b);
+
+
+
+
+// var month=prompt("Enter the month")
+// //  var search=prompt("enter month");
+// //  for (var i=0;i<month.length;i++){
+//    // monthAbb=[]
+//     if(month.length>3){
+//             var monthAbb=month.slice(0,3);
+//               console.log(monthAbb);
+//     }
+//  }
+
+// var someText=prompt("enter some text");
+// var str=someText.length;
+// for(var i=0;i<str;i++){
+//    if(someText.slice(i,i+1)===" "){
+//        alert("no double spaces!");
+//        break;
+//    }
+// }
+
+//  var str = prompt("Enter some text");
+//  var numChars = str.length;
+//  for (var i = 0; i < numChars; i++) {
+//  if (str.slice(i, i + 2) === " ") {
+//  alert("No double spaces!");
+//  break;
+
+//  }
+//  }
+
+
+
+
+// var text="world war II";
+// for(i=0; i<text.length;i++){
+//    if(text.slice(i,i+12)==="world war II"){
+//        text = text.slice(0, i) + "the Second World War" + text.slice(i + 12);
+
+//       console.log(text);
+      
+//    }
+// }
+//  var name="my name is hamza";
+//  var b=name.charAt(name.length-1);
+//  console.log(b);
+
+//  var str = prompt("Enter some text");
+//  var numChars = str.length;
+//  for (var i = 0; i < numChars; i++) {
+//  if (str.slice(i, i + 2) === " ") {
+//  alert("No double spaces!");
+//  break;
+
+//  }
+//  }
+
+
+
+
+//Finding Strings
+
+var text="World war II It is startling to think that, even in the darkest depths of World War II, J. R. R. Tolkien waswriting the trilogy"; 
+
+for(var i=0;i<text.length;i++){
+    if(text.slice(i,i+12)==="World war II"){
+        text=text.slice(0,i) + "the second world war" + text.slice(i+12)
+   console.log(text);
+   
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 
