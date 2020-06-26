@@ -268,20 +268,42 @@
 
 //Finding Strings
 
-var text="World war II It is startling to think that, even in the darkest depths of World War II, J. R. R. Tolkien waswriting the trilogy"; 
+// var text="World war II It is startling to think that, even in the darkest depths of World War II, J. R. R. Tolkien waswriting the trilogy"; 
 
-for(var i=0;i<text.length;i++){
-    if(text.slice(i,i+12)==="World war II"){
-        text=text.slice(0,i) + "the second world war" + text.slice(i+12)
-   console.log(text);
-   
-    }
-}
+// for(var i=0;i<text.length;i++){
+//     if(text.slice(i,i+12)==="World war II"){
+//         // text=text.slice(0,i) + "the second world war" + text.slice(i+12);
+//         text="the second world war" + text.slice(i+12);
+
+//         console.log(text);
+//            text=text.slice(0,i) + "the second world war" + text.slice(i+12);
+//            console.log(text);
+//     }
+// }
 
 
+// var a="hamza ali was born in karachi";
 
+// for(var i=0;i<a.length;i++){
+//     if(a.slice(i,i+9)==='hamza ali'){
+//         a= a.slice(i) +' furqan born in kashmir '+a.slice(i+9);
+//         console.log(a);
+        
+//     }
+// }
 
+// var a='hamza';
+// var b=a.indexOf();
+// console.log(b);
 
+// var text="World war II It is startling to think that, even in the darkest depths of World War II"
+//  var firstChar = text.indexOf("World War II");
+//  if (firstChar !== -1) {
+//     text = text.slice(0, firstChar) + "the Second World War" + text.slice(firstChar + 12);
+//     console.log(text);
+    
+//  }
+    
 
 
 
