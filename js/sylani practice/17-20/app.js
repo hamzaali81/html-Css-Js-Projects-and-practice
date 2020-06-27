@@ -306,6 +306,193 @@
     
 
 
+// var a='hamza ali was born in karachi';
+// var b=a.indexOf('hamza ali');
+
+// if(b!== -1){
+//     a= a.slice(0,b)+' furqan in kashmir'+ a.slice(b+9);
+//     console.log(a);
+    
+// }
+
+// var a="hamza ali";
+// console.log(a.slice(4));
+
+
+// var a=["hamza","ali"];
+// var b=["khan"];
+// for(var i=0;i<9;i++){
+// for(var j=0;j<i;j++){
+//  document.write("*");
+    
+// }
+// document.write("<br>")
+// }
+
+
+// var a=prompt("Enter the word");
+// var b="";
+// for(var i=a.length-1;i>=0;i--){
+//    //4                4>0  
+//    //3                3>0
+//    //2                2>0
+//    //1                1>0
+//    //0                0=0  loop break
+//   //madam
+
+//m  //a
+//a  //z
+//d  //m
+//a  //a
+//m  //h
+  
+//a[i] ===> azmah
+//a{i} ===> madam
+//   // mada
+//   //m
+//    b+= a[i];
+// console.log(b);
+
+// }
+// if(a===b){
+//    console.log(b+" is a palindrome word");
+   
+// }
+// else{
+//    console.log("not a palindrome word");
+   
+// }
+
+
+
+
+
+// var name="hamza ali";
+// var a=name.lastIndexOf('ali');  //index find
+// console.log(a);
+
+// var name="hamza ali";
+// var a=name.indexOf("ali");  //instance of index
+// console.log(a);//don't change value
+
+
+// var a="cake";
+// var b=a.slice(0,1)
+// console.log(b);
+
+// var c = a.charAt(a.length-1);
+// console.log(c);
+// // console.log(a);
+
+
+
+
+
+// var a="hamza";
+// console.log(a.lastIndexOf("a"));
+// var a="hamza";
+// console.log(a.indexOf("a"));
+
+
+// var a="hamza";
+// var b=a.charAt(a.length-1)
+// console.log(b);
+
+// var d="hamza";
+// // var e=d.slice(0,d+5);
+// console.log(d.slice(d));
+
+// var h="hamza!";
+// for(var i=0;i<h.length;i++){
+//     if(h[i]==="!"){
+//         alert("Yes available")
+//     }
+    
+// }
+
+
+
+
+// var h="hamza ali was born in karachi";
+// for(var i=0;i<h.length;i++){
+//     if(h.slice(i,i+9)==='hamza ali'){
+//         console.log(h[i]);
+        
+//         h = 'furqan '+h.slice(i+9);
+//         console.log(h);
+        
+//     }
+    
+// }
+
+
+// var a="hamza ali";
+// var b=a.replace('hamza',"ahmed")
+// console.log(b);
+
+
+
+// var a="hamza ali was born in karachi. hamza ali";
+// var b=a.replace(/hamza/g,"ahmed")
+// console.log(b);
+
+// var a=0.000001;
+// var b=Math.round(a);
+// console.log(b);
+
+// var a=0.000001;
+// var b=Math.ceil(a);
+// console.log(b);
+
+
+// var a=6;
+// var b=Math.floor((Math.random(a)*6)+1)
+// console.log(b);
+
+
+
+// var c=6;
+// console.log(Math.floor(Math.random(c)*6)+1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
