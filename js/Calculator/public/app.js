@@ -12,5 +12,8 @@ function clearResult(){
 }
 
 function getResult(){
+    var result=document.getElementById('result');
+    // console.log(result.value);
+    result.value=eval(result.value);
     
 }
