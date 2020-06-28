@@ -471,11 +471,100 @@
 // var b=a.toString()+1;
 // console.log(b);
 
-var a=10;
-var b=0.8789;
-var c=a*b
-var d=c.toFixed(2);
-console.log(d);
+// var a=10;
+// var b=0.8789;
+// var c=a*b
+// var d=c.toFixed(2);
+// console.log(d);
+// var c=['sun','mon','tues','wed','thur','fri','sat']
+// var a=new Date();
+// var b=a.getDay()  //get method
+// var d=c[b];
+// console.log(d);
+
+
+
+// var a=new Date();
+// a.setFullYear(2007);
+// console.log(a);
+
+//function se value de rha tha
+// function greet(peramater,peramater...){
+
+// }
+// greeting(arguments)
+// function greeting(a,b){
+//     // console.log(a+b);
+//     return a+b;
+    
+// }
+// var a=greeting(12,1);
+// console.log(a);
+
+
+// function sub(c){
+//     // console.log(c-a);
+//     return c-a;
+// }
+
+// var d=sub(50);
+
+// function multi(){
+// return a=10;
+// }
+// multi();
+// console.log(a);
+
+
+
+// function foo(){
+//     // var a=10;
+// }
+// console.log(foo("hello"));
+
+
+
+// function Order(biryani){
+//     var costBiryani;
+//     if(biryani>100){
+//         costBiryani=biryani;
+//     }
+//    else if(biryani>50){
+//         costBiryani=biryani + 5;
+//     }
+//     else if(biryani>150){
+//         costBiryani=biryani;
+//     }
+//     else if(biryani>200){
+//         costBiryani=biryani + 5;
+//     }
+//     else{
+//         costBiryani = biryani + 10 * (biryani-30);
+//     }
+//     return costBiryani;
+// }
+
+// var a=Order(100);
+// console.log(a);
+
+
+// var a="hamza";
+
+// switch(a){
+//     case "ali":
+//         console.log("Yes ali is present");
+//         break
+//     case "hamza" :
+//         console.log("yes hamza is present");
+        
+// }
+
+
+
+
+
+
+
 
 
 
