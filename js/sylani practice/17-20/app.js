@@ -455,6 +455,54 @@
 // console.log(Math.floor(Math.random(c)*6)+1);
 
 
+// var a="19"
+// var b=parseInt(a)-10;
+// console.log(b);
+
+// var a="109";
+// var b=Number(a)-10;
+// console.log(b);
+
+
+
+
+
+// var a=100;
+// var b=a.toString()+1;
+// console.log(b);
+
+var a=10;
+var b=0.8789;
+var c=a*b
+var d=c.toFixed(2);
+console.log(d);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
