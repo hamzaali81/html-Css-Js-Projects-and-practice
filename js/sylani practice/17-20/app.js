@@ -559,6 +559,133 @@
         
 // }
 
+///////////////////////////////////////////////////////////////////////
+//Assignments 21 -38 chapters
+
+// var firstname=prompt("Enter the first name");
+// var lastname=prompt("Enter the last name")
+// var fullname=firstname+" "+lastname
+// console.log(fullname);
+
+// var fravoriteMobile=prompt("Enter the fravorite mobile");
+// // var fravoriteMobile="world"
+// var a =fravoriteMobile.length;
+// console.log("My fravorite phone is:"+fravoriteMobile+" length of string is "+fravoriteMobile.length);
+
+// var a='Pakistan';
+// console.log('Pakistan word  Index of n: '+a.indexOf('n'));
+
+// var a='Hello world';
+// console.log("String:"+a+ " Last index of 'l'"+ a.lastIndexOf('l') );
+
+// var a='Pakistani';
+// console.log("String Pakistani "+a.indexOf('i'));
+
+// var a="hyderabad";
+// var b='islam'
+// var d=a.slice(5);
+// // console.log(d+b);
+
+// console.log(b+d);
+// var a='hyderabad';
+// var b=a.replace('hydera','islam')
+// console.log(b);
+
+
+
+// var a='hamza';
+// var b=a.slice(1,4)
+// console.log(b);
+
+
+// var a="Ali and Sami are best friends. They play cricket and football together";
+
+// var b=a.replace(/&/g,"and");
+// console.log(b);
+
+
+// var a=472;
+// console.log(a.toString()+10);
+
+// var c="472";
+// console.log(Number(c)+10);
+
+// var d="472";
+// console.log(parseInt(d)+10);
+
+
+// var a='peanuts';
+// console.log(a.toUpperCase());
+
+// var b='PEANUTS';
+// console.log(b.toLowerCase());
+// var num=35.36;
+// var b=num.toString()
+// console.log(b.replace('.',''));
+
+
+
+
+
+
+
+// var a=['!','.',',','@'];
+// for(var i=0;i<a.length;i++){
+//     var b=a[i];
+//     console.log(b.charCodeAt());
+    
+//     }
+
+var A=['cake','apple pie','cookie','chips','patties'];
+
+var a=prompt("Check the list");
+
+for(var i=0;i<A.length;i++){
+    // var b=A[i].findIndex(a);
+console.log(A[i].length());
+    // console.log(A[i]);
+    // if(a===A[i]){
+        
+//         console.log("Yes list available");
+        
+//     }
+//     else{
+//         console.log("List not available");
+        
+//     }
+    
+}
+// var a=A.findIndex();
+// console.log(a);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
