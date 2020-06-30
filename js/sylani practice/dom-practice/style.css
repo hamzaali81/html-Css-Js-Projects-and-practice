@@ -1,0 +1,19 @@
+.main-class{
+    margin: 0 196px;
+    align: center;
+}
+.clrBtn1{
+width: 100%;
+/* margin: 2px; */
+
+}
+
+.btn{
+    margin: 2px;
+    width: 20%;
+    text-align: center;
+    
+}
+.btn2{
+    width: 20%;
+}

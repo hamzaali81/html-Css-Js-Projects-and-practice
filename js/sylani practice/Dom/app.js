@@ -115,10 +115,47 @@ function makeInvisible(){
 // }
 
 
-function link(){
-    var link=document.getElementById('link1').style.color='yellow';
-    var address=link.href="http://wikipedia.org";
-}
+// function link(){
+//     var link=document.getElementById('link1').style.color='yellow';
+//     var address=link.href="http://wikipedia.org";
+// }
+
+
+
+// var a=document.getElementsByTagName("p");
+
+// var middle=a[2].innerHTML="<em>Today Part</em>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
