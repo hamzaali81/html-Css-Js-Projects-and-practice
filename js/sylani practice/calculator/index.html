@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="main-div">
+              <div>
+                <i style="color: #fff;" class="fa fa-user"></i>
+              </div>
+        <div>
+            <input class="input" type="text" id="result">
+        </div>
+    
+        <div>
+            <button class="clr" onclick="clearResult()">C</button>
+        </div>
+        <div>
+            <button onclick="showNumber('7')">7</button>
+            <button onclick="showNumber('8')">8</button>
+            <button onclick="showNumber('9')">9</button>
+            <button onclick="showNumber('*')">x</button>
+        </div>
+    
+        <div>
+            <button onclick="showNumber('4')">4</button>
+            <button onclick="showNumber('5')">5</button>
+            <button onclick="showNumber('6')">6</button>
+            <button onclick="showNumber('-')">-</button>
+        </div>
+        <div>
+            <button onclick="showNumber('1')">1</button>
+            <button onclick="showNumber('2')">2</button>
+            <button onclick="showNumber('3')">3</button>
+            <button onclick="showNumber('+')">+</button>
+        </div>
+    
+        <div class="last-t">
+            <button onclick="isEqualFinalResult('error')">=</button>
+            <button   onclick="showNumber('0')">0</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
