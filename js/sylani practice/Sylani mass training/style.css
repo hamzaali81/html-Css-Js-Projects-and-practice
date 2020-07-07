@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    background-color: black;
+}
+h2{
+    display: inline-block;
+    background: #fff;
+    width: 70px;
+    box-shadow: 2px 1px 1px #fff;
+}
+p{
+    display: inline-block;
+    background: #fff;
+    width: 80px;
+}
