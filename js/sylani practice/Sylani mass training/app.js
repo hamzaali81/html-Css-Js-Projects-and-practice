@@ -98,6 +98,19 @@ function reset(){
 
 
 
+function btn(){
+
+    var a=document.getElementById('val');
+    a.value='hamza';
+}
+
+
+
+
+
+
+
+
 
 
 
