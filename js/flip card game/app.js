@@ -106,11 +106,18 @@ function Todo(){
         var d=document.createTextNode('delete');
         var c=document.createElement('button');
         c.appendChild(d);
-        ul.appendChild(c)
+        ul.appendChild(c);
+
+        c.setAttribute('onclick','deleteBtn()')
 
     }
 }
 
+
+function deleteBtn(){
+
+    
+}
 /*
 Task Make in create method
 <p>
@@ -119,5 +126,53 @@ Task Make in create method
     !
 </p>
 */
+//first child
+//Last child
+
+
+
+
+//hasAttribute element is true or false  hasAttribute(id)
+//getAttribute check attribute value  getAttribute(title)
+//setAttribute(name,value)
+
+
+
+
+
+var div=document.getElementById('div-1');
+// console.log(div.childNodes[1]);
+var part=div.childNodes[1]
+var a=document.createElement('h1');
+console.log(part.nextSibling.nextSibling);
+var b=document.createTextNode("hello")
+a.insertBefore(b,part)
+// console.log(div.firstChild.nextSibling);
+// console.log(div.nextElementSibling.nextElementSibling.nextElementSibling);
+
+////////////////
+// append child print last
+//insertBefore(what Show, before show)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

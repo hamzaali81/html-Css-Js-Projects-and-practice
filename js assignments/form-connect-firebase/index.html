@@ -14,37 +14,6 @@
 
 
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
- <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
- <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>  
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBYt4rRy7JcBCMSzTk7Z_SueTByzzv4VP0",
-    authDomain: "todo-app-837ea.firebaseapp.com",
-    databaseURL: "https://todo-app-837ea.firebaseio.com",
-    projectId: "todo-app-837ea",
-    storageBucket: "todo-app-837ea.appspot.com",
-    messagingSenderId: "509498338998",
-    appId: "1:509498338998:web:54f4afbc0b0fb9f4a38017",
-    measurementId: "G-DY8MBEN2V8"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-//    const auth = firebase.auth ();
-
-
-
-
-
-
-</script>
-
 </head>
 <body>
     <h1>Sign Up</h1>
@@ -84,11 +53,38 @@
       </div>
 
 
+<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
 
 
 
+ <!-- Previously loaded Firebase SDKs -->
 
+ <script>
+  // TODO: Replace the following with your app's Firebase project configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBTpQMqYSO9X81I9LISAMN13Utid7aOwII",
+    authDomain: "form-connect-mode.firebaseapp.com",
+    databaseURL: "https://form-connect-mode.firebaseio.com",
+    projectId: "form-connect-mode",
+    storageBucket: "form-connect-mode.appspot.com",
+    messagingSenderId: "258109594872",
+    appId: "1:258109594872:web:f36c3a5c552d6b55bd6f0d",
+    measurementId: "G-RRB25845RN"
+  };
 
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 
 
 
