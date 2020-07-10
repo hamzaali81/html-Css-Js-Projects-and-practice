@@ -140,13 +140,13 @@ Task Make in create method
 
 
 
-var div=document.getElementById('div-1');
-// console.log(div.childNodes[1]);
-var part=div.childNodes[1]
-var a=document.createElement('h1');
-console.log(part.nextSibling.nextSibling);
-var b=document.createTextNode("hello")
-a.insertBefore(b,part)
+// var div=document.getElementById('div-1');
+// // console.log(div.childNodes[1]);
+// var part=div.childNodes[1]
+// var a=document.createElement('h1');
+// console.log(part.nextSibling.nextSibling);
+// var b=document.createTextNode("hello")
+// a.insertBefore(b,part)
 // console.log(div.firstChild.nextSibling);
 // console.log(div.nextElementSibling.nextElementSibling.nextElementSibling);
 
@@ -155,11 +155,21 @@ a.insertBefore(b,part)
 //insertBefore(what Show, before show)
 
 
+var a=document.getElementById('div-1');
+var check=a.childNodes[1];
+var result=check.childNodes[1]
+// console.log(result.childNodes);
+
+// console.log(result.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling);
 
 
+//parentNode.firstChild
+//parentNode.lastChild
 
 
-
+//nextSibling  apply same child
+//previousSibling  apply same child
+console.log(result);
 
 
 
