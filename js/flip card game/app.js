@@ -102,21 +102,32 @@ function Todo(){
         var b=document.createElement('li');
         b.appendChild(a);
         ul.appendChild(b);
-        result.value=''
         var d=document.createTextNode('delete');
         var c=document.createElement('button');
         c.appendChild(d);
         ul.appendChild(c);
+        result.value=''
 
-        c.setAttribute('onclick','deleteBtn()')
+
+        
+        c.setAttribute('onclick','deleteBtn(this)')
 
     }
 }
+// console.log(document.childNodes[1].childNodes[2].childNodes[9]);
 
 
-function deleteBtn(){
 
+function deleteBtn(target){
     
+// b.removeChild(c);
+
+    console.log('hello',target.parentNode.parentNode);
+
+var removeTarget=target.parentNode;
+var targetUl=target.parentNode.parentNode;
+targetUl.removeChild(removeTarget);
+
 }
 /*
 Task Make in create method
@@ -155,9 +166,9 @@ Task Make in create method
 //insertBefore(what Show, before show)
 
 
-var a=document.getElementById('div-1');
-var check=a.childNodes[1];
-var result=check.childNodes[1]
+// var a=document.getElementById('div-1');
+// var check=a.childNodes[1];
+// var result=check.childNodes[1]
 // console.log(result.childNodes);
 
 // console.log(result.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling);
@@ -169,7 +180,61 @@ var result=check.childNodes[1]
 
 //nextSibling  apply same child
 //previousSibling  apply same child
-console.log(result);
+// console.log(result);
+
+
+
+// var a=document.getElementById('div-1');
+// var check=a.childNodes[1];
+// var result=check.childNodes[4]
+
+// var h1=document.createElement('h1');
+// var textNode=document.createTextNode("hello world");
+// h1.appendChild(textNode);
+// console.log(h1);
+// check.insertBefore(h1,result)
+
+
+//nodeType 1 element
+//nodeType  3 text
+//nodeName for elements name is capital
+
+
+//Add parent node
+
+//  var a=document.getElementById('div-1');
+// console.log(a.parentNode.parentNode);
+
+// var a=document.getElementById('div-2');
+// var c=document.getElementById('spe');
+
+// a.removeChild(c)
+// console.log(a.childNodes[1]);
+
+//parentNode than removechild 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
