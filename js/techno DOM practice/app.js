@@ -2,6 +2,7 @@ var result=document.getElementById('result');
  var ul=document.childNodes[1].childNodes[2].childNodes[5];
 var addBtn=document.getElementById('add-btn');
 
+var editItem;
  // console.log();
  // console.log(document.childNodes[1].childNodes[2].childNodes[5]);
 function addItem(){
@@ -59,10 +60,23 @@ function edit(targetE1){
 // console.log("Hello Edit");
 // console.log(targetE1.previousSibling.previousSibling.nodeValue);
 result.value=targetE1.previousSibling.previousSibling.nodeValue;
+addBtn.innerHTML='Save';
+editItem=targetE1;
 
+console.log(editItem);
+addBtn.setAttribute('onclick','saveResult()');
 
 }
 
+function saveResult(){
+    console.log('Hello Save');
+editItem.previousSibling.previousSibling.nodeValue=result.value;
+    addBtn.innerHTML='Add';
+
+addBtn.setAttribute('onclick','addItem()');
+result.value='';
+editItem=undefined;
+}
 
 
 
