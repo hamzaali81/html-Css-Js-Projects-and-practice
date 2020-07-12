@@ -1,6 +1,8 @@
 var result=document.getElementById('result');
  var ul=document.childNodes[1].childNodes[2].childNodes[5];
-// console.log();
+var addBtn=document.getElementById('add-btn');
+
+ // console.log();
  // console.log(document.childNodes[1].childNodes[2].childNodes[5]);
 function addItem(){
     if(result.value===''){
@@ -27,7 +29,7 @@ function addItem(){
          var editBtn=document.createElement('button');
          var textEdit=document.createTextNode("edit")
          editBtn.appendChild(textEdit)
-editBtn.setAttribute('onclick','edit()')
+editBtn.setAttribute('onclick','edit(this)')
 
         li.appendChild(button);
         li.appendChild(editBtn);   
@@ -53,8 +55,12 @@ ulParent.removeChild(liParent)
 }
 
 
-function edit(){
-console.log("Hello Edit");
+function edit(targetE1){
+// console.log("Hello Edit");
+// console.log(targetE1.previousSibling.previousSibling.nodeValue);
+result.value=targetE1.previousSibling.previousSibling.nodeValue;
+
+
 }
 
 
