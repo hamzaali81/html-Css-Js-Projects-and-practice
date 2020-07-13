@@ -1,0 +1,10 @@
+.hidden{
+    width: 350px;
+    height: 350px;
+    box-shadow: 1px 3px 5px grey;
+    margin: 0 auto;
+    padding: 2px;
+    text-align: center;
+    
+    
+}

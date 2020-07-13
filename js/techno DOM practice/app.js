@@ -125,6 +125,8 @@ editItem=undefined;
 // // setAttribute()
 
 
+/////////////////////////////////////////////////
+//OLX one component in js 
 
 
 
@@ -132,11 +134,31 @@ editItem=undefined;
 
 
 
+console.log(document.childNodes[1].childNodes[2]);
+
+var partP=document.childNodes[1].childNodes[2];
+var div=document.createElement('div');
+
+div.className='hidden';
+
+var src=document.createElement('img');
+src.setAttribute('src','a.jpg')
+src.setAttribute('width','150px')
+div.appendChild(src);
+var h1=document.createElement('h1');
+var h1text=document.createTextNode('RS 25,999')
+h1.appendChild(h1text);
 
 
+var p=document.createElement('p');
+var ptext=document.createTextNode('Samsung galaxy');
+p.appendChild(ptext);
 
+div.appendChild(h1);
+div.appendChild(p);
+console.log(div);
 
-
+partP.appendChild(div);
 
 
 
