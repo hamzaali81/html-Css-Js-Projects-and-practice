@@ -168,6 +168,218 @@ partP.appendChild(div);
 
 
 
+// // var userpick=prompt("Check laptop")
+// var laptop={
+//     name: 'hp',
+//     model: 500,
+//     series: 'slim pad'
+// }
+
+
+// console.log(laptop);
+// laptop.ram='8GB';
+// console.log(laptop);
+
+// laptop['processor']='i5';
+// // console.log(laptop[userpick]);
+// console.log(laptop.userpick);  //undefined
+
+// var user={}
+// user.name='hamza';
+// user.age=21;
+// console.log(user);
+
+
+
+
+// value change dynamically
+// var user={};
+// user[prompt("Enter property name")]="hamza";
+// console.log(user);
+
+
+//Many objects use new type for loop
+// var car={
+//     model:'ducati',
+//     price:2000,
+//     series:2017
+// }
+
+// for(var key in car){
+//     console.log(car[key]);
+// }
+
+///////////////////////////////////////
+//Constructor
+
+//1.Use to access this keyword
+//2.Many Object return like a clone
+
+// function Student(name,age,rollno){
+//    this.name1=name;
+//    this.age1=age;
+//    this.rollno1=rollno;
+//    this.car= function(){
+//        console.log('Hello '+this.name1);
+//    }
+// }
+
+// var student1=new Student('ali',22,210);
+// var student2=new Student('ahmed',21,213);
+// var student3=new Student('umar',22,289);
+
+
+// student1.car();
+// student2.car();
+// student3.car();
+
+// delete student1.name1;
+
+// if('this.name1' in Student){
+//     console.log("yes present");
+// }
+
+// console.log(student1);
+// console.log(student2);
+// console.log(student3);
+
+
+
+
+
+// var cars={
+//     name: 'ducati',
+//     design:'moto'
+// }
+
+// if('name' in cars){
+//     console.log("Yes availble");
+// }
+
+
+// var shoppingCart=[{},{},{}];
+
+// var shoppingCart=[];
+var products=[];
+var item={
+name:'xyz',
+desc:'xyz',
+price:250
+}
+
+
+function Product(productName,productDesc,productPrice){
+this.name=productName;
+this.desc=productDesc;
+this.price=productPrice;
+}
+// var productObj=new Product(nameEl.value,descEl.value,priceEl.value);
+Product.prototype.brand='hp';
+Product.prototype.working=function(num){
+    console.log("Hello See " +num);
+}
+var productObj=new Product(23000,'dell','i3');
+
+productObj.working(1)
+productObj.working(2)
+productObj.working(3)
+
+
+var priceCheck="price" in productObj;
+var priceCheckMethod=productObj.hasOwnProperty('brand');
+console.log(priceCheckMethod);
+console.log(priceCheck);
+
+
+// console.log(productObj.brand);
+// console.log(productObj);
+
+
+// console.log(productObj);
+// function addProduct() {
+//     var productObj=new Product(nameEl.value,descEl.value,priceEl.value);
+//     products.push(productObj);
+   
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////
+//Array Helper
+// 1.forEach
+// 2.map
+// 3.filter
+// 4.find
+// 5.every
+// 6.some
+// 7.reduce
+
+
+
+//forEach
+
+// var colors=['red','blue','green']
+
+
+// for (var i=0;i<colors.length;i++){
+//     // console.log(colors[i]);
+//     console.log(colors[i]);
+// }
+
+
+// // for (var key in colors){
+// //     console.log(key-1);
+// // }
+
+// colors.forEach((color)=>{
+// console.log(color);
+// })
+
+
+//example 2
+
+// var numbers=[1,2,3,4,5,6];
+// var sum=0;
+
+// numbers.forEach((number)=>{
+// sum+=number;
+// // console.log(sum);
+// })
+
+
+
+
+
+// console.log(sum);
+/////////////////////////////
+//2.map helper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
