@@ -134,31 +134,31 @@ editItem=undefined;
 
 
 
-console.log(document.childNodes[1].childNodes[2]);
+// console.log(document.childNodes[1].childNodes[2]);
 
-var partP=document.childNodes[1].childNodes[2];
-var div=document.createElement('div');
+// var partP=document.childNodes[1].childNodes[2];
+// var div=document.createElement('div');
 
-div.className='hidden';
+// div.className='hidden';
 
-var src=document.createElement('img');
-src.setAttribute('src','a.jpg')
-src.setAttribute('width','150px')
-div.appendChild(src);
-var h1=document.createElement('h1');
-var h1text=document.createTextNode('RS 25,999')
-h1.appendChild(h1text);
+// var src=document.createElement('img');
+// src.setAttribute('src','a.jpg')
+// src.setAttribute('width','150px')
+// div.appendChild(src);
+// var h1=document.createElement('h1');
+// var h1text=document.createTextNode('RS 25,999')
+// h1.appendChild(h1text);
 
 
-var p=document.createElement('p');
-var ptext=document.createTextNode('Samsung galaxy');
-p.appendChild(ptext);
+// var p=document.createElement('p');
+// var ptext=document.createTextNode('Samsung galaxy');
+// p.appendChild(ptext);
 
-div.appendChild(h1);
-div.appendChild(p);
-console.log(div);
+// div.appendChild(h1);
+// div.appendChild(p);
+// console.log(div);
 
-partP.appendChild(div);
+// partP.appendChild(div);
 
 
 
@@ -260,35 +260,35 @@ partP.appendChild(div);
 // var shoppingCart=[{},{},{}];
 
 // var shoppingCart=[];
-var products=[];
-var item={
-name:'xyz',
-desc:'xyz',
-price:250
-}
+// var products=[];
+// var item={
+// name:'xyz',
+// desc:'xyz',
+// price:250
+// }
 
 
-function Product(productName,productDesc,productPrice){
-this.name=productName;
-this.desc=productDesc;
-this.price=productPrice;
-}
-// var productObj=new Product(nameEl.value,descEl.value,priceEl.value);
-Product.prototype.brand='hp';
-Product.prototype.working=function(num){
-    console.log("Hello See " +num);
-}
-var productObj=new Product(23000,'dell','i3');
+// function Product(productName,productDesc,productPrice){
+// this.name=productName;
+// this.desc=productDesc;
+// this.price=productPrice;
+// }
+// // var productObj=new Product(nameEl.value,descEl.value,priceEl.value);
+// Product.prototype.brand='hp';
+// Product.prototype.working=function(num){
+//     console.log("Hello See " +num);
+// }
+// var productObj=new Product(23000,'dell','i3');
 
-productObj.working(1)
-productObj.working(2)
-productObj.working(3)
+// productObj.working(1)
+// productObj.working(2)
+// productObj.working(3)
 
 
-var priceCheck="price" in productObj;
-var priceCheckMethod=productObj.hasOwnProperty('brand');
-console.log(priceCheckMethod);
-console.log(priceCheck);
+// var priceCheck="price" in productObj;
+// var priceCheckMethod=productObj.hasOwnProperty('brand');
+// console.log(priceCheckMethod);
+// console.log(priceCheck);
 
 
 // console.log(productObj.brand);
@@ -362,7 +362,169 @@ console.log(priceCheck);
 // console.log(sum);
 /////////////////////////////
 //2.map helper
+var a=['car','suzuki','bike'];
+var b=[];
+for(var i=0;i<a.length;i++){
+    b.push(a[i])
+    console.log(b);
+}
+//ES5
+var d=a.map(function(el){
+return el
+})
+console.log(d);
 
+//ES6
+var e=a.map((el)=>{
+return el;
+})
+console.log(e);
+
+////////////
+//filter
+var things=[
+    {type:'fruit'},
+    {vegetable:'spnich'},
+    {type:'fruit'}
+];
+var filterPro=[];
+for(var i=0;i<things.length;i++){
+    if(things[i].type==='fruit'){
+     filterPro.push(things[i])
+console.log(filterPro);
+    }
+}
+console.log(filterPro);
+
+var g=things.filter((el)=>{
+return el.type==='fruit'
+    // console.log(el);
+console.log(el);
+})
+
+console.log(g);
+
+
+
+
+
+
+///////////////////////////////////////////////////////
+// filters Class Techno
+
+var filterText=document.getElementById('filterText');
+var listing=document.getElementById('listing')
+function filterList(){
+    // console.log("hello world");
+// console.log(filterText.value);
+var filter=filterText.value;
+var listingText=listing.childNodes;
+// console.log(listing.childNodes);
+
+for(var i=0;i<listingText.length;i++){
+    // console.log(listingText[i]);
+
+// 1 is Markup
+// 3 is junk Artifact
+
+    if(listingText[i].nodeType===1){
+        // console.log(listingText[i].innerHTML);
+    if(listingText[i].innerHTML.toLowerCase().indexOf(filter.toLowerCase()) != -1 ){
+        listingText[i].style.display ='';
+    } 
+    else{
+    listingText[i].style.display ='none';
+    }
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Image Slider
+// var sliderimage=document.getElementsByClassName("slider-image");
+// console.log(sliderimage);
+// var topImageIndex=0;
+// var a=setInterval(function(){
+// for(var i=0;i<sliderimage.length;i++){
+//     sliderimage[i].style.zIndex=0;
+// }
+
+// sliderimage[topImageIndex].style.zIndex=10;
+// topImageIndex++;
+
+// if(topImageIndex>=sliderimage.length){
+//     topImageIndex=0;
+// }
+// },4000)
+
+
+
+// function swapRight(){
+//     for(var i=0;i<sliderimage.length;i++){
+//         sliderimage[i].style.zIndex=0;
+//     }
+    
+//     sliderimage[topImageIndex].style.zIndex=10;
+//     topImageIndex++;
+    
+//     if(topImageIndex>=sliderimage.length){
+//         topImageIndex=0;
+//     }
+// }
+
+
+// function swapLeft(){
+//     for(var i=0;i<sliderimage.length;i++){
+//         sliderimage[i].style.zIndex=0;
+//     }
+    
+//     topImageIndex--;
+    
+//     if(topImageIndex<0){
+//         topImageIndex=sliderimage.length;
+//     }
+//     sliderimage[topImageIndex].style.zIndex=10;
+// }
+
+// clearInterval(a)
 
 
 

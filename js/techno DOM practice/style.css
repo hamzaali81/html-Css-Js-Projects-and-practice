@@ -1,4 +1,4 @@
-.hidden{
+/* .hidden{
     width: 350px;
     height: 350px;
     box-shadow: 1px 3px 5px grey;
@@ -7,4 +7,40 @@
     text-align: center;
     
     
+} */
+
+.slider-image{
+ width: 70%;
+ height: 300px;
+ position: absolute;
+left: 15%;   
 }
+
+.arrows{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 150px;
+}
+.right-arrow{
+    width: 47px;
+    height: 47px;
+    left: 83%;
+}
+
+.left-arrow{
+    left: 13%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
