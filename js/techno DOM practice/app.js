@@ -362,47 +362,47 @@ editItem=undefined;
 // console.log(sum);
 /////////////////////////////
 //2.map helper
-var a=['car','suzuki','bike'];
-var b=[];
-for(var i=0;i<a.length;i++){
-    b.push(a[i])
-    console.log(b);
-}
-//ES5
-var d=a.map(function(el){
-return el
-})
-console.log(d);
+// var a=['car','suzuki','bike'];
+// var b=[];
+// for(var i=0;i<a.length;i++){
+//     b.push(a[i])
+//     console.log(b);
+// }
+// //ES5
+// var d=a.map(function(el){
+// return el
+// })
+// console.log(d);
 
-//ES6
-var e=a.map((el)=>{
-return el;
-})
-console.log(e);
+// //ES6
+// var e=a.map((el)=>{
+// return el;
+// })
+// console.log(e);
 
 ////////////
 //filter
-var things=[
-    {type:'fruit'},
-    {vegetable:'spnich'},
-    {type:'fruit'}
-];
-var filterPro=[];
-for(var i=0;i<things.length;i++){
-    if(things[i].type==='fruit'){
-     filterPro.push(things[i])
-console.log(filterPro);
-    }
-}
-console.log(filterPro);
+// var things=[
+//     {type:'fruit'},
+//     {vegetable:'spnich'},
+//     {type:'fruit'}
+// ];
+// var filterPro=[];
+// for(var i=0;i<things.length;i++){
+//     if(things[i].type==='fruit'){
+//      filterPro.push(things[i])
+// console.log(filterPro);
+//     }
+// }
+// console.log(filterPro);
 
-var g=things.filter((el)=>{
-return el.type==='fruit'
-    // console.log(el);
-console.log(el);
-})
+// var g=things.filter((el)=>{
+// return el.type==='fruit'
+//     // console.log(el);
+// console.log(el);
+// })
 
-console.log(g);
+// console.log(g);
 
 
 
@@ -412,32 +412,32 @@ console.log(g);
 ///////////////////////////////////////////////////////
 // filters Class Techno
 
-var filterText=document.getElementById('filterText');
-var listing=document.getElementById('listing')
-function filterList(){
-    // console.log("hello world");
-// console.log(filterText.value);
-var filter=filterText.value;
-var listingText=listing.childNodes;
-// console.log(listing.childNodes);
+// var filterText=document.getElementById('filterText');
+// var listing=document.getElementById('listing')
+// function filterList(){
+//     // console.log("hello world");
+// // console.log(filterText.value);
+// var filter=filterText.value;
+// var listingText=listing.childNodes;
+// // console.log(listing.childNodes);
 
-for(var i=0;i<listingText.length;i++){
-    // console.log(listingText[i]);
+// for(var i=0;i<listingText.length;i++){
+//     // console.log(listingText[i]);
 
-// 1 is Markup
-// 3 is junk Artifact
+// // 1 is Markup
+// // 3 is junk Artifact
 
-    if(listingText[i].nodeType===1){
-        // console.log(listingText[i].innerHTML);
-    if(listingText[i].innerHTML.toLowerCase().indexOf(filter.toLowerCase()) != -1 ){
-        listingText[i].style.display ='';
-    } 
-    else{
-    listingText[i].style.display ='none';
-    }
-    }
-}
-}
+//     if(listingText[i].nodeType===1){
+//         // console.log(listingText[i].innerHTML);
+//     if(listingText[i].innerHTML.toLowerCase().indexOf(filter.toLowerCase()) != -1 ){
+//         listingText[i].style.display ='';
+//     } 
+//     else{
+//     listingText[i].style.display ='none';
+//     }
+//     }
+// }
+// }
 
 
 
@@ -530,7 +530,93 @@ for(var i=0;i<listingText.length;i++){
 
 
 
+///////////////////////////////
+//Time Events and local storage
 
+// var i=0;
+
+// function checkUserLocation(){
+//     console.log(i++);
+//     if(i>5){
+//         clearInterval(consoleTimer);
+//     }
+
+// }
+
+// var consoleTimer=setInterval(checkUserLocation,1000)
+
+
+// function greeting(){
+//   var h1=document.getElementById('greet');
+//   h1.innerHTML='Welcome My Friend'
+// }
+
+
+
+// setInterval(greeting,3000)
+//minute counter create
+//hour counter
+// var sec=document.getElementById('sec');
+// var seconds=59;
+// function digitalWatch(){
+    
+//     if(i<1){
+//         clearInterval(a)
+//     }
+//     sec.innerHTML=seconds--;
+//     // clearInterval(a)
+// }
+
+// var a=setInterval(digitalWatch,1000);
+
+/**
+localStorage.setItem(key,value )
+ */
+
+// var h1=document.getElementById('greet');
+// var usernameE1=document.getElementById('username');
+// function saveUser(){
+// console.log(usernameE1.value);
+// localStorage.setItem('studentName',usernameE1.value)
+// }
+
+
+// var stName=localStorage.getItem('studentName');
+
+// if(stName){
+//     h1.innerHTML=stName
+// }
+
+
+
+
+
+//////////////////////////////////////////////
+//
+
+/**
+ Synchronous
+ Asynchronous and Promises
+ */
+
+
+// testing();
+//  console.log('1');
+
+//  function testing(){
+//      console.log('2');
+//  }
+//  testing();
+
+// console.log('3');
+
+console.log('3');
+setTimeout(function(){
+console.log('1');
+},1)
+
+console.log('2');
+//3 2 1
 
 
 
