@@ -94,27 +94,72 @@
 //////////////////////////////////////////////////////////////////////
 //58-57
 
+// var mainCon=document.getElementById("main-content");
+// // var render=document.getElementsByClassName('render');
+// var p=document.getElementsByClassName('render');
+// console.log(p);
+// console.log(mainCon.children);
+// var p=mainCon.getElementsByTagName("p");
+// var a=mainCon.children;
+// console.log(p);
 
-var mainCon=document.getElementById('main-content');
-console.log(document.childNodes[1].childNodes[2].childNodes[15].childNodes[5].childNodes[2]);
+// for(var i=0;i<p.length;i++){
 
-var a=document.childNodes[1].childNodes[2].childNodes[15].childNodes[5];
-
-mainCon.innerHTML=a;
-
-
-
-
-
-
-
-
+   
+// }
 
 
+function nameCalling(){
+    var firstname=document.getElementById('first-name');
+    firstname.value='hamza';
+}
+function email(){
+    var email=document.getElementById('email');
+    email.value='hamza54834@gmail.com';
+}
+function lastnameCalling(){
+    var lastname=document.getElementById('last-name');
+    lastname.value='ali';
+}
+
+// mainCon.innerHTML=p;
+// console.log(mainCon.children);
 
 
 
 
+
+
+var targetnode=document.getElementById('form-content')
+console.log(targetnode.nodeType);
+
+
+var lastname=document.getElementById('last-name');
+console.log(lastname.nodeType);
+
+
+var lastName=document.getElementById('lastName');
+
+console.log(lastName.parentNode.childNodes[3]);
+console.log(lastName.nextSibling.nextSibling);
+console.log(lastName.previousSibling.previousSibling);
+
+var update=lastName.parentNode.childNodes[3];
+update.innerHTML="LastName: Ali"
+console.log(update);
+
+
+var maincontent=document.getElementById('main-content');
+
+console.log(maincontent.firstChild);
+console.log(maincontent.lastChild);
+
+
+
+
+var email=document.getElementById('email');
+console.log(email.parentNode);
+console.log(email.nodeType);
 
 
 
