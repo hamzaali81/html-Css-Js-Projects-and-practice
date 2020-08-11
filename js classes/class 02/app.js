@@ -84,11 +84,87 @@
 //splice
 //slice
 
-var fruits=['mango','orange','banana','watermelon','graph','Avacado','dates']
-// (index,how many elements);
-//delete orang
-fruits.splice(-1)
-console.log(fruits);
+// var fruits=['mango','orange','banana','watermelon','graph','Avacado','dates']
+// // (index,how many elements);
+// //delete orang
+// fruits.splice(-1)
+// console.log(fruits);
+
+// Table
+// var tableAdd= prompt("Enter which table you see");
+// for(var i=1; i<=10; i++){
+//     console.log(tableAdd+" * "+ i +" = "+tableAdd*i);
+  
+// }
+
+//slice (index,length)
+
+// var a='hamza ali';
+// var b=a.slice(6,9);
+// console.log(b);
+
+// var d='hamza';
+// var e=d.substring(0,4)
+// console.log(e);
+
+//First Character Uppercase 
+// var cityName= 'iarachi';
+// var firstchar=cityName[0].toUpperCase();
+// var method1=cityName.slice(1)
+// // console.log(method1);
+// console.log(firstchar + method1);
+
+
+//Double space
+var userInfo=prompt("Enter some text");
+console.log(userInfo);
+for(var i=0; i<userInfo.length;i++){
+    var charSpace=userInfo.slice(i,i+2)
+    // console.log(charSpace);
+    // console.log(userInfo[i]);
+    if(charSpace=== '  '){
+        console.log("You have double space. pleasse correct info!");
+        break;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
