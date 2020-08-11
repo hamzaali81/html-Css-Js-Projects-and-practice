@@ -116,17 +116,105 @@
 
 
 //Double space
-var userInfo=prompt("Enter some text");
-console.log(userInfo);
-for(var i=0; i<userInfo.length;i++){
-    var charSpace=userInfo.slice(i,i+2)
-    // console.log(charSpace);
-    // console.log(userInfo[i]);
-    if(charSpace=== '  '){
-        console.log("You have double space. pleasse correct info!");
-        break;
+// var userInfo=prompt("Enter some text");
+// console.log(userInfo);
+// for(var i=0; i<userInfo.length;i++){
+//     var charSpace=userInfo.slice(i,i+2)
+//     // console.log(charSpace);
+//     // console.log(userInfo[i]);
+//     if(charSpace=== '  '){
+//         console.log("You have double space. pleasse correct info!");
+//         break;
+//     }
+// }
+
+
+
+//Texr replace
+// var text="a quick hello world pakitan hello world zindabad";
+// console.log(text);
+// var replaceText='Lahore';
+// for(var i=0; i<text.length;i++){
+//     // console.log(text[i]);
+//     var search=text.slice(i,i+11)
+//     if(search === 'hello world'){
+//         //logic          0,9
+//         text = text.slice(0,i) + replaceText + text.slice(i+11);
+//         console.log(text);
+//     }
+// }
+
+//replace method in js
+
+var intialNumbers= 1000;
+var picInitialNumber= document.getElementById('heading');
+picInitialNumber.innerHTML= intialNumbers;
+
+var gameStatus= document.getElementById('game-status');
+
+function UserPart(){
+    var userAmount = +prompt("What is your bid amount");
+    var bidNumber=+prompt("What is your bid Number 1 to 3");
+    var randomNumberStored = randomNumber();
+    var Result = compareBidAmount(randomNumberStored,bidNumber);
+    resultShow(Result,userAmount) 
+  }
+
+  function randomNumber()
+  { 
+      var number=3;
+       var generateNumber = Math.ceil(Math.random()*number);
+       return generateNumber;
     }
-}
+ 
+   function compareBidAmount(userNumberCompare,bidNumberCompare){
+        match = false;
+        if(userNumberCompare === bidNumberCompare){
+            // intialNumbers +=user;
+            match = true;
+        }
+        return match;
+    }
+ 
+    function resultShow(Result,userAmount){
+        if(Result){
+            var updatedNumber= intialNumbers + userAmount;
+            picInitialNumber.innerHTML=updatedNumber;
+            gameStatus.innerHTML='Congrats You Win !' + userAmount + ' is to be Added to your Account'
+        }
+        else{
+            var updatedNumber= intialNumbers - userAmount;
+            picInitialNumber.innerHTML=updatedNumber; 
+            gameStatus.innerHTML='Sorry You Lost !' + userAmount + ' is to be Subtract to your Account'
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
