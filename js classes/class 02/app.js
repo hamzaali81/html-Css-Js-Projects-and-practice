@@ -146,48 +146,104 @@
 
 //replace method in js
 
-var intialNumbers= 1000;
-var picInitialNumber= document.getElementById('heading');
-picInitialNumber.innerHTML= intialNumbers;
+// var intialNumbers= 1000;
+// var picInitialNumber= document.getElementById('heading');
+// picInitialNumber.innerHTML= intialNumbers;
 
-var gameStatus= document.getElementById('game-status');
+// var gameStatus= document.getElementById('game-status');
 
-function UserPart(){
-    var userAmount = +prompt("What is your bid amount");
-    var bidNumber=+prompt("What is your bid Number 1 to 3");
-    var randomNumberStored = randomNumber();
-    var Result = compareBidAmount(randomNumberStored,bidNumber);
-    resultShow(Result,userAmount) 
-  }
+// function UserPart(){
+//     var userAmount = +prompt("What is your bid amount");
+//     var bidNumber=+prompt("What is your bid Number 1 to 3");
+//     var randomNumberStored = randomNumber();
+//     var Result = compareBidAmount(randomNumberStored,bidNumber);
+//     resultShow(Result,userAmount) 
+//   }
 
-  function randomNumber()
-  { 
-      var number=3;
-       var generateNumber = Math.ceil(Math.random()*number);
-       return generateNumber;
-    }
+//   function randomNumber()
+//   { 
+//       var number=3;
+//        var generateNumber = Math.ceil(Math.random()*number);
+//        return generateNumber;
+//     }
  
-   function compareBidAmount(userNumberCompare,bidNumberCompare){
-        match = false;
-        if(userNumberCompare === bidNumberCompare){
-            // intialNumbers +=user;
-            match = true;
-        }
-        return match;
-    }
+//    function compareBidAmount(userNumberCompare,bidNumberCompare){
+//         match = false;
+//         if(userNumberCompare === bidNumberCompare){
+//             // intialNumbers +=user;
+//             match = true;
+//         }
+//         return match;
+//     }
  
-    function resultShow(Result,userAmount){
-        if(Result){
-            var updatedNumber= intialNumbers + userAmount;
-            picInitialNumber.innerHTML=updatedNumber;
-            gameStatus.innerHTML='Congrats You Win !' + userAmount + ' is to be Added to your Account'
-        }
-        else{
-            var updatedNumber= intialNumbers - userAmount;
-            picInitialNumber.innerHTML=updatedNumber; 
-            gameStatus.innerHTML='Sorry You Lost !' + userAmount + ' is to be Subtract to your Account'
-        }
-    }
+//     function resultShow(Result,userAmount){
+//         if(Result){
+//             var updatedNumber= intialNumbers + userAmount;
+//             picInitialNumber.innerHTML=updatedNumber;
+//             gameStatus.innerHTML='Congrats You Win !' + userAmount + ' is to be Added to your Account'
+//         }
+//         else{
+//             var updatedNumber= intialNumbers - userAmount;
+//             picInitialNumber.innerHTML=updatedNumber; 
+//             gameStatus.innerHTML='Sorry You Lost !' + userAmount + ' is to be Subtract to your Account'
+//         }
+//     }
+
+
+
+// var emailEl=document.getElementById('email');
+// var passwordEl=document.getElementById('password');
+// var status= document.getElementById('status');
+// let userlist=[];
+// function UserRegiter(){
+//     // var getValueE= emailEl.value;
+//     // var getValueP =passwordEl.value;
+//     // console.log(getValueE,getValueP);
+
+//     let user={
+//         userEmail: emailEl.value,
+//         userPassword: passwordEl.value
+//     }
+//     userlist.push(user);
+
+// }
+
+//     if(userEmail === userEmail && userPassword){
+//         status.innerHtml = "Login Sucessful"
+//     }
+//     else{
+//         status.innerHtml = "Login Failed"
+        
+//     }
+
+// }
+
+
+
+
+
+//Date
+
+var rightNow = new Date();
+console.log(rightNow);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
