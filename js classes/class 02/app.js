@@ -224,12 +224,62 @@
 
 //Date
 
-var rightNow = new Date();
-console.log(rightNow);
+// var rightNow = new Date();
+// console.log(rightNow);
 
+//How many days date of birth to today time
 
+var email= document.getElementById('email');
+var password= document.getElementById('password');
+var users=[];
+var status= document.getElementById('message');
 
+function registerUser(){
+    console.log(email.value,password.value);
 
+    user = {
+        emailEl: email.value,
+        passEl:  password.value
+
+    }
+    users.push(user)
+    console.log(users);
+}
+
+function signup(){
+    var emailInput = email.value;
+    var passInput= password.value;
+    var message;
+    for(var i=0; i<users.length;i++){
+        var userObj= users[i]; 
+        if(userObj.emailEl === emailInput && userObj.passEl === passInput){
+             message = 'sucessful login';
+             status.innerHTML = message
+            console.log(message);
+            break;
+        }
+       else if(userObj.emailEl === emailInput && userObj.passEl !== passInput){
+         message = 'Password incorrect'    
+        console.log(message);
+            break;
+        }
+       else if(userObj.emailEl !== emailInput && userObj.passEl === passInput){
+         message = 'Email incorrect';
+
+        console.log(message);
+            break;
+        }
+
+        else{
+             message= 'User not authorized';
+            console.log(message);
+        }
+
+    }
+    console.log(users,status.innerHTML = message);
+    status.innerHTML = message;
+
+}
 
 
 
