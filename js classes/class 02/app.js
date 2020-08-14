@@ -231,8 +231,10 @@
 
 var email= document.getElementById('email');
 var password= document.getElementById('password');
+var statusauth= document.getElementById('message');
 var users=[];
-var status= document.getElementById('message');
+
+console.log(status.innerHTML = 'hello');
 
 function registerUser(){
     console.log(email.value,password.value);
@@ -249,17 +251,18 @@ function registerUser(){
 function signup(){
     var emailInput = email.value;
     var passInput= password.value;
-    var message;
+    var message = '';
     for(var i=0; i<users.length;i++){
         var userObj= users[i]; 
         if(userObj.emailEl === emailInput && userObj.passEl === passInput){
              message = 'sucessful login';
-             status.innerHTML = message
+            //  status.innerHTML = message
             console.log(message);
             break;
         }
        else if(userObj.emailEl === emailInput && userObj.passEl !== passInput){
-         message = 'Password incorrect'    
+        message.style.color= 'red'; 
+        message = 'Password incorrect'    
         console.log(message);
             break;
         }
@@ -276,9 +279,8 @@ function signup(){
         }
 
     }
-    console.log(users,status.innerHTML = message);
-    status.innerHTML = message;
-
+    console.log(message);
+    statusauth.innerHTML= message ;
 }
 
 
