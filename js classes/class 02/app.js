@@ -229,79 +229,120 @@
 
 //How many days date of birth to today time
 
-var email= document.getElementById('email');
-var password= document.getElementById('password');
-var statusauth= document.getElementById('message');
-var users=[];
+// var email= document.getElementById('email');
+// var password= document.getElementById('password');
+// var statusauth= document.getElementById('message');
+// var users=[];
 
-console.log(status.innerHTML = 'hello');
+// console.log(status.innerHTML = 'hello');
 
-function registerUser(){
-    console.log(email.value,password.value);
+// function registerUser(){
+//     console.log(email.value,password.value);
 
-    user = {
-        emailEl: email.value,
-        passEl:  password.value
+//     user = {
+//         emailEl: email.value,
+//         passEl:  password.value
 
-    }
-    users.push(user)
-    console.log(users);
+//     }
+//     users.push(user)
+//     console.log(users);
+// }
+
+// function signup(){
+//     var emailInput = email.value;
+//     var passInput= password.value;
+//     var message = '';
+//     for(var i=0; i<users.length;i++){
+//         var userObj= users[i]; 
+//         if(userObj.emailEl === emailInput && userObj.passEl === passInput){
+//              message = 'sucessful login';
+//             //  status.innerHTML = message
+//             console.log(message);
+//             break;
+//         }
+//        else if(userObj.emailEl === emailInput && userObj.passEl !== passInput){ 
+//         message = 'Password incorrect'    
+//         console.log(message);
+//             break;
+//         }
+//        else if(userObj.emailEl !== emailInput && userObj.passEl === passInput){
+//          message = 'Email incorrect';
+
+//         console.log(message);
+//             break;
+//         }
+
+//         else{
+//              message= 'User not authorized';
+//             console.log(message);
+//         }
+
+//     }
+//     console.log(message);
+//     statusauth.innerHTML= message ;
+// }
+
+//1.slice
+//2.substring
+// var a= ['car','bike','suzuki','aeroplane','helocopter']
+// var textCopy = a.slice(1,3);
+// console.log(textCopy);
+
+
+// //string method
+// var b = 'hamzaali';
+// var copyString= b.substring(0,1).toUpperCase();
+// var nextText= b.substring(1)
+// console.log(copyString);
+// console.log(nextText);
+
+// console.log(copyString+nextText);
+
+
+//task 
+
+// var text = prompt('Enter the text');
+
+// // var upper=text.toUpperCase()
+// // // console.log(text);
+// // console.log(upper);
+
+// //a quick work in london
+
+
+
+// for(var i=0;i<text.length;i++){
+//     var copyText1= text.charAt(0).toUpperCase();
+//     var copyText2= text.slice(1).toLowerCase();
+//     console.log(copyText1+copyText2);
+// }
+
+
+
+
+
+
+// a='hamza';
+// console.log(a.charAt();
+
+
+
+
+
+
+
+//Assignment
+
+var text= 'a quick browN fOX jumps OVER the lazy dOG';
+function paragraphCapitalize(a){
+         var word= a.split(" ");
+     console.log(word);    
+     return word.map(el => el[0].toUpperCase() + el.slice(1)).join(" ");
+     console.log(word);    
 }
 
-function signup(){
-    var emailInput = email.value;
-    var passInput= password.value;
-    var message = '';
-    for(var i=0; i<users.length;i++){
-        var userObj= users[i]; 
-        if(userObj.emailEl === emailInput && userObj.passEl === passInput){
-             message = 'sucessful login';
-            //  status.innerHTML = message
-            console.log(message);
-            break;
-        }
-       else if(userObj.emailEl === emailInput && userObj.passEl !== passInput){
-        message.style.color= 'red'; 
-        message = 'Password incorrect'    
-        console.log(message);
-            break;
-        }
-       else if(userObj.emailEl !== emailInput && userObj.passEl === passInput){
-         message = 'Email incorrect';
-
-        console.log(message);
-            break;
-        }
-
-        else{
-             message= 'User not authorized';
-            console.log(message);
-        }
-
-    }
-    console.log(message);
-    statusauth.innerHTML= message ;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var result=paragraphCapitalize(text);
+console.log(result);
 
 
 
