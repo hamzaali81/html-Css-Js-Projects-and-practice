@@ -333,16 +333,58 @@
 
 //Assignment
 
-var text= 'a quick browN fOX jumps OVER the lazy dOG';
-function paragraphCapitalize(a){
-         var word= a.split(" ");
-     console.log(word);    
-     return word.map(el => el[0].toUpperCase() + el.slice(1)).join(" ");
-     console.log(word);    
+// var text= 'a quick browN fOX jumps OVER the lazy dOG';
+// function paragraphCapitalize(a){
+//          var word= a.split(" ");
+//      console.log(word);    
+//      return word.map(el => el[0].toUpperCase() + el.slice(1)).join(" ");
+//      console.log(word);    
+// }
+
+// var result=paragraphCapitalize(text);
+// console.log(result);
+
+
+
+//Time Events
+var h1= document.getElementById('heading');
+var i=0;
+
+function clock(){
+    console.log(i++);
+
+    clearInterval(i)
 }
 
-var result=paragraphCapitalize(text);
-console.log(result);
+setInterval(clock,1000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
