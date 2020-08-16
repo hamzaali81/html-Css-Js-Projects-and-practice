@@ -386,59 +386,63 @@
 // }
 
 //flip Card game
-var img1= document.getElementById('img-1');
-var img2= document.getElementById('img-2');
-var img3= document.getElementById('img-3');
-var message=document.getElementById('message');
-var cardfirsttime= false;
+// var img1= document.getElementById('img-1');
+// var img2= document.getElementById('img-2');
+// var img3= document.getElementById('img-3');
+// var message=document.getElementById('message');
+// var cardfirsttime= false;
 
-function flipCard(imgnumber){
-    console.log(imgnumber);
-    if(!cardfirsttime){
-        var numberGenerate = Math.ceil(Math.random()*3);
-        console.log(numberGenerate);
-        if(numberGenerate == 1){
-            img2.src='img2.png';
-            img1.src='img1.jpg';
-            img3.src='img2.png';
-            //two king
-         }
-        else if(numberGenerate == 2){
-            img1.src='img1.jpg';
-            img3.src='img2.png';
-            img2.src='img1.jpg';
-            //two joker 
-        }
-        else if(numberGenerate == 3){
-             img2.src='img2.png';
-             img1.src='img1.jpg';
-             img3.src='img2.png';
-         //two king
-            }
-            cardfirsttime= true;
-            if(numberGenerate == imgnumber){
-                message.innerHTML = 'You Won the game';
-            }
-            else{
-                message.innerHTML= 'You lose the game';
-            }
-     }
+// function flipCard(imgnumber){
+//     console.log(imgnumber);
+//     if(!cardfirsttime){
+//         var numberGenerate = Math.ceil(Math.random()*3);
+//         console.log(numberGenerate);
+//         if(numberGenerate == 1){
+//             img2.src='img2.png';
+//             img1.src='img1.jpg';
+//             img3.src='img2.png';
+//             //two king
+//          }
+//         else if(numberGenerate == 2){
+//             img1.src='img1.jpg';
+//             img3.src='img2.png';
+//             img2.src='img1.jpg';
+//             //two joker 
+//         }
+//         else if(numberGenerate == 3){
+//              img2.src='img2.png';
+//              img1.src='img1.jpg';
+//              img3.src='img2.png';
+//          //two king
+//             }
+//             cardfirsttime= true;
+//             if(numberGenerate == imgnumber){
+//                 message.innerHTML = 'You Won the game';
+//             }
+//             else{
+//                 message.innerHTML= 'You lose the game';
+//             }
+//      }
      
 
-}
+// }
 
 
-function reset(){
-    img1.src='card.jpg';
-    img2.src='card.jpg';
-    img3.src='card.jpg';
-    cardfirsttime= false;
-}
+// function reset(){
+//     img1.src='card.jpg';
+//     img2.src='card.jpg';
+//     img3.src='card.jpg';
+//     cardfirsttime= false;
+// }
 
 
+/////////////////////////////////////////////////
+//childNode topic
+console.log(document.childNodes[1].childNodes[2].childNodes[13].childNodes[1].nodeName);
 
+var textAnchorChange=document.childNodes[1].childNodes[2].childNodes[13].childNodes[1];
 
-
+textAnchorChange.innerHTML='Change Text';
 
 
 
