@@ -347,24 +347,43 @@
 
 
 //Time Events
-var h1= document.getElementById('heading');
-var i=0;
+// var h1= document.getElementById('heading');
 
-function clock(){
-    console.log(i++);
+// function clock(){
+//     // console.log(i++);
+//     // for(var i=0;i<59;i++){
+//     //    if(i>5){
+//             h1.innerHTML= i--;
+            
+//         }
+//     }
+//     }
+    
 
-    clearInterval(i)
+// setInterval(clock,500)
+
+
+
+
+
+//DOM
+
+var div1= document.getElementById('main-div');
+var allpara=div1.getElementsByTagName('p');
+
+// console.log(allpara);
+// var userText=prompt("Type the paragraph");
+// allpara[2].innerHTML = '3. '+userText;
+
+
+for(var i=0;i<allpara.length;i++){
+   var userType=prompt("Paragraph you write");
+   allpara[i].innerHTML=userType; 
+    // console.log(allpara[i]);
+
+    // allpara.innerHTML = 'hello';
+
 }
-
-setInterval(clock,1000)
-
-
-
-
-
-
-
-
 
 
 
