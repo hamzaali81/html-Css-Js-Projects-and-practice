@@ -368,22 +368,24 @@
 
 //DOM
 
-var div1= document.getElementById('main-div');
-var allpara=div1.getElementsByTagName('p');
+// var div1= document.getElementById('main-div');
+// var allpara=div1.getElementsByTagName('p');
 
-// console.log(allpara);
-// var userText=prompt("Type the paragraph");
-// allpara[2].innerHTML = '3. '+userText;
+// // console.log(allpara);
+// // var userText=prompt("Type the paragraph");
+// // allpara[2].innerHTML = '3. '+userText;
 
 
-for(var i=0;i<allpara.length;i++){
-   var userType=prompt("Paragraph you write");
-   allpara[i].innerHTML=userType; 
-    // console.log(allpara[i]);
+// for(var i=0;i<allpara.length;i++){
+//    var userType=prompt("Paragraph you write");
+//    allpara[i].innerHTML=userType; 
+//     // console.log(allpara[i]);
 
-    // allpara.innerHTML = 'hello';
+//     // allpara.innerHTML = 'hello';
 
-}
+// }
+
+//flip Card game
 
 
 
