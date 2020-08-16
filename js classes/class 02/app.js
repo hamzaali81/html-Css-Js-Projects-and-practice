@@ -438,15 +438,42 @@
 
 /////////////////////////////////////////////////
 //childNode topic
-console.log(document.childNodes[1].childNodes[2].childNodes[13].childNodes[1].nodeName);
+// console.log(document.childNodes[1].childNodes[2].childNodes[13].childNodes[1].nodeName);
 
-var textAnchorChange=document.childNodes[1].childNodes[2].childNodes[13].childNodes[1];
+// var textAnchorChange=document.childNodes[1].childNodes[2].childNodes[13].childNodes[1];
 
-textAnchorChange.innerHTML='Change Text';
+// textAnchorChange.innerHTML='Change Text';
+
+/////////////////////////////////////////////////////////
+// create method and append
+console.log(document.childNodes[1].childNodes[2]);
+var body=document.childNodes[1].childNodes[2];
+
+var h1=document.createElement('h1');
+var textheading=document.createTextNode('shopping card');
+h1.appendChild(textheading);
+body.appendChild(h1);
+
+var item=document.getElementById('userText');
+
+console.log(document.childNodes[1].childNodes[2].childNodes[19]);
+var ul=document.childNodes[1].childNodes[2].childNodes[19];
 
 
+function todoTest(){
+    console.log(item.value);
+    if(item.value === ''){
+       console.log('Field is empty');
+    }
 
+    else{
+        var li=document.createElement('li');
+        var text=document.createTextNode(item.value);
+        li.append(text);
+        ul.appendChild(li)
 
+    }
+}
 
 
 
