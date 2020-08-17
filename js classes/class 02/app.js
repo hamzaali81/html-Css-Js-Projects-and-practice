@@ -476,10 +476,14 @@
 // }
 
 //Todo App
-
+//replace add btn to save btn
 
 var items=document.getElementById('list');
 var ul=document.childNodes[1].childNodes[2].childNodes[21];
+var addBtn=document.getElementById('add-btn');
+var editItem='';
+
+console.log(addBtn);
 console.log(document.childNodes[1].childNodes[2].childNodes[21]);
 // console.log(document.childNodes[1].childNodes[2].childNodes[21].firstChild);
 function todoApp(){
@@ -522,12 +526,23 @@ ulEl.removeChild(liEl);
 
 function editButton(targetEl){
     console.log(targetEl.previousSibling.previousSibling.nodeValue);
-
+    editItem=targetEl;
     // console.log(targetEl);
     items.value=targetEl.previousSibling.previousSibling.nodeValue;
-
+    addBtn.innerHTML='Save';
+    addBtn.setAttribute('onclick','saveItems()')
 }
 
+
+function saveItems(){
+     console.log('Hello world save',editItem);
+     editItem.previousSibling.previousSibling.nodeValue = items.value
+     addBtn.innerHTML='Add';
+     addBtn.setAttribute('onclick','todoApp()');
+
+     items.value='';
+     editItem=undefined;
+}
 
 
 
