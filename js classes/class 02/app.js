@@ -446,34 +446,112 @@
 
 /////////////////////////////////////////////////////////
 // create method and append
-console.log(document.childNodes[1].childNodes[2]);
-var body=document.childNodes[1].childNodes[2];
+// console.log(document.childNodes[1].childNodes[2]);
+// var body=document.childNodes[1].childNodes[2];
 
-var h1=document.createElement('h1');
-var textheading=document.createTextNode('shopping card');
-h1.appendChild(textheading);
-body.appendChild(h1);
+// var h1=document.createElement('h1');
+// var textheading=document.createTextNode('shopping card');
+// h1.appendChild(textheading);
+// body.appendChild(h1);
 
-var item=document.getElementById('userText');
+// var item=document.getElementById('userText');
 
-console.log(document.childNodes[1].childNodes[2].childNodes[19]);
-var ul=document.childNodes[1].childNodes[2].childNodes[19];
+// console.log(document.childNodes[1].childNodes[2].childNodes[19]);
+// var ul=document.childNodes[1].childNodes[2].childNodes[19];
 
 
-function todoTest(){
-    console.log(item.value);
-    if(item.value === ''){
-       console.log('Field is empty');
+// function todoTest(){
+//     console.log(item.value);
+//     if(item.value === ''){
+//        console.log('Field is empty');
+//     }
+
+//     else{
+//         var li=document.createElement('li');
+//         var text=document.createTextNode(item.value);
+//         li.append(text);
+//         ul.appendChild(li)
+
+//     }
+// }
+
+//Todo App
+
+
+var items=document.getElementById('list');
+var ul=document.childNodes[1].childNodes[2].childNodes[21];
+console.log(document.childNodes[1].childNodes[2].childNodes[21]);
+// console.log(document.childNodes[1].childNodes[2].childNodes[21].firstChild);
+function todoApp(){
+        // console.log(listrender);
+    if(items.value === ''){
+        console.log('Not available list');
     }
-
     else{
-        var li=document.createElement('li');
-        var text=document.createTextNode(item.value);
-        li.append(text);
-        ul.appendChild(li)
 
+        var li=document.createElement('li');
+        var textList=document.createTextNode(items.value);
+        li.appendChild(textList);
+        ul.appendChild(li);
+        
+        var deleteBtn=document.createElement('button');
+        var edit=document.createElement('button')
+        var textDelete=document.createTextNode('delete');
+        var editText=document.createTextNode('edit');
+        deleteBtn.appendChild(textDelete);
+        edit.appendChild(editText);
+      
+
+        // console.log(deleteBtn);
+        
+        li.appendChild(deleteBtn);
+        li.appendChild(edit);
+        
+        deleteBtn.setAttribute('onclick','deleteButton(this)');
+        edit.setAttribute('onclick','editButton(this)');
     }
+    
 }
+
+function deleteButton(targetEl){    
+// console.log('Hello delete',targetEl);
+var liEl=targetEl.parentNode;
+var ulEl=targetEl.parentNode.parentNode;
+ulEl.removeChild(liEl);
+}
+
+function editButton(targetEl){
+    console.log(targetEl.previousSibling.previousSibling.nodeValue);
+
+    // console.log(targetEl);
+    items.value=targetEl.previousSibling.previousSibling.nodeValue;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
