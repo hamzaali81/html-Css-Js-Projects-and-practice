@@ -478,71 +478,104 @@
 //Todo App
 //replace add btn to save btn
 
-var items=document.getElementById('list');
-var ul=document.childNodes[1].childNodes[2].childNodes[21];
-var addBtn=document.getElementById('add-btn');
-var editItem='';
+// var items=document.getElementById('list');
+// var ul=document.childNodes[1].childNodes[2].childNodes[21];
+// var addBtn=document.getElementById('add-btn');
+// var editItem='';
 
-console.log(addBtn);
-console.log(document.childNodes[1].childNodes[2].childNodes[21]);
-// console.log(document.childNodes[1].childNodes[2].childNodes[21].firstChild);
-function todoApp(){
-        // console.log(listrender);
-    if(items.value === ''){
-        console.log('Not available list');
-    }
-    else{
+// console.log(addBtn);
+// console.log(document.childNodes[1].childNodes[2].childNodes[21]);
+// // console.log(document.childNodes[1].childNodes[2].childNodes[21].firstChild);
+// function todoApp(){
+//         // console.log(listrender);
+//     if(items.value === ''){
+//         console.log('Not available list');
+//     }
+//     else{
 
-        var li=document.createElement('li');
-        var textList=document.createTextNode(items.value);
-        li.appendChild(textList);
-        ul.appendChild(li);
+//         var li=document.createElement('li');
+//         var textList=document.createTextNode(items.value);
+//         li.appendChild(textList);
+//         ul.appendChild(li);
         
-        var deleteBtn=document.createElement('button');
-        var edit=document.createElement('button')
-        var textDelete=document.createTextNode('delete');
-        var editText=document.createTextNode('edit');
-        deleteBtn.appendChild(textDelete);
-        edit.appendChild(editText);
+//         var deleteBtn=document.createElement('button');
+//         var edit=document.createElement('button')
+//         var textDelete=document.createTextNode('delete');
+//         var editText=document.createTextNode('edit');
+//         deleteBtn.appendChild(textDelete);
+//         edit.appendChild(editText);
       
 
-        // console.log(deleteBtn);
+//         // console.log(deleteBtn);
         
-        li.appendChild(deleteBtn);
-        li.appendChild(edit);
+//         li.appendChild(deleteBtn);
+//         li.appendChild(edit);
         
-        deleteBtn.setAttribute('onclick','deleteButton(this)');
-        edit.setAttribute('onclick','editButton(this)');
-    }
+//         deleteBtn.setAttribute('onclick','deleteButton(this)');
+//         edit.setAttribute('onclick','editButton(this)');
+//     }
     
+// }
+
+// function deleteButton(targetEl){    
+// // console.log('Hello delete',targetEl);
+// var liEl=targetEl.parentNode;
+// var ulEl=targetEl.parentNode.parentNode;
+// ulEl.removeChild(liEl);
+// }
+
+// function editButton(targetEl){
+//     console.log(targetEl.previousSibling.previousSibling.nodeValue);
+//     editItem=targetEl;
+//     // console.log(targetEl);
+//     items.value=targetEl.previousSibling.previousSibling.nodeValue;
+//     addBtn.innerHTML='Save';
+//     addBtn.setAttribute('onclick','saveItems()')
+// }
+
+
+// function saveItems(){
+//      console.log('Hello world save',editItem);
+//      editItem.previousSibling.previousSibling.nodeValue = items.value
+//      addBtn.innerHTML='Add';
+//      addBtn.setAttribute('onclick','todoApp()');
+
+//      items.value='';
+//      editItem=undefined;
+// }
+
+
+//////////////////////////////////////////////////////////////////////////////
+//filter project
+var filterText=document.getElementById('filterText')
+
+function filterList(){
+console.log(filterText.value);
 }
 
-function deleteButton(targetEl){    
-// console.log('Hello delete',targetEl);
-var liEl=targetEl.parentNode;
-var ulEl=targetEl.parentNode.parentNode;
-ulEl.removeChild(liEl);
-}
-
-function editButton(targetEl){
-    console.log(targetEl.previousSibling.previousSibling.nodeValue);
-    editItem=targetEl;
-    // console.log(targetEl);
-    items.value=targetEl.previousSibling.previousSibling.nodeValue;
-    addBtn.innerHTML='Save';
-    addBtn.setAttribute('onclick','saveItems()')
-}
 
 
-function saveItems(){
-     console.log('Hello world save',editItem);
-     editItem.previousSibling.previousSibling.nodeValue = items.value
-     addBtn.innerHTML='Add';
-     addBtn.setAttribute('onclick','todoApp()');
 
-     items.value='';
-     editItem=undefined;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
