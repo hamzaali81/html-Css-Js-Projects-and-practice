@@ -660,6 +660,41 @@ function saveWithcustomDocId(){
 // }
 
 
+function getUserTodoRealtime(){
+    var uid=JSON.parse(localStorage.getItem('userInfo')).uid;
+    db.collection("todo").where("uid","==",uid) //base data collection
+      .onSnapshot(function(snapshot){  //realtime
+         console.log('snapshot',snapshot);
+
+         snapshot.docChanges().forEach(function(change) {
+            if (change.type === "added") {
+                console.log("Todo App: ", change.doc.data());
+            }
+            if (change.type === "modified") {
+                console.log("Modified city: ", change.doc.data());
+            }
+            if (change.type === "removed") {
+                console.log("Removed city: ", change.doc.data());
+            }
+        });
+     })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
