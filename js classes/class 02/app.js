@@ -598,6 +598,7 @@ function signin(){
 }
 
 function redirectToHome(){
+    localStorage.setItem('userInfo',JSON.stringify(auth.currentUser))
     window.location.href='./home.html';
 }
 
@@ -620,27 +621,43 @@ function addTodoItem(){
     });
 }
 
-function getAllTodos(){
-    db.collection("todo").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            console.log(auth.currentUser);  //find user data
-            // console.log('raw data', doc);
-            // console.log(`${doc.id} => ${doc.data().todo}`);
-            // console.log(`${doc.id} => ${doc.data()}`);
-            console.log(doc.id,doc.data());
-        });
-    });
-}
+// function getAllTodos(){
+//     db.collection("todo").get().then((querySnapshot) => {
+//         querySnapshot.forEach((doc) => {
+//             console.log(auth.currentUser);  //find user data
+//             // console.log('raw data', doc);
+//             // console.log(`${doc.id} => ${doc.data().todo}`);
+//             // console.log(`${doc.id} => ${doc.data()}`);
+//             console.log(doc.id,doc.data());
+//         });
+//     });
+// }
 
+saveWithcustomDocId();
 function saveWithcustomDocId(){
-    
+    db.collection('users').doc('LA').set({
+        studentName: 'hamza',
+        roll:  2643
+    })
 }
 
 
 
 
 
-
+// function getCurrentUserTodos(){
+//     db.collection("todo").where('uid', "==",JSON.parse(localStorage.getItem('userInfo')).uid)
+//     .get()
+//     .then((querySnapshot) => {
+//         querySnapshot.forEach((doc) => {
+//             console.log(auth.currentUser);  //find user data
+//             // console.log('raw data', doc);
+//             // console.log(`${doc.id} => ${doc.data().todo}`);
+//             // console.log(`${doc.id} => ${doc.data()}`);
+//             console.log(doc.id,doc.data());
+//         });
+//     });
+// }
 
 
 
