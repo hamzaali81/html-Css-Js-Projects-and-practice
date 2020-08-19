@@ -556,11 +556,15 @@
 
 var emailEl= document.getElementById('email');
 var passEl=document.getElementById('password');
+var auth=firebase.auth();
+var db = firebase.firestore();
+
+
 
 function signupUser(){
     console.log(emailEl.value,passEl.value);
     
-    firebase.auth().createUserWithEmailAndPassword(emailEl.value, passEl.value)
+    auth.createUserWithEmailAndPassword(emailEl.value, passEl.value)
     .then(function(sucess){
     console.log(sucess);
     })
@@ -579,9 +583,10 @@ function signupUser(){
 
 function signin(){
     console.log(emailEl.value,passEl.value);
-    firebase.auth().signInWithEmailAndPassword(emailEl.value, passEl.value)
+    auth.signInWithEmailAndPassword(emailEl.value, passEl.value)
     .then(function(user){
         console.log('user',user.user.uid);
+          redirectToHome()
     })
     .catch(function(error) {
         // Handle Errors here.
@@ -592,10 +597,28 @@ function signin(){
       });
 }
 
+function redirectToHome(){
+    window.location.href='./home.html';
+}
 
 
-
-
+function addTodoItem(){
+    console.log(auth.currentUser.uid);
+    var todos=document.getElementById('todo-item');
+    db.collection("todo").add({
+       todo: todos.value,
+       uid: auth.currentUser.uid
+    })
+    .then(function(docRef) {
+        
+        console.log("Document written with ID: ", docRef.id);
+        todos.value= '';
+    
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
+}
 
 
 

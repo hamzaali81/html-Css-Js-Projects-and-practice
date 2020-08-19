@@ -6,6 +6,42 @@
     <title>home</title>
 </head>
 <body>
+    <h1>Welcome to special Todo App</h1>
+    <p>Place to manage your schedule</p>
+     
+    Todo: <input type="text" name="todo" id="todo-item">
     
+    <button onclick="addTodoItem()">Add Todo</button>
+
+
+      <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBUm8Mfo4_aS6icK5_8aer3pAmsH9sOkSM",
+    authDomain: "signupapp-b5eb0.firebaseapp.com",
+    databaseURL: "https://signupapp-b5eb0.firebaseio.com",
+    projectId: "signupapp-b5eb0",
+    storageBucket: "signupapp-b5eb0.appspot.com",
+    messagingSenderId: "590099231056",
+    appId: "1:590099231056:web:81c85c95c88d49c13e3c55",
+    measurementId: "G-GQ6W9P3QTF"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+      <script src="app.js"></script>
 </body>
 </html>
