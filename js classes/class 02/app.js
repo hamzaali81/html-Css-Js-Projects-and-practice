@@ -547,12 +547,50 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //filter project
-var filterText=document.getElementById('filterText')
+// var filterText=document.getElementById('filterText')
 
-function filterList(){
-console.log(filterText.value);
+// function filterList(){
+// console.log(filterText.value);
+// }
+
+
+var emailEl= document.getElementById('email');
+var passEl=document.getElementById('password');
+
+function signupUser(){
+    console.log(emailEl.value,passEl.value);
+    
+    firebase.auth().createUserWithEmailAndPassword(emailEl.value, passEl.value)
+    .then(function(sucess){
+    console.log(sucess);
+    })
+
+
+    .catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+        console.log(error);  
+    });
 }
 
+
+
+function signin(){
+    console.log(emailEl.value,passEl.value);
+    firebase.auth().signInWithEmailAndPassword(emailEl.value, passEl.value)
+    .then(function(user){
+        console.log('user',user.user.uid);
+    })
+    .catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+        console.log(error);
+      });
+}
 
 
 
