@@ -620,10 +620,21 @@ function addTodoItem(){
     });
 }
 
+function getAllTodos(){
+    db.collection("todo").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            console.log(auth.currentUser);  //find user data
+            // console.log('raw data', doc);
+            // console.log(`${doc.id} => ${doc.data().todo}`);
+            // console.log(`${doc.id} => ${doc.data()}`);
+            console.log(doc.id,doc.data());
+        });
+    });
+}
 
-
-
-
+function saveWithcustomDocId(){
+    
+}
 
 
 
