@@ -733,8 +733,10 @@ function deleteFromDom(id){
 }
 
 
-var todoBtn=document.getElementById('todo-btn')
+var todoBtn=document.getElementById('todo-btn');
+var editkey;
 function editItem(editTodo){
+    editkey=editTodo.parentNode.id;
     console.log(editTodo.parentNode.childNodes[0].nodeValue);
     todos.value=editTodo.parentNode.childNodes[0].nodeValue;
     todoBtn.innerHTML='Save Todo';
@@ -745,94 +747,10 @@ function editItem(editTodo){
 
 function updateTodo(){
     console.log("******");
+ db.collection("todo").doc(editkey).update({
+     todos: todos.value
+ })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
