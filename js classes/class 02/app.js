@@ -552,7 +552,8 @@
 // function filterList(){
 // console.log(filterText.value);
 // }
-
+/////////////////////////////////////
+//firebase learning
 
 var emailEl= document.getElementById('email');
 var passEl=document.getElementById('password');
@@ -586,7 +587,7 @@ function signin(){
     auth.signInWithEmailAndPassword(emailEl.value, passEl.value)
     .then(function(user){
         console.log('user',user.user.uid);
-          redirectToHome()
+        redirectToHome()
     })
     .catch(function(error) {
         // Handle Errors here.
@@ -594,7 +595,7 @@ function signin(){
         var errorMessage = error.message;
         // ...
         console.log(error);
-      });
+    });
 }
 
 function redirectToHome(){
@@ -603,6 +604,7 @@ function redirectToHome(){
 }
 
 
+var todos=document.getElementById('todo-item');
 function addTodoItem(){
     console.log(auth.currentUser.uid);
     var todos=document.getElementById('todo-item');
@@ -669,24 +671,81 @@ function getUserTodoRealtime(){
          snapshot.docChanges().forEach(function(change) {
             if (change.type === "added") {
                 console.log("Todo App: ", change.doc.data());
+                makeListing(change.doc)
             }
-            if (change.type === "modified") {
-                console.log("Modified city: ", change.doc.data());
-            }
+            // if (change.type === "modified") {
+            //     console.log("Modified city: ", change.doc.data());
+            // }
             if (change.type === "removed") {
-                console.log("Removed city: ", change.doc.data());
+                console.log("Removed Todo: ",change.doc.id, change.doc.data());
+                deleteFromDom(change.doc.id);
             }
         });
      })
 }
 
+// function makeListing(data,docId){
+// console.log(docId,'data',data);
+// }
+
+var divListing=document.getElementById('listing');
+
+function makeListing(todoItem){
+    var todoObj=todoItem.data();
+         todoObj.id = todoItem.id;
+    console.log(todoObj,'todoItem');
+var p=document.createElement('p');
+var paraText=document.createTextNode(todoObj.todo);
+p.setAttribute('id', todoObj.id)
+p.appendChild(paraText);
+
+var editBtn = document.createElement('button');
+var editTextNode =  document.createTextNode('edit');
+editBtn.appendChild(editTextNode);
+editBtn.setAttribute('onclick','editItem(this)')
+
+var delBtn = document.createElement('button');
+var delTextNode =  document.createTextNode('delete');
+delBtn.appendChild(delTextNode);
+delBtn.setAttribute('onclick','deleteTodo(this)')
+
+p.appendChild(editBtn);
+p.appendChild(delBtn);
+
+divListing.appendChild(p);
+}
 
 
+function deleteTodo(itemToDelete) {
+    console.log('item',itemToDelete.parentNode.id);
+    var docId= itemToDelete.parentNode.id;
+    db.collection("todo").doc(docId).delete().then(function() {
+        console.log("Document successfully deleted!");
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
+}
+
+function deleteFromDom(id){
+    var itemToDelete = document.getElementById(id)
+    divListing.removeChild(itemToDelete);
+    console.log(id,itemToDelete);
+}
 
 
+var todoBtn=document.getElementById('todo-btn')
+function editItem(editTodo){
+    console.log(editTodo.parentNode.childNodes[0].nodeValue);
+    todos.value=editTodo.parentNode.childNodes[0].nodeValue;
+    todoBtn.innerHTML='Save Todo';
+    todoBtn.setAttribute('onclick','updateTodo()')
+
+}
 
 
-
+function updateTodo(){
+    console.log("******");
+}
 
 
 
