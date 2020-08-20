@@ -562,6 +562,8 @@ var db = firebase.firestore();
 
 
 
+//onsnapshot listener
+
 function signupUser(){
     console.log(emailEl.value,passEl.value);
     
@@ -660,11 +662,11 @@ function saveWithcustomDocId(){
 //         });
 //     });
 // }
-
+var unsubscribe ;
 
 function getUserTodoRealtime(){
     var uid=JSON.parse(localStorage.getItem('userInfo')).uid;
-    db.collection("todo").where("uid","==",uid) //base data collection
+    unsubscribe = db.collection("todo").where("uid","==",uid) //base data collection
       .onSnapshot(function(snapshot){  //realtime
          console.log('snapshot',snapshot);
 
@@ -673,9 +675,10 @@ function getUserTodoRealtime(){
                 console.log("Todo App: ", change.doc.data());
                 makeListing(change.doc)
             }
-            // if (change.type === "modified") {
-            //     console.log("Modified city: ", change.doc.data());
-            // }
+            if (change.type === "modified") {
+                console.log("Two Part Option is used: ",change.doc.id, change.doc.data());
+                updateFROMDOM(change.doc);
+            }
             if (change.type === "removed") {
                 console.log("Removed Todo: ",change.doc.id, change.doc.data());
                 deleteFromDom(change.doc.id);
@@ -744,15 +747,36 @@ function editItem(editTodo){
 
 }
 
+function updateFROMDOM(doc){
+     var domUpdateLi=document.getElementById(doc.id);
+     console.log(domUpdateLi.childNodes[0].nodeValue);
+     domUpdateLi.childNodes[0].nodeValue = doc.data().todo;
+
+}
 
 function updateTodo(){
     console.log("******");
  db.collection("todo").doc(editkey).update({
-     todos: todos.value
+     todo: todos.value
+ })
+ .then(function(){
+    // var editPara=document.getElementById(editkey);
+
+     todoBtn.innerHTML='Add Todo';
+     todoBtn.setAttribute('onclick','addTodoItem()');
+     todos.value='';
+     editkey=undefined;
  })
 }
 
-
+function logoutUser(){
+    unsubscribe();
+    auth.signOut()
+    .then(function(){
+        localStorage.clear();
+        window.location.href='./index.html'
+    })
+}
 
 
 
