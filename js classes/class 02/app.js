@@ -615,31 +615,43 @@ var fileInput=document.getElementById('file-item');
 
 function addTodoItem(){
 // console.log(fileInput.value);
-console.log(fileInput.files.files[0]); //additional field
 //1.image pic and url
-
 var imagefile=fileInput.files[0];
-var imagesRef = storageRef.child('images');  //images folder file upload
-var uploadTask = storageRef.imagesRef.put(imagefile);
+
+if(imagefile && todos.value){
 
 
-
-
-    //     console.log(auth.currentUser.uid);
-//     var todos=document.getElementById('todo-item');
-//     db.collection("todo").add({
-//        todo: todos.value,
-//        uid: auth.currentUser.uid
-//     })
-//     .then(function(docRef) {
-        
-//         console.log("Document written with ID: ", docRef.id);
-//         todos.value= '';
     
-//     })
-//     .catch(function(error) {
-//         console.error("Error adding document: ", error);
-//     });
+    var imagesRef = storageRef.child('images/'+ fileInput.files[0].name);  //images folder file upload
+    var uploadTask = imagesRef.put(imagefile);
+    console.log(fileInput.files[0]); //additional field
+    
+    
+    uploadTask.snapshot.ref.getDownloadURL()
+    .then(function(url) {
+        // Insert url into an <img> tag to "download"
+         console.log('url=>',url); 
+             console.log(auth.currentUser.uid);
+             var todos=document.getElementById('todo-item');
+             db.collection("todo").add({
+                todo: todos.value,
+                uid: auth.currentUser.uid,
+                todoImage: url
+             })
+             .then(function(docRef) {
+             
+                 console.log("Document written with ID: ", docRef.id);
+                 todos.value= '';
+         
+             })
+             .catch(function(error) {
+                 console.error("Error adding document: ", error);
+             });
+    })
+}
+else{
+    alert('Image and Text are upload & required')
+}
 }
 
 // function getAllTodos(){
@@ -723,6 +735,19 @@ var editBtn = document.createElement('button');
 var editTextNode =  document.createTextNode('edit');
 editBtn.appendChild(editTextNode);
 editBtn.setAttribute('onclick','editItem(this)')
+
+
+
+
+
+
+var imgEl= document.createElement('img');
+imgEl.setAttribute('src',todoObj.todoImage);
+imgEl.setAttribute('width','50');
+imgEl.setAttribute('height','50');
+p.appendChild(imgEl);
+
+
 
 var delBtn = document.createElement('button');
 var delTextNode =  document.createTextNode('delete');
