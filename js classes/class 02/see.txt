@@ -1,0 +1,12 @@
+Database
+ref.limit.method()
+
+2.Storage
+document or image pick
+
+1.ref
+2.upload
+3.download url
+
+
+//olx project first image upload

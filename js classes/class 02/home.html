@@ -10,7 +10,7 @@
     <p>Place to manage your schedule</p>
      
     Todo: <input type="text" name="todo" id="todo-item">
-    
+    <input type="file" id="file-item" multiple/>
     <button onclick="addTodoItem()" id="todo-btn">Add Todo</button>
     
     
@@ -36,6 +36,8 @@
   <!-- Add Firebase products that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-storage.js"></script>
+
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {

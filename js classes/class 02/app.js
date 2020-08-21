@@ -559,7 +559,11 @@ var emailEl= document.getElementById('email');
 var passEl=document.getElementById('password');
 var auth=firebase.auth();
 var db = firebase.firestore();
+// Get a reference to the storage service, which is used to create references in your storage bucket
+var storage = firebase.storage();
 
+// Create a storage reference from our storage service
+var storageRef = storage.ref();
 
 
 //onsnapshot listener
@@ -607,22 +611,35 @@ function redirectToHome(){
 
 
 var todos=document.getElementById('todo-item');
+var fileInput=document.getElementById('file-item');
+
 function addTodoItem(){
-    console.log(auth.currentUser.uid);
-    var todos=document.getElementById('todo-item');
-    db.collection("todo").add({
-       todo: todos.value,
-       uid: auth.currentUser.uid
-    })
-    .then(function(docRef) {
+// console.log(fileInput.value);
+console.log(fileInput.files.files[0]); //additional field
+//1.image pic and url
+
+var imagefile=fileInput.files[0];
+var imagesRef = storageRef.child('images');  //images folder file upload
+var uploadTask = storageRef.imagesRef.put(imagefile);
+
+
+
+
+    //     console.log(auth.currentUser.uid);
+//     var todos=document.getElementById('todo-item');
+//     db.collection("todo").add({
+//        todo: todos.value,
+//        uid: auth.currentUser.uid
+//     })
+//     .then(function(docRef) {
         
-        console.log("Document written with ID: ", docRef.id);
-        todos.value= '';
+//         console.log("Document written with ID: ", docRef.id);
+//         todos.value= '';
     
-    })
-    .catch(function(error) {
-        console.error("Error adding document: ", error);
-    });
+//     })
+//     .catch(function(error) {
+//         console.error("Error adding document: ", error);
+//     });
 }
 
 // function getAllTodos(){
@@ -667,7 +684,7 @@ var unsubscribe ;
 function getUserTodoRealtime(){
     var uid=JSON.parse(localStorage.getItem('userInfo')).uid;
     unsubscribe = db.collection("todo").where("uid","==",uid) //base data collection
-      .onSnapshot(function(snapshot){  //realtime
+      .onSnapshot(function(snapshot){  //realtime data builden method in js
          console.log('snapshot',snapshot);
 
          snapshot.docChanges().forEach(function(change) {
@@ -777,161 +794,3 @@ function logoutUser(){
         window.location.href='./index.html'
     })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
