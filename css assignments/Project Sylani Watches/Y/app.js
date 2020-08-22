@@ -7,6 +7,5 @@ var loading=document.getElementById('loading');
 // },1000)
 
 window.addEventListener('load',function(){
-    screen.style.fadeOut='slow';
     screen.style.display= 'none';
 })
