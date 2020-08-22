@@ -13,3 +13,26 @@ document or image pick
 
 //database mein kabhi bhi aap password store nhi karenga wo firebase manage kar rha hai
 //database ka collection ka andar user ki info rakhni hai
+
+
+.where query three parameter li if condition
+//////////////////////////////////////
+//Summary
+signup three parts
+1.firebase authenticate
+2.image upload  ===> data pic
+3. firebase data Storage put
+
+signin
+authentication then chalgya
+database ki information lee kar aao wo konsa data hai jis ki id mil gi hai wo la aao
+query(docs)          snapshot(docs)     localstorage save data in string
+
+user data user identification 
+performance fast save data localstorage 
+
+why realtime nhi mangwaya joo bar update usa realtime mein magwana hai
+
+
+
+//firebase not website specific customize
