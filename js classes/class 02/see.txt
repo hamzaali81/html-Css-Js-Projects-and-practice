@@ -4,9 +4,12 @@ ref.limit.method()
 2.Storage
 document or image pick
 
-1.ref
-2.upload
+1.ref apna ref banana hai
+2.upload ka liya put method call karna tha
 3.download url
 
 
 //olx project first image upload
+
+//database mein kabhi bhi aap password store nhi karenga wo firebase manage kar rha hai
+//database ka collection ka andar user ki info rakhni hai
