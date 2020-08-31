@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+<body>
+    <h1>Todo App</h1>
+
+    <h1>Welcome to special Todo App</h1>
+    <p>Place to manage your schedule</p>
+
+    <button onclick="addTodoItem()">Add Todo</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCFKhnH9_YZ4uvVemdUwSezfQVrleMgnDU",
+    authDomain: "fir-learning-4184e.firebaseapp.com",
+    databaseURL: "https://fir-learning-4184e.firebaseio.com",
+    projectId: "fir-learning-4184e",
+    storageBucket: "fir-learning-4184e.appspot.com",
+    messagingSenderId: "640335324802",
+    appId: "1:640335324802:web:6a2a949b0b19f1f862b69b",
+    measurementId: "G-VXHZP96S80"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+    <script src="app.js"></script>
+</body>
+</html>
