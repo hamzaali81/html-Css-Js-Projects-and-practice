@@ -37,30 +37,58 @@ function signInUser(){
       });
        
 }
-
+  
 
 function redirectToHome(){
     window.location.href='./home.html'
 }
 
+var todo=document.getElementById('todo-item')
+
 function addTodoItem(){
     console.log(auth.currentUser.email);
     console.log(auth.currentUser.uid);
     db.collection("todo").add({
-        todo: 'learning react',
+        todo: todo.value,
         uid : auth.currentUser.uid
 
     })
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
+        todo.value='';
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
     });
 }
 
-
-
+function getAllTodos(){
+    db.collection("todo").get()
+    
+    .then((querySnapshot) => {
+        console.log(auth.currentUser);
+        querySnapshot.forEach((doc) => {
+            // console.log('raw data',doc);
+            // console.log(`${doc.id} => ${doc.data().todo}`);
+            console.log(doc.id,doc.data().todo);
+        });
+    });
+}
+// saveWithCustomeDocID()
+// function saveWithCustomeDocID(){
+//     // Add a new document in collection "cities"
+// db.collection("cities").doc("LA").set({
+//     name: "Los Angeles",
+//     state: "CA",
+//     country: "USA"
+// })
+// .then(function() {
+//     console.log("Document successfully written!");
+// })
+// .catch(function(error) {
+//     console.error("Error writing document: ", error);
+// });
+// }
 
 
 
