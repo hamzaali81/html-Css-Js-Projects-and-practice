@@ -53,11 +53,18 @@ var fileInput=document.getElementById('file-item');
 function addTodoItem(){
  
  
+    
+    //  console.log(fileInput.value);   // console.log(auth.currentUser.email);
  
-//  console.log(fileInput.value);   // console.log(auth.currentUser.email);
- console.log(fileInput.files);
- var file=fileInput.files[0];
- // console.log(auth.currentUser.email);
+ 
+    console.log(fileInput.files);
+    var imageFile=fileInput.files[0];
+    var imagesRef = storageRef.child('images/'+fileInput.files[0].name);
+ 
+ 
+    var uploadTask = imagesRef.put(imageFile);
+
+    // console.log(auth.currentUser.email);
     // console.log(auth.currentUser.uid);
     // db.collection("todo").add({
     //     todo: todo.value,
