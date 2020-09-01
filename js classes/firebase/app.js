@@ -4,7 +4,10 @@ var passEl=document.getElementById('password');
 var auth=firebase.auth();
 var db = firebase.firestore();
 
+var storage = firebase.storage();
+var storageRef = storage.ref();
 
+// console.log(storage);
 
 function signupUser(){
     console.log(emailEl.value,passEl.value);
@@ -44,23 +47,30 @@ function redirectToHome(){
     window.location.href='./home.html'
 }
 
-var todo=document.getElementById('todo-item')
+var todo=document.getElementById('todo-item');
+var fileInput=document.getElementById('file-item');
 
 function addTodoItem(){
-    console.log(auth.currentUser.email);
-    console.log(auth.currentUser.uid);
-    db.collection("todo").add({
-        todo: todo.value,
-        uid : auth.currentUser.uid
+ 
+ 
+ 
+//  console.log(fileInput.value);   // console.log(auth.currentUser.email);
+ console.log(fileInput.files);
+ var file=fileInput.files[0];
+ // console.log(auth.currentUser.email);
+    // console.log(auth.currentUser.uid);
+    // db.collection("todo").add({
+    //     todo: todo.value,
+    //     uid : auth.currentUser.uid
 
-    })
-    .then(function(docRef) {
-        console.log("Document written with ID: ", docRef.id);
-        todo.value='';
-    })
-    .catch(function(error) {
-        console.error("Error adding document: ", error);
-    });
+    // })
+    // .then(function(docRef) {
+    //     console.log("Document written with ID: ", docRef.id);
+    //     todo.value='';
+    // })
+    // .catch(function(error) {
+    //     console.error("Error adding document: ", error);
+    // });
 }
 
 // function getAllTodos(){
