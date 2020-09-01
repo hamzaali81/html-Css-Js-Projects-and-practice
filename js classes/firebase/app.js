@@ -120,6 +120,7 @@ function getUserTodosRealtime(){
        snapshot.docChanges().forEach(function(change) {
         if (change.type === "added") {
             console.log("New Todo: ", change.doc.data());
+        makeListing(change.doc)
         }
         // if (change.type === "modified") {
         //     console.log("Modified city: ", change.doc.data());
@@ -131,3 +132,15 @@ function getUserTodosRealtime(){
        })
        //Readable form method
 }
+
+var divListing=document.getElementById('listing');
+function makeListing(todoItem){
+    var todoObject=todoItem.data();
+    todoObject.id=todoItem.id;
+    console.log(todoItem.data(),' todoItem',todoItem.id);
+    var p=document.createElement('p');
+    var paraText=document.createTextNode(todoObject.todo);
+    p.appendChild(paraText);
+    divListing.appendChild(p);
+
+ }
