@@ -40,6 +40,7 @@ function signInUser(){
   
 
 function redirectToHome(){
+    localStorage.setItem('userInfo',JSON.stringify(auth.currentUser))
     window.location.href='./home.html'
 }
 
@@ -62,18 +63,21 @@ function addTodoItem(){
     });
 }
 
-function getAllTodos(){
-    db.collection("todo").get()
+// function getAllTodos(){
+//     db.collection("todo").get()
     
-    .then((querySnapshot) => {
-        console.log(auth.currentUser);
-        querySnapshot.forEach((doc) => {
-            // console.log('raw data',doc);
-            // console.log(`${doc.id} => ${doc.data().todo}`);
-            console.log(doc.id,doc.data().todo);
-        });
-    });
-}
+//     .then((querySnapshot) => {
+//         console.log(auth.currentUser);
+//         querySnapshot.forEach((doc) => {
+//             // console.log('raw data',doc);
+//             // console.log(`${doc.id} => ${doc.data().todo}`);
+//             console.log(doc.id,doc.data().todo);
+//         });
+//     });
+// }
+
+
+
 // saveWithCustomeDocID()
 // function saveWithCustomeDocID(){
 //     // Add a new document in collection "cities"
@@ -91,4 +95,39 @@ function getAllTodos(){
 // }
 
 
+// function getCurrentUserTodo(){
+//     db.collection("todo")
+//     // .where('uid','==',auth.currentUser.uid)
+//     .where('uid','==',JSON.parse(localStorage.getItem('userInfo')).uid)
+//     .get()
+//     .then((querySnapshot) => {
+//         console.log(auth.currentUser);
+//         querySnapshot.forEach((doc) => {
+//             // console.log('raw data',doc);
+//             // console.log(`${doc.id} => ${doc.data().todo}`);
+//             console.log(doc.id,doc.data().todo);
+//         });
+//     });
+// }
 
+
+
+function getUserTodosRealtime(){
+    db.collection("todo")
+        .where('uid','==',JSON.parse(localStorage.getItem('userInfo')).uid)
+       .onSnapshot(function (snapshot){
+    //    console.log('SnapShot****',snapshot);
+       snapshot.docChanges().forEach(function(change) {
+        if (change.type === "added") {
+            console.log("New Todo: ", change.doc.data());
+        }
+        // if (change.type === "modified") {
+        //     console.log("Modified city: ", change.doc.data());
+        // }
+        // if (change.type === "removed") {
+        //     console.log("Removed city: ", change.doc.data());
+        // }
+    });
+       })
+       //Readable form method
+}
