@@ -138,9 +138,41 @@ function makeListing(todoItem){
     var todoObject=todoItem.data();
     todoObject.id=todoItem.id;
     console.log(todoItem.data(),' todoItem',todoItem.id);
+    
     var p=document.createElement('p');
     var paraText=document.createTextNode(todoObject.todo);
     p.appendChild(paraText);
+    p.setAttribute('id',todoObject.id)
+    
+     var editBtn=document.createElement('button');
+     var editTextNode=document.createTextNode('edit');
+     editBtn.appendChild(editTextNode);
+
+
+    var deleteBtn=document.createElement('button');
+    var deleteTextNode=document.createTextNode('delete');
+    deleteBtn.appendChild(deleteTextNode);
+    deleteBtn.setAttribute('onclick','deleteTodo(this)')
+
+
+    p.appendChild(editBtn);
+    p.appendChild(deleteBtn);
+
+
+    
+    
     divListing.appendChild(p);
 
+ }
+
+
+ function deleteTodo(itemToDelete){
+    console.log('item delete',itemToDelete.parentNode.id);
+    var docId=itemToDelete.parentNode.id;
+    
+    db.collection("todo").doc(docId).delete().then(function() {
+        console.log("Document successfully deleted!");
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
  }
