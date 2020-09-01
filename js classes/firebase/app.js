@@ -59,25 +59,36 @@ function addTodoItem(){
  
     console.log(fileInput.files);
     var imageFile=fileInput.files[0];
-    var imagesRef = storageRef.child('images/'+fileInput.files[0].name);
- 
- 
-    var uploadTask = imagesRef.put(imageFile);
+    if(imageFile && todo.value){
 
-    // console.log(auth.currentUser.email);
-    // console.log(auth.currentUser.uid);
-    // db.collection("todo").add({
-    //     todo: todo.value,
-    //     uid : auth.currentUser.uid
+        var imagesRef = storageRef.child('images/'+fileInput.files[0].name);
+        var uploadTask = imagesRef.put(imageFile);
+        uploadTask.snapshot.ref.getDownloadURL()
+        .then(function (url){
+            console.log('url =>', url);
+            // console.log(auth.currentUser.email);
+            // console.log(auth.currentUser.uid);
+            db.collection("todo").add({
+                todo: todo.value,
+                uid : auth.currentUser.uid,
+                todoImage: url
+            
+            })
+            .then(function(docRef) {
+                console.log("Document written with ID: ", docRef.id);
+                todo.value='';
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
+            });
+        })
 
-    // })
-    // .then(function(docRef) {
-    //     console.log("Document written with ID: ", docRef.id);
-    //     todo.value='';
-    // })
-    // .catch(function(error) {
-    //     console.error("Error adding document: ", error);
-    // });
+    }
+else{
+    alert('Image and Todo value both required');
+}
+
+
 }
 
 // function getAllTodos(){
