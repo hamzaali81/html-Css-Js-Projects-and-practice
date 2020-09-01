@@ -125,9 +125,10 @@ function getUserTodosRealtime(){
         // if (change.type === "modified") {
         //     console.log("Modified city: ", change.doc.data());
         // }
-        // if (change.type === "removed") {
-        //     console.log("Removed city: ", change.doc.data());
-        // }
+        if (change.type === "removed") {
+            console.log("Removed todo: ", change.doc.data());
+             deleteFromDom(change.doc.id)
+        }
     });
        })
        //Readable form method
@@ -175,4 +176,11 @@ function makeListing(todoItem){
     }).catch(function(error) {
         console.error("Error removing document: ", error);
     });
+ }
+
+
+ function deleteFromDom(id){
+     var itemToDelete=document.getElementById(id);
+     console.log(id,itemToDelete);
+     divListing.removeChild(itemToDelete);
  }
