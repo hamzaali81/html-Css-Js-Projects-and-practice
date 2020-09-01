@@ -110,10 +110,11 @@ function addTodoItem(){
 //     });
 // }
 
-
+var unsubscribe;
 
 function getUserTodosRealtime(){
-    db.collection("todo")
+    
+   unsubscribe= db.collection("todo")
         .where('uid','==',JSON.parse(localStorage.getItem('userInfo')).uid)
        .onSnapshot(function (snapshot){
     //    console.log('SnapShot****',snapshot);
@@ -122,9 +123,10 @@ function getUserTodosRealtime(){
             console.log("New Todo: ", change.doc.data());
         makeListing(change.doc)
         }
-        // if (change.type === "modified") {
-        //     console.log("Modified city: ", change.doc.data());
-        // }
+        if (change.type === "modified") {
+            console.log("Modified todo: ",change.doc.id, change.doc.data());
+            updateFromDOM(change.doc);
+        }
         if (change.type === "removed") {
             console.log("Removed todo: ", change.doc.data());
              deleteFromDom(change.doc.id)
@@ -148,6 +150,7 @@ function makeListing(todoItem){
      var editBtn=document.createElement('button');
      var editTextNode=document.createTextNode('edit');
      editBtn.appendChild(editTextNode);
+     editBtn.setAttribute('onclick','editItem(this)')
 
 
     var deleteBtn=document.createElement('button');
@@ -183,4 +186,53 @@ function makeListing(todoItem){
      var itemToDelete=document.getElementById(id);
      console.log(id,itemToDelete);
      divListing.removeChild(itemToDelete);
+ }
+
+ function updateFromDOM(doc){
+     var domUpdateLi=document.getElementById(doc.id);
+    //  console.log(domUpdateLi);
+    //  console.log(domUpdateLi.childNodes[0].nodeValue=doc.data().todo);
+     domUpdateLi.childNodes[0].nodeValue=doc.data().todo;
+ }
+
+ var todoBtn=document.getElementById('todo-btn');
+ var editkey;
+ 
+ function editItem(editTodo){
+   editkey=editTodo.parentNode.id;
+   console.log(editkey);
+console.log(editTodo.parentNode.childNodes[0]);
+todo.value =editTodo.parentNode.childNodes[0].nodeValue;
+todoBtn.innerHTML='Save Todo';
+todoBtn.setAttribute('onclick','updateTodo()');
+ }
+
+
+
+ function updateTodo(){
+     console.log('Hello');
+     db.collection("todo").doc(editkey).update({
+        todo: todo.value
+    })
+    .then(function(){
+
+        todoBtn.innerHTML='Add Todo';
+        todoBtn.setAttribute('onclick','addTodoItem()');
+        todo.value='';
+        editkey=undefined;
+
+    })
+ }
+
+
+ function logoutUser(){
+    unsubscribe();
+    auth.signOut()
+    .then(function() {
+        // Sign-out successful.
+        localStorage.clear();
+        window.location.href='./index.html'
+      }).catch(function(error) {
+        // An error happened.
+      });
  }
