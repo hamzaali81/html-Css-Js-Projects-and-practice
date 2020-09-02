@@ -67,15 +67,16 @@ function signupUser(){
                  userRole: userRoleEl,
                  uid: sucess.user.uid
              })
-             .then(function(){
+            //  .then(function(){
 
-                 redirectToHome();
-             })
+            //      redirectToHome();
+            //  })
             })
         })
 
 
 
+        // redirectToHome();
         // redirectToHome();
     })
     .catch(function(error){
@@ -89,17 +90,19 @@ function signupUser(){
 function signInUser(){
     firebase.auth().signInWithEmailAndPassword(emailEl.value, password.value)
     .then(function(sucess){
-        console.log("user",user);
+        console.log("user",sucess.user.uid);
         
-        db.collection("user").get().where('uid','==',user.user.uid)
+        db.collection("users").get().where('uid','==',user.user.uid)
         
         .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
             console.log(doc.id, doc.data());
+            localStorage.setItem('userdata',JSON.stringify(doc.data()));
+            // redirectToHome();
+            redirectToHome();
                 
             });
         });
-        redirectToHome();
 
     })
     .catch(function(error){
