@@ -2,8 +2,8 @@ var emailEl=document.getElementById('email');
 var passEl=document.getElementById('password');
 var usernameEl=document.getElementById('username');
 var profilePicEl=document.getElementById('profile-pic');
-var userRoleEl=document.getElementsByClassName('user-role');
-
+// var userRoleEl=document.getElementsByClassName('user-role');
+var userRoleEl;
 
 var auth=firebase.auth();
 var db = firebase.firestore();
@@ -12,6 +12,15 @@ var storage = firebase.storage();
 var storageRef = storage.ref();
 
 // console.log(storage);
+
+
+
+function userRoleDefine(userRole){
+userRoleEl=userRole;
+}
+
+
+
 
 function signupUser(){
    
@@ -51,6 +60,17 @@ function signupUser(){
             imagesRef.getDownloadURL()
             .then(function(result){
                 console.log(result,'URL==>');
+             db.collection("users").add({
+                 email: emailEl.value,
+                 profilePic: result,
+                 username: usernameEl.value,
+                 userRole: userRoleEl,
+                 uid: sucess.user.uid
+             })
+             .then(function(){
+
+                 redirectToHome();
+             })
             })
         })
 
@@ -69,7 +89,16 @@ function signupUser(){
 function signInUser(){
     firebase.auth().signInWithEmailAndPassword(emailEl.value, password.value)
     .then(function(sucess){
-        console.log("****sucess",sucess);
+        console.log("user",user);
+        
+        db.collection("user").get().where('uid','==',user.user.uid)
+        
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+            console.log(doc.id, doc.data());
+                
+            });
+        });
         redirectToHome();
 
     })
