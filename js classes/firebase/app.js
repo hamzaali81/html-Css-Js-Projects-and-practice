@@ -1,5 +1,9 @@
 var emailEl=document.getElementById('email');
 var passEl=document.getElementById('password');
+var usernameEl=document.getElementById('username');
+var profilePicEl=document.getElementById('profile-pic');
+var userRoleEl=document.getElementsByClassName('user-role');
+
 
 var auth=firebase.auth();
 var db = firebase.firestore();
@@ -10,15 +14,50 @@ var storageRef = storage.ref();
 // console.log(storage);
 
 function signupUser(){
+   
+//    console.log(usernameEl.value,profilePicEl.files[0],userRoleEl[0].checked,userRoleEl[1].checked);
+   console.log(usernameEl.value,profilePicEl.files[0],userRoleEl[0].checked,userRoleEl[1].checked);
     console.log(emailEl.value,passEl.value);
 
     auth.createUserWithEmailAndPassword(emailEl.value, passEl.value)
     .then(function(sucess){
         console.log("Sucessfuly register");
+        var profileImageFile=profilePicEl.files[0];
+        var imagesRef = storageRef.child('profile/'+profileImageFile.name);
+        // var uploadTask = imagesRef.put(profileImageFile);
+
+        // uploadTask.snapshot.ref.getDownloadURL()
+        // .then(function (url){
+            // console.log('DP set==>', url);
+           
+            // db.collection("todo").add({
+            //     todo: todo.value,
+            //     uid : auth.currentUser.uid,
+            //     todoImage: url
+            
+            // })
+            // .then(function(docRef) {
+            //     console.log("Document written with ID: ", docRef.id);
+            //     todo.value='';
+            // })
+            // .catch(function(error) {
+            //     console.error("Error adding document: ", error);
+            // });
+        // })
+
+
+        imagesRef.put(profileImageFile)
+        .then(function(snapshot){
+            imagesRef.getDownloadURL()
+            .then(function(result){
+                console.log(result,'URL==>');
+            })
+        })
+
+
+
         // redirectToHome();
     })
-    
-    
     .catch(function(error){
         
         console.log("***",error);

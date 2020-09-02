@@ -27,3 +27,6 @@ citiesRef.doc("BJ").set({
 
 
     //onsnapshot==> realtime data
+
+
+    //picture upload must be an array

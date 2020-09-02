@@ -6,8 +6,19 @@
     <title>firebase learning</title>
 </head>
 <body>
-    <input type="email" name="email" id="email"><br>
-    <input type="password" id="password"><br>
+  <br>
+  
+    Email:<input type="email" name="email" id="email"><br>
+   Password: <input type="password" id="password"><br>
+   Username: <input type="text" name="username" id="username"><br>
+   Upload Avatar: <input type="file" id="profile-pic"><br>
+   Role: <br>
+   Restaurants:<input type="radio" name="userrole" value="restaurants" class="user-role" onclick="userRoleDefine(this.value)">
+   Customer:<input type="radio" name="userrole" value="customer" class="user-role" onclick="userRoleDefine(this.value)"><br>
+
+   
+   
+   
     <button onclick="signupUser()">Signup</button>
     <button onclick="signInUser()">Signin</button>
 
