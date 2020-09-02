@@ -180,6 +180,13 @@ function makeListing(todoItem){
      editBtn.appendChild(editTextNode);
      editBtn.setAttribute('onclick','editItem(this)')
 
+     var imgEl=document.createElement('img');
+     imgEl.setAttribute('src',todoObject.todoImage);
+     imgEl.setAttribute('width','50');
+     imgEl.setAttribute('height','50');
+     p.appendChild(imgEl);
+
+
 
     var deleteBtn=document.createElement('button');
     var deleteTextNode=document.createTextNode('delete');
