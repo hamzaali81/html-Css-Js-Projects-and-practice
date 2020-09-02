@@ -67,15 +67,12 @@ function signupUser(){
                  userRole: userRoleEl,
                  uid: sucess.user.uid
              })
-            //  .then(function(){
+             .then(function(){
 
-            //      redirectToHome();
-            //  })
+                 redirectToHome();
+             })
             })
         })
-
-
-
         // redirectToHome();
         // redirectToHome();
     })
@@ -88,16 +85,15 @@ function signupUser(){
 
 
 function signInUser(){
-    firebase.auth().signInWithEmailAndPassword(emailEl.value, password.value)
+    auth.signInWithEmailAndPassword(emailEl.value, password.value)
     .then(function(sucess){
         console.log("user",sucess.user.uid);
         
-        db.collection("users").get().where('uid','==',user.user.uid)
-        
+        db.collection("users").where('uid','==',sucess.user.uid).get()
         .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
             console.log(doc.id, doc.data());
-            localStorage.setItem('userdata',JSON.stringify(doc.data()));
+            localStorage.setItem('userData',JSON.stringify(doc.data()));
             // redirectToHome();
             redirectToHome();
                 
@@ -212,8 +208,12 @@ else{
 var unsubscribe;
 
 function getUserTodosRealtime(){
-    
-   unsubscribe= db.collection("todo")
+    var userData=localStorage.getItem('userData');
+    userData=JSON.parse(userData);
+    document.getElementById('dp').src =userData.profilePic;
+
+    var uid=JSON.parse(localStorage.getItem('userInfo')).uid;
+    unsubscribe= db.collection("todo")
         .where('uid','==',JSON.parse(localStorage.getItem('userInfo')).uid)
        .onSnapshot(function (snapshot){
     //    console.log('SnapShot****',snapshot);
