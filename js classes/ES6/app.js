@@ -37,9 +37,54 @@
 // }
 
 
-var abc=(v)=> 
- v='hello';
-// console.log(v);
+// var abc=(v)=> 
+//  v='hello';
+// // console.log(v);
 
-var test=abc();
-console.log(test);
+// var test=abc();
+// console.log(test);
+
+
+
+//ES6 Advance
+// forEach
+
+// ES5
+var math=Math.ceil(Math.random()*355689);
+console.log(math);
+var colors=['red','blue','green'];
+for(var i=0;i<colors.length;i++){
+    console.log(colors[i]);
+}
+
+
+colors.forEach((el,index)=>{console.log(el,`${index}${math}`);})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
