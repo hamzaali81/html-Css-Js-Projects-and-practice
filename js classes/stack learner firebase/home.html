@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>Todo App</title>
+</head>
+<body onload="getRealTimeUpdates()">
+ 
+
+    <h1>Welcome to special Todo App</h1>
+    <p>Place to manage your schedule</p>
+
+    Todo: <input type="text" name="todo" id="todo-item" />
+    <button onclick="addTodoItem()">Add Todo</button>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCtbPWL6JXJEIgZGWvu_Qm7wnwHJyHn6k0",
+        authDomain: "todo-app-realtime-working.firebaseapp.com",
+        databaseURL: "https://todo-app-realtime-working.firebaseio.com",
+        projectId: "todo-app-realtime-working",
+        storageBucket: "todo-app-realtime-working.appspot.com",
+        messagingSenderId: "299851686967",
+        appId: "1:299851686967:web:c59fb2eca90cf982f78bb2",
+        measurementId: "G-E6G553G1GT"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+<body>
+    
+
+    <body>
+    <br>
+    Email: <input type="text" placeholder="email" name="email" id="email"/><br>
+    Password: <input type="password" name="password" id="password" placeholder="password"/><br>
+    <button onclick="signupUser()">Sign Up</button>
+    <button onclick="signin()">Sign In</button>
+
+    
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+
+
+<!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-storage.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyCtbPWL6JXJEIgZGWvu_Qm7wnwHJyHn6k0",
+        authDomain: "todo-app-realtime-working.firebaseapp.com",
+        databaseURL: "https://todo-app-realtime-working.firebaseio.com",
+        projectId: "todo-app-realtime-working",
+        storageBucket: "todo-app-realtime-working.appspot.com",
+        messagingSenderId: "299851686967",
+        appId: "1:299851686967:web:c59fb2eca90cf982f78bb2",
+        measurementId: "G-E6G553G1GT"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+        <script src="app.js"></script>
+      </body>
+</body>
+</html>
