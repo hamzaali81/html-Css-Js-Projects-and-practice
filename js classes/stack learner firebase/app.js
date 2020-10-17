@@ -51,11 +51,11 @@ function redirectToHome(){
 
 
 
+var todo= document.getElementById('todo-item');
 function addTodoItem(){
 // console.log(auth.currentUser);
 // console.log(auth.currentUser.uid);
 
-var todo= document.getElementById('todo-item');
     db.collection("todo").add({
         // todo: 'learning JS',
         todo: todo.value,
@@ -115,9 +115,11 @@ var todo= document.getElementById('todo-item');
 //    }
 
 
+//RealTimeUpdates
 
+var unsubscribe;
 function getRealTimeUpdates(){
-    db.collection("todo").where('uid','==',JSON.parse(localStorage.getItem('userInfo')).uid)
+    unsubscribe = db.collection("todo").where('uid','==',JSON.parse(localStorage.getItem('userInfo')).uid)
     .onSnapshot(function(snapshot) {
         console.log(snapshot);
         snapshot.docChanges().forEach(function(change) {
@@ -125,12 +127,16 @@ function getRealTimeUpdates(){
                 console.log("New todo: ", change.doc.data());
                 makeListing(change.doc);
             }
-            // if (change.type === "modified") {
-            //     console.log("Modified city: ", change.doc.data());
-            // }
-            // if (change.type === "removed") {
-            //     console.log("Removed city: ", change.doc.data());
-            // }
+            if (change.type === "modified") {
+                console.log("Modified city: ", change.doc.data(),change.doc.id);
+                UpdateFromDom(change.doc)
+            }
+            if (change.type === "removed") {
+                console.log("Removed todo", change.doc.data(),change.doc.id);
+                var docId= change.doc.id;
+                deleteFromDom(docId);
+
+            }
         });
     });
 }
@@ -141,6 +147,7 @@ function getRealTimeUpdates(){
 
 //listing add
 var divListing=document.getElementById('listing');
+
 function makeListing(todoItem){
     //  console.log(data.data(),'data',data.id);
     var todoObject=todoItem.data();
@@ -157,7 +164,7 @@ function makeListing(todoItem){
     var edit = document.createTextNode('edit');
     editBtn.appendChild(edit)
     p.appendChild(editBtn);
-    // editBtn.setAttribute('onclick','')
+    editBtn.setAttribute('onclick','editItem(this)')
 
     var deleteBtn = document.createElement('button');
     var deleteTextNode= document.createTextNode('delete')
@@ -178,9 +185,68 @@ function deleteTodo(itemToDelete){
     });
 }
 
+function deleteFromDom(id){
+    var itemToDelete = document.getElementById(id);
+    console.log(id,itemToDelete);
+    divListing.removeChild(itemToDelete);
+}
+function UpdateFromDom(doc){
+    var domUpdateLi = document.getElementById(doc.id)
+   //  console.log(domUpdateLi.childNodes[0].nodeValue);
+    var domliPick= domUpdateLi.childNodes[0].nodeValue;
+   domliPick = doc.data().todo;
+}
+
+var todoBtn = document.getElementById('todo-btn');
+var editKey ;
+
+function editItem(editTodo){
+  console.log(editTodo.parentNode.childNodes[0]);
+editKey = editTodo.parentNode.id;
+  todo.value = editTodo.parentNode.childNodes[0].nodeValue;
+  todoBtn.innerHTML='Save Todo';
+
+  todoBtn.setAttribute('onclick','updateTodo()')
+}
+
+
+function updateTodo(){
+    console.log('test bhai');
+    var TodoRef = db.collection("todo").doc(editKey);
+
+    // Set the "capital" field of the city 'DC'
+    return TodoRef.update({
+        todo: todo.value
+    })
+    .then(function() {
+
+    // var editPara= document.getElementById(editKey);
+
+
+        todoBtn.innerHTML = 'Add';
+        todoBtn.setAttribute('onclick','addTodoItem(this)');
+        todo.value = '';
+        editKey = undefined;
+    
+        console.log("Document successfully updated!");
+    })
+    .catch(function(error) {
+        // The document probably doesn't exist.
+        console.error("Error updating document: ", error);
+    });
+}
 
 
 
-
-
-
+function logoutUser(){
+    unsubscribe();
+    auth.signOut()
+    .then(function() {
+        
+        window.location.href = './index.html';
+    localStorage.clear()
+        // Sign-out successful.
+      }).catch(function(error) {
+        // An error happened.
+      });
+}
