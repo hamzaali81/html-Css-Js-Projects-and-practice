@@ -123,6 +123,7 @@ function getRealTimeUpdates(){
         snapshot.docChanges().forEach(function(change) {
             if (change.type === "added") {
                 console.log("New todo: ", change.doc.data());
+                makeListing(change.doc);
             }
             // if (change.type === "modified") {
             //     console.log("Modified city: ", change.doc.data());
@@ -133,3 +134,53 @@ function getRealTimeUpdates(){
         });
     });
 }
+
+
+
+//second part firebase
+
+//listing add
+var divListing=document.getElementById('listing');
+function makeListing(todoItem){
+    //  console.log(data.data(),'data',data.id);
+    var todoObject=todoItem.data();
+    todoObject.id= todoItem.id; 
+    console.log(todoObject,'data',todoItem.id);
+    var p=document.createElement('p');
+    p.setAttribute('id',todoObject.id)
+    var paraText = document.createTextNode(todoObject.todo);
+    p.appendChild(paraText);
+    divListing.appendChild(p);
+    // console.log(p);
+
+    var editBtn = document.createElement('button');
+    var edit = document.createTextNode('edit');
+    editBtn.appendChild(edit)
+    p.appendChild(editBtn);
+    // editBtn.setAttribute('onclick','')
+
+    var deleteBtn = document.createElement('button');
+    var deleteTextNode= document.createTextNode('delete')
+    deleteBtn.appendChild(deleteTextNode)
+    p.appendChild(deleteBtn);
+    deleteBtn.setAttribute('onclick','deleteTodo(this)')
+}
+
+//Delete data in database
+function deleteTodo(itemToDelete){
+    console.log(itemToDelete.parentNode.id);
+    var docId = itemToDelete.parentNode.id;
+    db.collection("todo").doc(docId).delete()
+    .then(function() {
+        console.log("Document successfully deleted!");
+    }).catch(function(error) {
+        console.error("Error removing document: ", error);
+    });
+}
+
+
+
+
+
+
+
