@@ -25,3 +25,11 @@ citiesRef.doc("BJ").set({
     name: "Beijing", state: null, country: "China",
     capital: true, population: 21500000,
     regions: ["jingjinji", "hebei"] });
+
+
+
+    //3 steps of image upload
+
+    1.doc
+    2.ref
+    3.upload

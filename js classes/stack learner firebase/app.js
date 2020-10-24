@@ -52,22 +52,33 @@ function redirectToHome(){
 
 
 var todo= document.getElementById('todo-item');
+var fileInput = document.getElementById('file-item');
+
 function addTodoItem(){
 // console.log(auth.currentUser);
 // console.log(auth.currentUser.uid);
 
-    db.collection("todo").add({
-        // todo: 'learning JS',
-        todo: todo.value,
-        uid:  auth.currentUser.uid
-    })
-    .then(function(docRef) {
-        console.log("Document written with ID: ", docRef.id);
-        todo.value = ''
-    })
-    .catch(function(error) {
-        console.error("Error adding document: ", error);
-    });
+//    console.log(fileInput.value);
+//    console.log(fileInput.files[0].name);
+
+var imageFile = fileInput.files[0];
+var imagesRef = storageRef.child('images'); 
+var uploadTask = imagesRef.put(imageFile);
+
+
+
+// db.collection("todo").add({
+    //     // todo: 'learning JS',
+    //     todo: todo.value,
+    //     uid:  auth.currentUser.uid
+    // })
+    // .then(function(docRef) {
+    //     console.log("Document written with ID: ", docRef.id);
+    //     todo.value = ''
+    // })
+    // .catch(function(error) {
+    //     console.error("Error adding document: ", error);
+    // });
 }
 
 //Custom ID create in firebase
