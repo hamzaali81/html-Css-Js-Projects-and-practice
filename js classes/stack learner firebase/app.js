@@ -7,15 +7,60 @@ var storage = firebase.storage();
 var storageRef = storage.ref();
 
 
+var usernameEl= document.getElementById('username');
+var profilePicEl = document.getElementById('profile-pic');
+// var userRoleEl = document.getElementsByClassName('user-role');
+var userRoleEl ;
 
-function signupUser(){
-    console.log(emailEl.value,passEl.value);
+function userRoleDefine(userRole){
+     userRoleEl = userRole
+}
 
-  auth.createUserWithEmailAndPassword(emailEl.value, passEl.value)
+function signupUser(){  
+        
+    // console.log(emailEl.value,passEl.value);
+    console.log(profilePicEl.files[0]);
+    console.log(userRoleEl);
+    auth.createUserWithEmailAndPassword(emailEl.value, passEl.value)
     .then((sucess)=>{
+        //  console.log(usernameEl.value, profilePicEl.files[0], userRoleEl.checked[0],userRoleEl.checked[1]);
         console.log(sucess);
-        redirectToHome();
+        var imageFile = profilePicEl.files[0];
+        console.log(imageFile);
+        var imagesRef = storageRef.child('dp/'+profilePicEl.files[0].name); 
+
+   imagesRef.put(imageFile)
+    .then(function(){
+        imagesRef.getDownloadURL().then(function (result) {
+            console.log('result',result);
+            db.collection("users").add({
+                        
+                        email: emailEl.value,
+                        username: usernameEl,
+                        profileDp: result,
+                        userRole: userRoleEl,
+                        uid: sucess.user.uid
+                    })
+
+ })
     })
+
+        //////////////////////////
+//    
+      
+    //imagesRef.put(imageFile)
+    //.then(function(){
+ //        imagesRef.getDownloadURL().then(function (result) {
+            // console.log('result',result)
+ //})
+    //})
+
+        // redirectToHome();
+    })
+    .then(function(sucess){
+        console.log('page redirection==>',sucess);
+            redirectToHome();
+    }) 
     .catch(function(error) {
         console.log(error);
         // Handle Errors here.
@@ -26,6 +71,24 @@ function signupUser(){
 }
 
 
+//ex
+// var uploadTask = imagesRef.put(imageFile);
+// console.log(uploadTask);
+
+// //     //complete method must see
+// uploadTask.snapshot.ref.getDownloadURL()
+// .then(function(url) {
+//     console.log('url =>',url);
+//     db.collection("todo").add({
+//         // todo: 'learning JS',
+//         email: emailEl.value,
+//         username: usernameEl,
+//         profileDp: url,
+//         userRole: userRoleEl,
+//         uid: sucess.user.uid
+//     })
+// })
+
 function signin(){
     console.log(emailEl.value,passEl.value);
     auth
@@ -33,7 +96,17 @@ function signin(){
     
     .then((user)=>{
        console.log('sucess',user.user.uid);
-       redirectToHome()
+    //    redirectToHome()
+        db.collection("users").where('uid','==',user.user.uid).get()
+        .then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                        console.log(doc.id,doc.data());
+                        // console.log(auth.currentUser); //this object provide all information of user
+                        console.log('raw data',doc);
+                        localStorage.setItem('userData',JSON.stringify(doc.data()))
+                        redirectToHome();
+                    });
+                });
     })
     
     .catch(function(error) {
@@ -49,7 +122,7 @@ function signin(){
 
 function redirectToHome(){
     localStorage.setItem('userInfo',JSON.stringify(auth.currentUser))
-    window.location.href = './home.html'
+    window.location.href = './home.html';
 } 
 
 
@@ -85,6 +158,7 @@ if(imageFile && todo.value){
         // todo: 'learning JS',
         todo: todo.value,
         uid:  auth.currentUser.uid,
+        username: usernameEl,
         todoImageUrl: url
     })
     .then(function(docRef) {
@@ -143,8 +217,6 @@ else{
             //     });
             // }
 
-
-
 //             //Condition pick to todo to user current list
 //         function getAllTodos(){
 //      db.collection("todo")
@@ -163,6 +235,10 @@ else{
 
 var unsubscribe;
 function getRealTimeUpdates(){
+    var userData=localStorage.getItem('userData');
+     userData=JSON.parse(userData);
+        console.log(profilePicEl);
+    // document.getElementById('dp').src = userData.profilePicEl;
     unsubscribe = db.collection("todo").where('uid','==',JSON.parse(localStorage.getItem('userInfo')).uid)
     .onSnapshot(function(snapshot) {
         console.log(snapshot);
@@ -246,7 +322,7 @@ function UpdateFromDom(doc){
     var domUpdateLi = document.getElementById(doc.id)
    //  console.log(domUpdateLi.childNodes[0].nodeValue);
     var domliPick= domUpdateLi.childNodes[0].nodeValue;
-   domliPick = doc.data().todo;
+    domliPick = doc.data().todo;
 }
 
 var todoBtn = document.getElementById('todo-btn');

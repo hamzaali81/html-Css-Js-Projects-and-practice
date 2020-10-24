@@ -173,35 +173,64 @@
 
 //charCount
 
-function charCount(str){
-   // var result = [];
-   var result = {};
-   for(var i=0; i<str.length;i++){
-      console.log(str[i]);
-      var char = str[i];
-      debugger;
-      if(result[char] > 0){  //1 > 0
-// console.log(result[char]);
-         result[char]++;
-         // result[char] = result[char] + 1; 
+// function charCount(str){
+//    // var result = [];
+//    var result = {};
+//    for(var i=0; i<str.length;i++){
+//       console.log(str[i]);
+//       var char = str[i];
+//       debugger;
+//       if(result[char] > 0){  //1 > 0
+// // console.log(result[char]);
+//          result[char]++;
+//          // result[char] = result[char] + 1; 
          
-      }
-      else{
-         result[char] = 1
-      }
-   }
-   // var v=Object.keys(result).length;
-   // console.log(v);
-   return result;
-}
+//       }
+//       else{
+//          result[char] = 1
+//       }
+//    }
+//    // var v=Object.keys(result).length;
+//    // console.log(v);
+//    return result;
+// }
 
 
-var a=charCount("hello");
+// var a=charCount("hello");
 // console.log(a);
 
 // var b={
 // }
 // // b["hamza"] =1;
 // console.log(b);
+
+// same array detect pattern
+
+// function same(){
+
+// }
+
+// same([],[])
+
+
+function 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

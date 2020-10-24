@@ -12,12 +12,14 @@
     <br>
     Email: <input type="text" placeholder="email" name="email" id="email"/><br>
     Password: <input type="password" name="password" id="password" placeholder="password"/><br>
+    User Name: <input type="text" name="username" id="username">
     <button onclick="signupUser()">Sign Up</button>
     <button onclick="signin()">Sign In</button>
-    upload Avatar:  <img src="file" id="profile-pic" />
+    upload Avatar:  <input type="file" id="profile-pic" />
     Role: 
-    Restaurants: <input type="radio" name="username" class="user-role">
-    Customer: <input type="radio" name="userrole" class="user-role">
+    Restaurants: <input type="radio" name="username" onclick="userRoleDefine(this.value)">
+    <!-- Restaurants: <input type="radio" name="username" class="user-role" > -->
+    Customer: <input type="radio" name="userrole" onclick="userRoleDefine(this.value)" />
 
         <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
