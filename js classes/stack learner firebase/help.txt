@@ -33,3 +33,17 @@ citiesRef.doc("BJ").set({
     1.doc
     2.ref
     3.upload
+
+
+    //upload method
+    // Upload the file and metadata
+var uploadTask = storageRef.child('images/mountains.jpg').put(file);
+
+// Pause the upload
+uploadTask.pause();
+
+// Resume the upload
+uploadTask.resume();
+
+// Cancel the upload
+uploadTask.cancel();

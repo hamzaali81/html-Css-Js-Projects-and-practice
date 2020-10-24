@@ -3,6 +3,9 @@ var passEl=document.getElementById('password');
 var auth = firebase.auth();
 var db = firebase.firestore();
 
+var storage = firebase.storage();
+var storageRef = storage.ref();
+
 
 
 function signupUser(){
@@ -61,12 +64,42 @@ function addTodoItem(){
 //    console.log(fileInput.value);
 //    console.log(fileInput.files[0].name);
 
+//path identify step
 var imageFile = fileInput.files[0];
-var imagesRef = storageRef.child('images'); 
-var uploadTask = imagesRef.put(imageFile);
+
+//ref step
+
+if(imageFile && todo.value){
 
 
+    var imagesRef = storageRef.child('images/'+fileInput.files[0].name); 
+    
+    //upload step
+    var uploadTask = imagesRef.put(imageFile);
+    console.log(uploadTask);
+    
+    //complete method must see
+    uploadTask.snapshot.ref.getDownloadURL().then(function(url) {
+            console.log('url =>',url);
+            db.collection("todo").add({
+        // todo: 'learning JS',
+        todo: todo.value,
+        uid:  auth.currentUser.uid,
+        todoImageUrl: url
+    })
+    .then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+        todo.value = ''
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
+    })
+}
 
+else{
+    alert('image and todo')
+}
 // db.collection("todo").add({
     //     // todo: 'learning JS',
     //     todo: todo.value,
