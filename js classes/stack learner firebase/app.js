@@ -16,11 +16,14 @@ function userRoleDefine(userRole){
      userRoleEl = userRole
 }
 
-function signupUser(){  
-        
+
+function signupUser(){          
+    
+    
+    
     // console.log(emailEl.value,passEl.value);
     console.log(profilePicEl.files[0]);
-    console.log(userRoleEl);
+    // console.log(userRoleEl);
     auth.createUserWithEmailAndPassword(emailEl.value, passEl.value)
     .then((sucess)=>{
         //  console.log(usernameEl.value, profilePicEl.files[0], userRoleEl.checked[0],userRoleEl.checked[1]);
@@ -36,11 +39,15 @@ function signupUser(){
             db.collection("users").add({
                         
                         email: emailEl.value,
-                        username: usernameEl,
-                        profileDp: result,
+                        userName: usernameEl.value,
+                        profilePic: result,
                         userRole: userRoleEl,
                         uid: sucess.user.uid
                     })
+                    .then(function(sucess){
+                        console.log('page redirection==>',sucess);
+                            redirectToHome();
+                    }) 
 
  })
     })
@@ -57,10 +64,7 @@ function signupUser(){
 
         // redirectToHome();
     })
-    .then(function(sucess){
-        console.log('page redirection==>',sucess);
-            redirectToHome();
-    }) 
+
     .catch(function(error) {
         console.log(error);
         // Handle Errors here.
@@ -91,20 +95,20 @@ function signupUser(){
 
 function signin(){
     console.log(emailEl.value,passEl.value);
-    auth
-    .signInWithEmailAndPassword(emailEl.value, passEl.value)
+    auth.signInWithEmailAndPassword(emailEl.value, passEl.value)
     
-    .then((user)=>{
-       console.log('sucess',user.user.uid);
+    .then((sucess)=>{
+       console.log('sucess',sucess.user.uid);
     //    redirectToHome()
-        db.collection("users").where('uid','==',user.user.uid).get()
+        db.collection("users").where('uid','==',sucess.user.uid).get()
         .then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                         console.log(doc.id,doc.data());
                         // console.log(auth.currentUser); //this object provide all information of user
                         console.log('raw data',doc);
-                        localStorage.setItem('userData',JSON.stringify(doc.data()))
+                        localStorage.setItem('userData',JSON.stringify(doc.data()));
                         redirectToHome();
+                        // redirectToHome();
                     });
                 });
     })
@@ -234,11 +238,14 @@ else{
 //RealTimeUpdates
 
 var unsubscribe;
+var dp= document.getElementById('dp');
+console.log(dp);
 function getRealTimeUpdates(){
     var userData=localStorage.getItem('userData');
      userData=JSON.parse(userData);
-        console.log(profilePicEl);
+        // console.log(profilePic);
     // document.getElementById('dp').src = userData.profilePicEl;
+    dp.src = userData.profilePic;
     unsubscribe = db.collection("todo").where('uid','==',JSON.parse(localStorage.getItem('userInfo')).uid)
     .onSnapshot(function(snapshot) {
         console.log(snapshot);
