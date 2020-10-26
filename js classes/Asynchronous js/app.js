@@ -47,35 +47,122 @@
 
 ////////////////////////////////////////////////
 //callback hell
-function getRecipe(){
-    setTimeout(()=>{
-        const recipeID = [523,883,432,974];
-        console.log(recipeID);
-        setTimeout((id)=>{
-            const recipe ={
-                title: 'biryani shop',
-                publisher: 'hamza'
-            }
-            console.log(`${id}: ${recipe.title}`);
+//asynchronous in old way
+// function getRecipe(){
+//     setTimeout(()=>{
+//         const recipeID = [523,883,432,974];
+//         console.log(recipeID);
+//         setTimeout((id)=>{
+//             const recipe ={
+//                 title: 'biryani shop',
+//                 publisher: 'hamza'
+//             }
+//             console.log(`${id}: ${recipe.title}`);
               
-            setTimeout((publisher)=>{
+//             setTimeout((publisher)=>{
              
-                const recipe2 = {title: 'Italian pizza',publisher: 'ali'}
-                console.log(recipe);
+//                 const recipe2 = {title: 'Italian pizza',publisher: 'ali'}
+//                 console.log(recipe);
 
-            },1000,recipe.publisher)
+//             },1000,recipe.publisher)
 
 
-        },2000,recipeID[2])
-    },1500)
+//         },2000,recipeID[2])
+//     },1500)
+// }
+
+// getRecipe();
+
+
+// from callback hell to promises
+const getIDs = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve([523,883,432,974])
+    },1000)
+}) 
+
+const getRecipe = recID =>{
+   return new Promise ((resolve, rejected)=>{
+    setTimeout((ID)=>{
+
+        const recipe = {tiltle: 'chips',publisher: 'hamza'}
+        // console.log(`${id}: ${recipe.tiltle}`);
+        resolve((`${ID}: ${recipe.tiltle}`));
+    },1500,recID)
+   })
+};
+
+const getRelated = publisher =>{
+    return new Promise((resolve,reject)=>{
+        setTimeout(pub=>{
+         const recipe = {title: 'Italian Pizza',publisher: 'ahmed'} 
+        //  resolve(`${pub} ${recipe}`);  
+         resolve(`${pub} ${recipe.title}`);  
+        },1500,publisher)
+    })
 }
 
-getRecipe();
+// getIDs
+// .then((IDs)=>{
+//          console.log(IDs);
+//         // getRecipe(IDs[2]).then()
+//         return getRecipe(IDs[2])
+//         })
+//         .then(recipe =>{
+//           console.log(recipe);
+//         //   return getRelated(recipe.publisher)
+//           return getRelated('hamza ali')
+//         })
+//         .then(recipe =>{
+//             console.log(recipe);
+//         })
+//         .catch(error =>{
+//             console.log('Error !');
+//         })
+
+//asyn/await
+
+async function getRecipeItem(){
+  let result1=  await getIDs;
+  console.log(result1);
+
+  let result2 = await getRecipe(result1[2]);
+  console.log(result2); 
+
+  let result3 = await getRelated('ali');
+  console.log(result3);
+}
+
+getRecipeItem();
 
 
+//fetch
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+.then((response)=>{
+    console.log(response);
+    return response.json();
+
+})
+.then((data)=>{
+    console.log(data);
+
+})
+.catch((err)=>{
+    console.log('ok error note',err);
+
+})
 
 
+async function getData(){
+   var result=await fetch('https://jsonplaceholder.typicode.com/todos/1');
+//    console.log(result.json());
+   return result.json()
+}
 
+let rec=getData().then((result)=>{
+    console.log(result);
+});
+// console.log(rec);
 
 
 
