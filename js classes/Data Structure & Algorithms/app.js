@@ -213,7 +213,43 @@
 // same([],[])
 
 
-function 
+// function same(arr1,arr2){
+//     if(arr1.length !== arr2.length){
+//         return false
+//     }
+
+//     for(var i=0; i<arr1.length;i++){
+//         let correctIndex = arr2.indexOf(arr1[i]**2);
+//         // console.log(arr2.indexOf(arr1[i]**2));
+//         if(correctIndex === -1){
+//             return false
+//         }
+//         console.log(arr2);
+//         arr2.splice(correctIndex,1)
+//         // console.log(arr2.splice(correctIndex,1));
+//     }
+//     return true
+// }
+
+// var result=same([1,2,3,2], [9,1,4,4]);
+// console.log(result);
+
+// var arr = [4,2,3,4];
+// for(let val in arr){
+//    console.log(val);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
