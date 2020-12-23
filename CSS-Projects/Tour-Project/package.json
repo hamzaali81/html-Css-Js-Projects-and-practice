@@ -1,0 +1,15 @@
+{
+    "name": "natours",
+    "version": "1.0.0",
+    "description": "natours website",
+    "main": "index.js",
+    "scripts": {
+        "compile:sass": "node-sass sass/main.scss css/style.css --w"
+    },
+    "author": "hamza ali",
+    "license": "ISC",
+    "devDependencies": {
+        "node-sass": "^4.13.1"
+    },
+    "dependencies": {}
+}
